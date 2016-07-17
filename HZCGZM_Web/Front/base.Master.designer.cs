@@ -67,22 +67,22 @@ namespace HZCGZM_Web.Web {
         protected global::System.Web.UI.WebControls.Button btnSearch;
         
         /// <summary>
-        /// hlkMain 控件。
+        /// lkbMain 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink hlkMain;
+        protected global::System.Web.UI.WebControls.LinkButton lkbMain;
         
         /// <summary>
-        /// hlkAbout 控件。
+        /// lkbAbout 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink hlkAbout;
+        protected global::System.Web.UI.WebControls.LinkButton lkbAbout;
         
         /// <summary>
         /// hlkNews 控件。
@@ -94,49 +94,49 @@ namespace HZCGZM_Web.Web {
         protected global::System.Web.UI.WebControls.HyperLink hlkNews;
         
         /// <summary>
-        /// hlkProduct 控件。
+        /// lkbProduct 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink hlkProduct;
+        protected global::System.Web.UI.WebControls.LinkButton lkbProduct;
         
         /// <summary>
-        /// hlkApplicaion 控件。
+        /// lkbApplication 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink hlkApplicaion;
+        protected global::System.Web.UI.WebControls.LinkButton lkbApplication;
         
         /// <summary>
-        /// hlkSupport 控件。
+        /// lkbSupport 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink hlkSupport;
+        protected global::System.Web.UI.WebControls.LinkButton lkbSupport;
         
         /// <summary>
-        /// hlkDownload 控件。
+        /// lkbDownload 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink hlkDownload;
+        protected global::System.Web.UI.WebControls.LinkButton lkbDownload;
         
         /// <summary>
-        /// hlkContact 控件。
+        /// lkbContact 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink hlkContact;
+        protected global::System.Web.UI.WebControls.LinkButton lkbContact;
         
         /// <summary>
         /// content 控件。
