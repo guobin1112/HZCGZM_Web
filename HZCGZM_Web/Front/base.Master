@@ -1,0 +1,62 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="base.Master.cs" Inherits="HZCGZM_Web.Web.web" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <link href="Style/baseStyle.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body >
+    <form id="formMain" runat="server">
+        <div class="header">
+            <div class="top">
+                   <img class="logo left" src="Image/logo.png" />
+                    <div class="right" style="display:inline-block">
+                             <div class="language" style="display:block">
+                                 <asp:LinkButton ID="lkbChinese" runat="server">Chinese</asp:LinkButton>
+                                  <asp:LinkButton ID="lkbEnglish" runat="server">English</asp:LinkButton>
+                                  </div>
+                                     <div class="search">
+                                      <asp:TextBox ID="tbxSearch" runat="server"></asp:TextBox>
+                                      <asp:Button ID="btnSearch" runat="server" Text="搜索" />
+                                       </div>
+                </div>
+            </div>
+
+
+            <div class="nav nofloat ">
+            <ul>
+                <li><asp:HyperLink ID="hlkMain" runat="server">主页</asp:HyperLink><img src="Image/triangle_down_orange.png"/></li>
+                <li><asp:HyperLink ID="hlkAbout" runat="server">关于我们</asp:HyperLink><img src="Image/triangle_down_orange.png"/></li>
+                <li><asp:HyperLink ID="hlkNews" runat="server">新闻资讯</asp:HyperLink><img src="Image/triangle_down_orange.png"/></li>
+                <li><asp:HyperLink ID="hlkProduct" runat="server">产品中心</asp:HyperLink><img src="Image/triangle_down_orange.png"/></li>
+                <li><asp:HyperLink ID="hlkApplicaion" runat="server">应用领域</asp:HyperLink><img src="Image/triangle_down_orange.png"/></li>
+                <li><asp:HyperLink ID="hlkSupport" runat="server">应用支持</asp:HyperLink><img src="Image/triangle_down_orange.png"/></li>
+                <li><asp:HyperLink ID="hlkDownload" runat="server">下载专区</asp:HyperLink><img src="Image/triangle_down_orange.png"/></li>
+                <li><asp:HyperLink ID="hlkContact" runat="server">联系我们</asp:HyperLink><img src="Image/triangle_down_orange.png"/></li>
+                <%--<li><a href="#" >主页</a><img src="Image/triangle_down_orange.png"/></li>
+                <li><a href="#">关于我们</a><img src="Image/triangle_down_orange.png"/></li>
+                <li><a href="#">产品</a><img src="Image/triangle_down_orange.png"/></li>
+                <li><a href="#">应用</a><img src="Image/triangle_down_orange.png"/></li>
+                <li><a href="#">OEM支持</a><img src="Image/triangle_down_orange.png"/></li>
+                <li><a href="#">下载专区</a><img src="Image/triangle_down_orange.png"/></li>
+                <li><a href="#">新闻资讯</a><img src="Image/triangle_down_orange.png"/></li>
+                <li><a href="#">联系我们</a><img src="Image/triangle_down_orange.png"/></li>--%>
+            </ul>
+        </div>
+            </div>
+        <div>
+             <asp:ContentPlaceHolder ID="content" runat="server">
+            
+            </asp:ContentPlaceHolder>
+        </div>
+        <div class="footer">
+            Add:No.68,Huaqiao Road,Lin'an Zhejiang China    Email:--------     Sunrise All Rights Reserved
+            </div>
+    </form>
+</body>
+</html>
