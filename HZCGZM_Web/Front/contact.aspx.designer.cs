@@ -11,5 +11,17 @@ namespace HZCGZM_Web.Front {
     
     
     public partial class contact {
+        
+        /// <summary>
+        /// Master 属性。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的属性。
+        /// </remarks>
+        public new HZCGZM_Web.Web.web Master {
+            get {
+                return ((HZCGZM_Web.Web.web)(base.Master));
+            }
+        }
     }
 }

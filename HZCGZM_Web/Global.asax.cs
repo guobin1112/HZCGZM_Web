@@ -13,4 +13,16 @@ namespace HZCGZM_Web
         {
         }
     }
+
+    public enum NavType
+    {
+        NAV_MAIN = 1,
+        NAV_ABOUT = 2,
+        NAV_NEWS = 3,
+        NAV_PRODUCT = 4,
+        NAV_APPLICATION = 5,
+        NAV_SUPPORT = 6,
+        NAV_DOWNLOAD = 7,
+        NAV_CONTACT = 8
+    }
 }

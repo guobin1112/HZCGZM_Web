@@ -1,0 +1,10 @@
+﻿.news_top {
+    padding: 10px;
+    border-bottom: 1px solid #ff7f00;
+    height:20px;
+}
+
+.news_list{
+    padding:10px;
+    height:880px;
+}

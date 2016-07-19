@@ -32,27 +32,28 @@
             <div class="nav nofloat ">
                 <ul>
                     <li>
-                        <asp:LinkButton ID="lkbMain" runat="server" OnClick="lkbMain_Click">主页</asp:LinkButton><img src="Image/triangle_down_orange.png" /></li>
+                        <asp:LinkButton ID="lkbMain" runat="server" OnClick="lkbMain_Click"  PostBackUrl="~/Front/index.aspx">主页</asp:LinkButton><img src="Image/triangle_down_orange.png" /></li>
                     <li>
-                        <asp:LinkButton ID="lkbAbout" runat="server" OnClick="lkbAbout_Click">关于我们</asp:LinkButton>
+                        <asp:LinkButton ID="lkbAbout" runat="server" OnClick="lkbAbout_Click"
+                           PostBackUrl="~/Front/about.aspx">关于我们</asp:LinkButton>
                         <img src="Image/triangle_down_orange.png" /></li>
                     <li>
-                        <asp:LinkButton ID="lkbNews" runat="server" OnClick="lkbNews_Click">新闻资讯</asp:LinkButton>
+                        <asp:LinkButton ID="lkbNews" runat="server" OnClick="lkbNews_Click" PostBackUrl="~/Front/news.aspx">新闻资讯</asp:LinkButton>
                         <img src="Image/triangle_down_orange.png" /></li>
                     <li>
-                        <asp:LinkButton ID="lkbProduct" runat="server" OnClick="lkbProduct_Click">产品中心</asp:LinkButton>
+                        <asp:LinkButton ID="lkbProduct" runat="server" OnClick="lkbProduct_Click" PostBackUrl="~/Front/product.aspx">产品中心</asp:LinkButton>
                         <img src="Image/triangle_down_orange.png" /></li>
                     <li>
-                        <asp:LinkButton ID="lkbApplication" runat="server" OnClick="lkbApplication_Click">应用领域</asp:LinkButton>
+                        <asp:LinkButton ID="lkbApplication" runat="server" OnClick="lkbApplication_Click" PostBackUrl="~/Front/application.aspx">应用领域</asp:LinkButton>
                         <img src="Image/triangle_down_orange.png" /></li>
                     <li>
-                        <asp:LinkButton ID="lkbSupport" runat="server" OnClick="lkbSupport_Click">应用支持</asp:LinkButton>
+                        <asp:LinkButton ID="lkbSupport" runat="server" OnClick="lkbSupport_Click" PostBackUrl="~/Front/support.aspx">应用支持</asp:LinkButton>
                      <img src="Image/triangle_down_orange.png" /></li>
                     <li>
-                        <asp:LinkButton ID="lkbDownload" runat="server" OnClick="lkbDownload_Click">下载专区</asp:LinkButton>
+                        <asp:LinkButton ID="lkbDownload" runat="server" OnClick="lkbDownload_Click" PostBackUrl="~/Front/download.aspx">下载专区</asp:LinkButton>
                         <img src="Image/triangle_down_orange.png" /></li>
                     <li>
-                        <asp:LinkButton ID="lkbContact" runat="server" OnClick="lkbContact_Click">联系我们</asp:LinkButton>
+                        <asp:LinkButton ID="lkbContact" runat="server" OnClick="lkbContact_Click" PostBackUrl="~/Front/contact.aspx">联系我们</asp:LinkButton>
                      <img src="Image/triangle_down_orange.png" /></li>
                     <%--<li><a href="#" >主页</a><img src="Image/triangle_down_orange.png"/></li>
                 <li><a href="#">关于我们</a><img src="Image/triangle_down_orange.png"/></li>

@@ -72,6 +72,7 @@
     <Content Include="Front\Image\3.jpg" />
     <Content Include="Front\Image\4.jpg" />
     <Content Include="Front\Image\5.jpg" />
+    <Content Include="Front\Image\home.png" />
     <Content Include="Front\Image\arrow_left_gray.png" />
     <Content Include="Front\Image\arrow_left_orange.png" />
     <Content Include="Front\Image\arrow_right_gray.png" />
@@ -103,9 +104,12 @@
     <Content Include="Front\product.aspx" />
     <Content Include="Front\Script\index.js" />
     <Content Include="Front\Script\jquery-1.8.3.min.js" />
+    <Content Include="Front\Style\product.css" />
     <Content Include="Front\Script\slide.min.js" />
+    <Content Include="Front\Style\about.css" />
     <Content Include="Front\Style\base.css" />
     <Content Include="Front\Style\index.css" />
+    <Content Include="Front\Style\news.css" />
     <Content Include="Front\Style\slide.css" />
     <Content Include="Front\support.aspx" />
     <Content Include="Global.asax" />
@@ -183,7 +187,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Backup\" />
-    <Folder Include="Models\" />
+    <Folder Include="Model\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

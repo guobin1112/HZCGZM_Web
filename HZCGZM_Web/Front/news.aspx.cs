@@ -11,7 +11,7 @@ namespace HZCGZM_Web.Front
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            Master.updateNav((int)NavType.NAV_NEWS);
         }
     }
 }

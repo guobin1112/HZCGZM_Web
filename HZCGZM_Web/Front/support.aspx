@@ -1,5 +1,8 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Front/base.Master" AutoEventWireup="true" CodeBehind="support.aspx.cs" Inherits="HZCGZM_Web.Front.support" %>
-<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+
+<%@ MasterType VirtualPath="~/Front/base.Master" %>
+
+<asp:Content ID="head_support" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="content" runat="server">
+<asp:Content ID="content_support" ContentPlaceHolderID="content" runat="server">
 </asp:Content>

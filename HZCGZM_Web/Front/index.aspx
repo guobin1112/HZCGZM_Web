@@ -1,5 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Front/base.Master" AutoEventWireup="true" CodeBehind="index.aspx.cs" Inherits="HZCGZM_Web.Front.index" %>
 
+<%@ MasterType VirtualPath="~/Front/base.Master" %>
+
 <asp:Content ID="head_index" ContentPlaceHolderID="head" runat="server">
     <link rel="stylesheet" href="Style/index.css" />
     <link rel="stylesheet" href="Style/slide.css" />
