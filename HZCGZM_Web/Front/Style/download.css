@@ -1,0 +1,38 @@
+﻿.download_top {
+    padding: 10px;
+    border-bottom: 1px solid #ff7f00;
+    height: 20px;
+}
+
+.download_list {
+    padding: 10px;
+}
+
+    .download_list ul li {
+        padding: 9px;
+        width: 220px;
+        margin-right: 20px;
+        border: 1px solid #cccccc;
+        float:left;
+        margin-top:10px;
+        margin-bottom:10px;
+    }
+
+        .download_list ul li:nth-child(3n) {
+            margin-right: 0;
+        }
+
+        .download_list ul li span {
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .download_list ul li>img {
+            width: 220px;
+            height: 200px;
+        }
+
+a {
+    text-decoration: none;
+    color: #ff7f00;
+}

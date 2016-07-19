@@ -9,19 +9,19 @@
         <div class="content">
         <div class="left nav_left">
             <div class="top">
-                新闻咨询
+                产品中心
             </div>
             <ul>
-                <li>展会<img src="Image/triangle_right_orange.png" /></li>
-                <li>公告<img src="Image/triangle_right_orange.png" /></li>
-                <li>行业资讯<img src="Image/triangle_right_orange.png" /></li>
+                <li>产品类型1<img src="Image/triangle_right_orange.png" /></li>
+                <li>产品类型2<img src="Image/triangle_right_orange.png" /></li>
+                <li>产品类型3<img src="Image/triangle_right_orange.png" /></li>
             </ul>
 
         </div>
         <div class="right content_right">
             <div class="product_top">
-                <asp:Label ID="lblproductType" runat="server" Text="新闻类型" CssClass="left"></asp:Label>
-                <asp:Label ID="lblNewContent" runat="server" Text="所在位置：新闻资讯" CssClass="right"></asp:Label>
+                <asp:Label ID="lblproductType" runat="server" Text="产品类型" CssClass="left"></asp:Label>
+                <asp:Label ID="lblNewContent" runat="server" Text="所在位置：产品中心" CssClass="right"></asp:Label>
                 <img src="Image/home.png" class="right" />
             </div>
             <div class="product_list">

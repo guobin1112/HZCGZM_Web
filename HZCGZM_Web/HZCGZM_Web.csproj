@@ -65,6 +65,7 @@
     </None>
     <Content Include="Front\about.aspx" />
     <Content Include="Front\application.aspx" />
+    <Content Include="Front\application_detail.aspx" />
     <Content Include="Front\contact.aspx" />
     <Content Include="Front\download.aspx" />
     <Content Include="Front\Image\1.jpg" />
@@ -104,6 +105,8 @@
     <Content Include="Front\product.aspx" />
     <Content Include="Front\Script\index.js" />
     <Content Include="Front\Script\jquery-1.8.3.min.js" />
+    <Content Include="Front\Style\application.css" />
+    <Content Include="Front\Style\download.css" />
     <Content Include="Front\Style\product.css" />
     <Content Include="Front\Script\slide.min.js" />
     <Content Include="Front\Style\about.css" />
@@ -111,6 +114,7 @@
     <Content Include="Front\Style\index.css" />
     <Content Include="Front\Style\news.css" />
     <Content Include="Front\Style\slide.css" />
+    <Content Include="Front\Style\support.css" />
     <Content Include="Front\support.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
@@ -129,6 +133,13 @@
     </Compile>
     <Compile Include="Front\application.aspx.designer.cs">
       <DependentUpon>application.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Front\application_detail.aspx.cs">
+      <DependentUpon>application_detail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Front\application_detail.aspx.designer.cs">
+      <DependentUpon>application_detail.aspx</DependentUpon>
     </Compile>
     <Compile Include="Front\contact.aspx.cs">
       <DependentUpon>contact.aspx</DependentUpon>
