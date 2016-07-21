@@ -3,7 +3,7 @@
 <%@ MasterType VirtualPath="~/Front/base.Master" %>
 
 <asp:Content ID="head_download" ContentPlaceHolderID="head" runat="server">
-      <link href="Style/download.css" rel="stylesheet" />
+    <link href="Style/download.css" rel="stylesheet" />
 </asp:Content>
 <asp:Content ID="content_download" ContentPlaceHolderID="content" runat="server">
     <div class="content">
@@ -26,45 +26,81 @@
                 <ul>
                     <li>
                         <img src="Image/1.jpg" />
-                        <span class="download_title">标题名称</span>
-                        <hr />
-                        <p>内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介</p>
-                        <a href="#">查看更多  <img src="Image/triangle_right_orange.png" /></a>
-                    </li>
-                   <li>
-                        <img src="Image/1.jpg" />
-                        <span class="download_title">标题名称</span>
-                        <hr />
-                        <p>内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介</p>
-                        <a href="#">查看更多  <img src="Image/triangle_right_orange.png" /></a>
+                        <p class="download_title">标题名称</p>
+                        <a href="#">点击下载 
+                            <img src="Image/triangle_right_orange.png" /></a>
                     </li>
                     <li>
                         <img src="Image/1.jpg" />
-                        <span class="download_title">标题名称</span>
-                        <hr />
-                        <p>内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介</p>
-                        <a href="#">查看更多  <img src="Image/triangle_right_orange.png" /></a>
+                        <p class="download_title">标题名称</p>
+                        <a href="#">点击下载 
+                            <img src="Image/triangle_right_orange.png" /></a>
                     </li>
                     <li>
                         <img src="Image/1.jpg" />
-                        <span class="download_title">标题名称</span>
-                        <hr />
-                        <p>内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介</p>
-                        <a href="#">查看更多  <img src="Image/triangle_right_orange.png" /></a>
+                        <p class="download_title">标题名称</p>
+                        <a href="#">点击下载 
+                            <img src="Image/triangle_right_orange.png" /></a>
                     </li>
                     <li>
                         <img src="Image/1.jpg" />
-                        <span class="download_title">标题名称</span>
-                        <hr />
-                        <p>内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介</p>
-                        <a href="#">查看更多  <img src="Image/triangle_right_orange.png" /></a>
+                        <p class="download_title">标题名称</p>
+                        <a href="#">点击下载 
+                            <img src="Image/triangle_right_orange.png" /></a>
                     </li>
                     <li>
                         <img src="Image/1.jpg" />
-                        <span class="download_title">标题名称</span>
-                        <hr />
-                        <p>内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介</p>
-                        <a href="#">查看更多  <img src="Image/triangle_right_orange.png" /></a>
+                        <p class="download_title">标题名称</p>
+                        <a href="#">点击下载 
+                            <img src="Image/triangle_right_orange.png" /></a>
+                    </li>
+                    <li>
+                        <img src="Image/1.jpg" />
+                        <p class="download_title">标题名称</p>
+                        <a href="#">点击下载 
+                            <img src="Image/triangle_right_orange.png" /></a>
+                    </li>
+                    <li>
+                        <img src="Image/1.jpg" />
+                        <p class="download_title">标题名称</p>
+                        <a href="#">点击下载 
+                            <img src="Image/triangle_right_orange.png" /></a>
+                    </li>
+                    <li>
+                        <img src="Image/1.jpg" />
+                        <p class="download_title">标题名称</p>
+                        <a href="#">点击下载 
+                            <img src="Image/triangle_right_orange.png" /></a>
+                    </li>
+                    <li>
+                        <img src="Image/1.jpg" />
+                        <p class="download_title">标题名称</p>
+                        <a href="#">点击下载 
+                            <img src="Image/triangle_right_orange.png" /></a>
+                    </li>
+                    <li>
+                        <img src="Image/1.jpg" />
+                        <p class="download_title">标题名称</p>
+                        <a href="#">点击下载 
+                            <img src="Image/triangle_right_orange.png" /></a>
+                    </li>
+                    <li>
+                        <img src="Image/1.jpg" />
+                        <p class="download_title">标题名称</p>
+                        <a href="#">点击下载 
+                            <img src="Image/triangle_right_orange.png" /></a>
+                    </li>
+                    <li>
+                        <img src="Image/1.jpg" />
+                        <p class="download_title">标题名称</p>
+                        <a href="#">点击下载 
+                            <img src="Image/triangle_right_orange.png" /></a>
+                    </li>
+                    <li>
+                        <img src="Image/1.jpg" />
+                        <p class="download_title">标题名称</p>
+                        <a href="#">点击下载 
+                            <img src="Image/triangle_right_orange.png" /></a>
                     </li>
                 </ul>
             </div>

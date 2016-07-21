@@ -13,7 +13,9 @@ namespace HZCGZM_Web
         {
         }
     }
-
+    /// <summary>
+    /// 首页导航索引
+    /// </summary>
     public enum NavType
     {
         NAV_MAIN = 1,
@@ -24,5 +26,26 @@ namespace HZCGZM_Web
         NAV_SUPPORT = 6,
         NAV_DOWNLOAD = 7,
         NAV_CONTACT = 8
+    }
+    /// <summary>
+    /// 可用状态
+    /// </summary>
+    public enum NormalState
+    {
+        AVALIABLE = 1,
+        UNAVALIABLE = 2
+    }
+
+    /// <summary>
+    /// 类别
+    /// </summary>
+    public enum CategoryType
+    {
+        PRODUCT = 1,
+        SUBPRODUCT = 2,
+        APPLICATION = 3,
+        SUBAPPLICATION = 4,
+        NEWS = 5,
+        SUPPORT = 6
     }
 }

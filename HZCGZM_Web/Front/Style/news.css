@@ -8,3 +8,15 @@
     padding:10px;
     height:880px;
 }
+
+.news_list ul li{
+    height:30px;
+    line-height:30px;
+    border-bottom:1px dashed #333333;
+    display:block;
+}
+
+a{
+    text-decoration:none;
+    color:#333333;
+}

@@ -13,6 +13,24 @@ namespace HZCGZM_Web.Front {
     public partial class news {
         
         /// <summary>
+        /// rptNewCategory 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Repeater rptNewCategory;
+        
+        /// <summary>
+        /// sdcNewsCategory 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource sdcNewsCategory;
+        
+        /// <summary>
         /// lblNewsType 控件。
         /// </summary>
         /// <remarks>
@@ -29,6 +47,24 @@ namespace HZCGZM_Web.Front {
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblNewContent;
+        
+        /// <summary>
+        /// rptNews 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Repeater rptNews;
+        
+        /// <summary>
+        /// sdcNews 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource sdcNews;
         
         /// <summary>
         /// Master 属性。

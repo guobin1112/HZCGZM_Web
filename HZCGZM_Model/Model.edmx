@@ -1,0 +1,249 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="HZCGZMModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="tbBanner">
+          <Key>
+            <PropertyRef Name="bannerId" />
+          </Key>
+          <Property Name="bannerId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="bannerActionURL" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="bannerState" Type="int" Nullable="false" />
+          <Property Name="bannerType" Type="int" Nullable="false" />
+          <Property Name="sortNumber" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbCategory">
+          <Key>
+            <PropertyRef Name="categoryId" />
+          </Key>
+          <Property Name="categoryId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="categoryName" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="parentId" Type="int" Nullable="false" />
+          <Property Name="categoryState" Type="int" Nullable="false" />
+          <Property Name="categoryType" Type="int" Nullable="false" />
+          <Property Name="sortNumber" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbImage">
+          <Key>
+            <PropertyRef Name="imageId" />
+          </Key>
+          <Property Name="imageId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="imageURL" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="imageType" Type="int" Nullable="false" />
+          <Property Name="imageState" Type="int" Nullable="false" />
+          <Property Name="bindId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbNews">
+          <Key>
+            <PropertyRef Name="newsId" />
+          </Key>
+          <Property Name="newsId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="newsTitle" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="newsPublishTime" Type="smalldatetime" Nullable="false" />
+          <Property Name="newsContentHtmlString" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="newsState" Type="int" Nullable="false" />
+          <Property Name="newsType" Type="int" />
+        </EntityType>
+        <EntityType Name="tbPdf">
+          <Key>
+            <PropertyRef Name="pdfId" />
+          </Key>
+          <Property Name="pdfId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="pdfName" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="pdfURL" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="pdfState" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbProduct">
+          <Key>
+            <PropertyRef Name="productId" />
+          </Key>
+          <Property Name="productId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="productName" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="productCategory" Type="int" Nullable="false" />
+          <Property Name="productSubcategory" Type="int" Nullable="false" />
+          <Property Name="productDetailHtmlString" Type="nvarchar(max)" />
+          <Property Name="productState" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="HZCGZMModelStoreContainer">
+          <EntitySet Name="tbBanner" EntityType="Self.tbBanner" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbCategory" EntityType="Self.tbCategory" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbImage" EntityType="Self.tbImage" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbNews" EntityType="Self.tbNews" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbPdf" EntityType="Self.tbPdf" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbProduct" EntityType="Self.tbProduct" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="HZCGZMModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="HZCGZMEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="tbBanner" EntityType="HZCGZMModel.tbBanner" />
+          <EntitySet Name="tbCategory" EntityType="HZCGZMModel.tbCategory" />
+          <EntitySet Name="tbImage" EntityType="HZCGZMModel.tbImage" />
+          <EntitySet Name="tbNews" EntityType="HZCGZMModel.tbNews" />
+          <EntitySet Name="tbPdf" EntityType="HZCGZMModel.tbPdf" />
+          <EntitySet Name="tbProduct" EntityType="HZCGZMModel.tbProduct" />
+        </EntityContainer>
+        <EntityType Name="tbBanner">
+          <Key>
+            <PropertyRef Name="bannerId" />
+          </Key>
+          <Property Name="bannerId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="bannerActionURL" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="bannerState" Type="Int32" Nullable="false" />
+          <Property Name="bannerType" Type="Int32" Nullable="false" />
+          <Property Name="sortNumber" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbCategory">
+          <Key>
+            <PropertyRef Name="categoryId" />
+          </Key>
+          <Property Name="categoryId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="categoryName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="parentId" Type="Int32" Nullable="false" />
+          <Property Name="categoryState" Type="Int32" Nullable="false" />
+          <Property Name="categoryType" Type="Int32" Nullable="false" />
+          <Property Name="sortNumber" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbImage">
+          <Key>
+            <PropertyRef Name="imageId" />
+          </Key>
+          <Property Name="imageId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="imageURL" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="imageType" Type="Int32" Nullable="false" />
+          <Property Name="imageState" Type="Int32" Nullable="false" />
+          <Property Name="bindId" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbNews">
+          <Key>
+            <PropertyRef Name="newsId" />
+          </Key>
+          <Property Name="newsId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="newsTitle" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="newsPublishTime" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="newsContentHtmlString" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="newsState" Type="Int32" Nullable="false" />
+          <Property Name="newsType" Type="Int32" />
+        </EntityType>
+        <EntityType Name="tbPdf">
+          <Key>
+            <PropertyRef Name="pdfId" />
+          </Key>
+          <Property Name="pdfId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="pdfName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="pdfURL" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="pdfState" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbProduct">
+          <Key>
+            <PropertyRef Name="productId" />
+          </Key>
+          <Property Name="productId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="productName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="productCategory" Type="Int32" Nullable="false" />
+          <Property Name="productSubcategory" Type="Int32" Nullable="false" />
+          <Property Name="productDetailHtmlString" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="productState" Type="Int32" Nullable="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="HZCGZMModelStoreContainer" CdmEntityContainer="HZCGZMEntities">
+          <EntitySetMapping Name="tbBanner">
+            <EntityTypeMapping TypeName="HZCGZMModel.tbBanner">
+              <MappingFragment StoreEntitySet="tbBanner">
+                <ScalarProperty Name="sortNumber" ColumnName="sortNumber" />
+                <ScalarProperty Name="bannerType" ColumnName="bannerType" />
+                <ScalarProperty Name="bannerState" ColumnName="bannerState" />
+                <ScalarProperty Name="bannerActionURL" ColumnName="bannerActionURL" />
+                <ScalarProperty Name="bannerId" ColumnName="bannerId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbCategory">
+            <EntityTypeMapping TypeName="HZCGZMModel.tbCategory">
+              <MappingFragment StoreEntitySet="tbCategory">
+                <ScalarProperty Name="sortNumber" ColumnName="sortNumber" />
+                <ScalarProperty Name="categoryType" ColumnName="categoryType" />
+                <ScalarProperty Name="categoryState" ColumnName="categoryState" />
+                <ScalarProperty Name="parentId" ColumnName="parentId" />
+                <ScalarProperty Name="categoryName" ColumnName="categoryName" />
+                <ScalarProperty Name="categoryId" ColumnName="categoryId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbImage">
+            <EntityTypeMapping TypeName="HZCGZMModel.tbImage">
+              <MappingFragment StoreEntitySet="tbImage">
+                <ScalarProperty Name="bindId" ColumnName="bindId" />
+                <ScalarProperty Name="imageState" ColumnName="imageState" />
+                <ScalarProperty Name="imageType" ColumnName="imageType" />
+                <ScalarProperty Name="imageURL" ColumnName="imageURL" />
+                <ScalarProperty Name="imageId" ColumnName="imageId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbNews">
+            <EntityTypeMapping TypeName="HZCGZMModel.tbNews">
+              <MappingFragment StoreEntitySet="tbNews">
+                <ScalarProperty Name="newsType" ColumnName="newsType" />
+                <ScalarProperty Name="newsState" ColumnName="newsState" />
+                <ScalarProperty Name="newsContentHtmlString" ColumnName="newsContentHtmlString" />
+                <ScalarProperty Name="newsPublishTime" ColumnName="newsPublishTime" />
+                <ScalarProperty Name="newsTitle" ColumnName="newsTitle" />
+                <ScalarProperty Name="newsId" ColumnName="newsId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbPdf">
+            <EntityTypeMapping TypeName="HZCGZMModel.tbPdf">
+              <MappingFragment StoreEntitySet="tbPdf">
+                <ScalarProperty Name="pdfState" ColumnName="pdfState" />
+                <ScalarProperty Name="pdfURL" ColumnName="pdfURL" />
+                <ScalarProperty Name="pdfName" ColumnName="pdfName" />
+                <ScalarProperty Name="pdfId" ColumnName="pdfId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbProduct">
+            <EntityTypeMapping TypeName="HZCGZMModel.tbProduct">
+              <MappingFragment StoreEntitySet="tbProduct">
+                <ScalarProperty Name="productState" ColumnName="productState" />
+                <ScalarProperty Name="productDetailHtmlString" ColumnName="productDetailHtmlString" />
+                <ScalarProperty Name="productSubcategory" ColumnName="productSubcategory" />
+                <ScalarProperty Name="productCategory" ColumnName="productCategory" />
+                <ScalarProperty Name="productName" ColumnName="productName" />
+                <ScalarProperty Name="productId" ColumnName="productId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="无" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

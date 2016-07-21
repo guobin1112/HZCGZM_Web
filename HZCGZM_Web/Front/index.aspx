@@ -12,7 +12,30 @@
     <div class="banner">
         <div class="ck-slide">
             <ul class="ck-slide-wrapper">
-                <li>
+                <asp:Repeater ID="rptBanner" runat="server" DataSourceID="sdcBanner">
+                    <ItemTemplate>
+                        <li>
+                            <a href='<%#Eval("bannerActionURL") %>'>
+                                <asp:Image ID="img_banner" runat="server" ImageUrl='<%#Eval("imageURL") %>' />
+                            </a>
+                        </li>
+                    </ItemTemplate>
+                </asp:Repeater>
+                <asp:SqlDataSource ID="sdcBanner" runat="server" ConnectionString="<%$ ConnectionStrings:HZCGZMConnectionString %>" SelectCommand="
+                    SELECT     dbo.tbBanner.bannerId, dbo.tbBanner.bannerActionURL, dbo.tbImage.bindId, dbo.tbImage.imageURL,ROW_NUMBER() OVER(ORDER BY bannerId) AS rowId
+                    FROM         dbo.tbBanner INNER JOIN
+                      dbo.tbImage ON dbo.tbBanner.bannerId = dbo.tbImage.bindId
+                    WHERE dbo.tbImage.imageState=@imageState and dbo.tbBanner.bannerState=@bannerState and dbo.tbImage.imageType=@imageType and dbo.tbBanner.bannerType=@bannerType
+                    ORDER BY dbo.tbBanner.sortNumber">
+
+                    <SelectParameters>
+                        <asp:Parameter DefaultValue="1" Name="imageState" Type="Int32" />
+                        <asp:Parameter DefaultValue="1" Name="bannerState" Type="Int32" />
+                        <asp:Parameter DefaultValue="1" Name="imageType" Type="Int32" />
+                        <asp:Parameter DefaultValue="1" Name="bannerType" Type="Int32" />
+                    </SelectParameters>
+                </asp:SqlDataSource>
+                <%--                <li>
                     <a href="javascript:">
                         <img src="Image/1.jpg" alt="" /></a>
                 </li>
@@ -31,17 +54,22 @@
                 <li style="display: none">
                     <a href="javascript:">
                         <img src="Image/5.jpg" alt="" /></a>
-                </li>
+                </li>--%>
             </ul>
             <a href="javascript:;" class="ctrl-slide ck-prev">上一张</a> <a href="javascript:;" class="ctrl-slide ck-next">下一张</a>
             <div class="ck-slidebox">
                 <div class="slideWrap">
                     <ul class="dot-wrap">
-                        <li class="current"><em>1</em></li>
+                        <asp:Repeater ID="rptDot" runat="server" DataSourceID="sdcBanner"> 
+                            <ItemTemplate>
+                                <li><em><%#Eval("rowId") %></em></li>
+                            </ItemTemplate>
+                        </asp:Repeater>
+                    <%--    <li class="current"><em>1</em></li>
                         <li><em>2</em></li>
                         <li><em>3</em></li>
                         <li><em>4</em></li>
-                        <li><em>5</em></li>
+                        <li><em>5</em></li>--%>
                     </ul>
                 </div>
             </div>
@@ -144,16 +172,16 @@
             <p>联系我们</p>
             <img src="Image/1.jpg" />
             <div>
-                <img src="Image/triangle_right_orange.png" />
-                <a href="#">more</a>
+                <a href="contact.aspx"><img src="Image/triangle_right_orange.png" /></a>
+                <a href="contact.aspx">more</a>
             </div>
         </div>
         <div class="product">
             <p>产品册</p>
             <img src="Image/1.jpg" />
             <div>
-                <img src="Image/triangle_right_orange.png" />
-                <a href="#">more</a>
+                <a href="product.aspx"><img src="Image/triangle_right_orange.png" /></a>
+                <a href="product.aspx">more</a>
             </div>
 
         </div>
@@ -161,8 +189,8 @@
             <p>新闻资讯</p>
             <img src="Image/1.jpg" />
             <div>
-                <img src="Image/triangle_right_orange.png" />
-                <a href="#">more</a>
+                <a href="news.aspx"><img src="Image/triangle_right_orange.png" /></a>
+                <a href="news.aspx">more</a>
             </div>
         </div>
     </div>

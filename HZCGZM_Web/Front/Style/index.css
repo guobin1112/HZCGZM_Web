@@ -10,6 +10,11 @@
         height: 320px;
     }
 
+    .ck-slide ul.ck-slide-wrapper li a img{
+        width:960px;
+        height: 320px;
+    }
+
 /* product */
 .product {
     width: 960px;
