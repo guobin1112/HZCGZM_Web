@@ -5,7 +5,6 @@
 <asp:Content ID="head_index" ContentPlaceHolderID="head" runat="server">
     <link rel="stylesheet" href="Style/index.css" />
     <link rel="stylesheet" href="Style/slide.css" />
-    <script src="Script/jquery-1.8.3.min.js"></script>
     <script src="Script/index.js"></script>
 </asp:Content>
 <asp:Content ID="content_index" ContentPlaceHolderID="content" runat="server">
@@ -62,7 +61,7 @@
                     <ul class="dot-wrap">
                         <asp:Repeater ID="rptDot" runat="server" DataSourceID="sdcBanner"> 
                             <ItemTemplate>
-                                <li><em><%#Eval("rowId") %></em></li>
+                                <li class="<%# (Container.ItemIndex)==0?"current":"" %>"><em><%#Eval("rowId") %></em></li>
                             </ItemTemplate>
                         </asp:Repeater>
                     <%--    <li class="current"><em>1</em></li>

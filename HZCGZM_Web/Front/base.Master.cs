@@ -13,7 +13,7 @@ namespace HZCGZM_Web.Web
 
         protected void Page_Load(object sender, EventArgs e)
         {
- 
+            
         }
 
         protected void lkbMain_Click(object sender, EventArgs e)

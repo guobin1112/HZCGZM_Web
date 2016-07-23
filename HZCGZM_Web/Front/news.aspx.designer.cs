@@ -31,15 +31,6 @@ namespace HZCGZM_Web.Front {
         protected global::System.Web.UI.WebControls.SqlDataSource sdcNewsCategory;
         
         /// <summary>
-        /// lblNewsType 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblNewsType;
-        
-        /// <summary>
         /// lblNewContent 控件。
         /// </summary>
         /// <remarks>
@@ -47,6 +38,15 @@ namespace HZCGZM_Web.Front {
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblNewContent;
+        
+        /// <summary>
+        /// upNews 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.UpdatePanel upNews;
         
         /// <summary>
         /// rptNews 控件。

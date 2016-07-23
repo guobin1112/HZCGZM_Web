@@ -66,6 +66,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Front\news_detail.aspx" />
     <Content Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -178,6 +179,13 @@
     </Compile>
     <Compile Include="Front\news.aspx.designer.cs">
       <DependentUpon>news.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Front\news_detail.aspx.cs">
+      <DependentUpon>news_detail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Front\news_detail.aspx.designer.cs">
+      <DependentUpon>news_detail.aspx</DependentUpon>
     </Compile>
     <Compile Include="Front\product.aspx.cs">
       <DependentUpon>product.aspx</DependentUpon>

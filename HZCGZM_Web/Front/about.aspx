@@ -16,7 +16,7 @@
                 关于我们
             </div>
             <ul>
-                <li><a href="about.aspx">公司简介<img src="Image/triangle_right_orange.png" /></a></li>
+                <li a class="current"><a  href="about.aspx">公司简介<img src="Image/triangle_right_orange.png" /></a></li>
             </ul>
 
         </div>
