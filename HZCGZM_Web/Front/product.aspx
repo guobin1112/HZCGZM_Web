@@ -12,6 +12,13 @@
                 产品中心
             </div>
             <ul>
+               <%-- <asp:Repeater ID="rptProductCatefory" runat="server">
+                    <ItemTemplate>
+                        <li  id='<%#Eval("categoryId") %>' >
+                            <a href='product.aspx?type=<%#Eval("categoryId") %>'><%#Eval("categoryName") %><img src="Image/triangle_right_orange.png" /></a>
+                        </li>
+                    </ItemTemplate>
+                </asp:Repeater>--%>
                 <li>产品类型1<img src="Image/triangle_right_orange.png" /></li>
                 <li>产品类型2<img src="Image/triangle_right_orange.png" /></li>
                 <li>产品类型3<img src="Image/triangle_right_orange.png" /></li>

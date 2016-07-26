@@ -13,9 +13,9 @@
         width: 220px;
         margin-right: 20px;
         border: 1px solid #cccccc;
-        float:left;
-        margin-top:10px;
-        margin-bottom:10px;
+        float: left;
+        margin-top: 10px;
+        margin-bottom: 10px;
     }
 
         .application_list ul li:nth-child(3n) {
@@ -27,12 +27,12 @@
             text-align: center;
         }
 
-        .application_list ul li>img {
+        .application_list ul li > img {
             width: 220px;
             height: 200px;
         }
 
-a {
-    text-decoration: none;
-    color: #ff7f00;
-}
+    .application_list a {
+        text-decoration: none;
+        color: #ff7f00;
+    }

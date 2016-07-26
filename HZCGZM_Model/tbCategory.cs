@@ -20,5 +20,6 @@ namespace HZCGZM_Model
         public int categoryState { get; set; }
         public int categoryType { get; set; }
         public int sortNumber { get; set; }
+        public string categoryInfo { get; set; }
     }
 }

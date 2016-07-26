@@ -48,4 +48,11 @@ namespace HZCGZM_Web
         NEWS = 5,
         SUPPORT = 6
     }
+
+    public enum ImageType
+    {
+        BANNER=1,
+        APPLICATION=2,
+        SUBAPPLICATION=3
+    }
 }

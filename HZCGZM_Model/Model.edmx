@@ -25,6 +25,7 @@
           <Property Name="categoryState" Type="int" Nullable="false" />
           <Property Name="categoryType" Type="int" Nullable="false" />
           <Property Name="sortNumber" Type="int" Nullable="false" />
+          <Property Name="categoryInfo" Type="nvarchar" MaxLength="512" />
         </EntityType>
         <EntityType Name="tbImage">
           <Key>
@@ -107,6 +108,7 @@
           <Property Name="categoryState" Type="Int32" Nullable="false" />
           <Property Name="categoryType" Type="Int32" Nullable="false" />
           <Property Name="sortNumber" Type="Int32" Nullable="false" />
+          <Property Name="categoryInfo" Type="String" MaxLength="512" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="tbImage">
           <Key>
@@ -149,7 +151,7 @@
           <Property Name="productDetailHtmlString" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="productState" Type="Int32" Nullable="false" />
         </EntityType>
-      </Schema>
+        </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
@@ -169,6 +171,7 @@
           <EntitySetMapping Name="tbCategory">
             <EntityTypeMapping TypeName="HZCGZMModel.tbCategory">
               <MappingFragment StoreEntitySet="tbCategory">
+                <ScalarProperty Name="categoryInfo" ColumnName="categoryInfo" />
                 <ScalarProperty Name="sortNumber" ColumnName="sortNumber" />
                 <ScalarProperty Name="categoryType" ColumnName="categoryType" />
                 <ScalarProperty Name="categoryState" ColumnName="categoryState" />
@@ -239,7 +242,7 @@
         <DesignerProperty Name="ValidateOnBuild" Value="true" />
         <DesignerProperty Name="EnablePluralization" Value="false" />
         <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
-        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="False" />
         <DesignerProperty Name="CodeGenerationStrategy" Value="无" />
       </DesignerInfoPropertySet>
     </Options>

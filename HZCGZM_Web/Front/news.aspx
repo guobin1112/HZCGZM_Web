@@ -24,15 +24,12 @@
                         <asp:Parameter DefaultValue="5" Name="categoryType" Type="Int32" />
                     </SelectParameters>
                 </asp:SqlDataSource>
-                <%--<li>展会<img src="Image/triangle_right_orange.png" /></li>
-                <li>公告<img src="Image/triangle_right_orange.png" /></li>
-                <li>行业资讯<img src="Image/triangle_right_orange.png" /></li>--%>
+               
             </ul>
 
         </div>
         <div class="right content_right">
             <div class="news_top">
-                <%--                <asp:Label ID="lblNewsType" runat="server" Text="新闻类型" CssClass="left" ForeColor="#ff7f00"></asp:Label>--%>
                 <span id="newsType" class="left" style="color: #ff7f00"></span>
                 <asp:Label ID="lblNewContent" runat="server" Text="所在位置：新闻资讯" CssClass="right"></asp:Label>
                 <img src="Image/home.png" class="right" />

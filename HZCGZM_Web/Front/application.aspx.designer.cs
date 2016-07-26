@@ -13,13 +13,22 @@ namespace HZCGZM_Web.Front {
     public partial class application {
         
         /// <summary>
-        /// lblApplicationType 控件。
+        /// rptApplicationCategory 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblApplicationType;
+        protected global::System.Web.UI.WebControls.Repeater rptApplicationCategory;
+        
+        /// <summary>
+        /// sdcApplicationCategory 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource sdcApplicationCategory;
         
         /// <summary>
         /// lblApplicationContent 控件。
@@ -29,6 +38,24 @@ namespace HZCGZM_Web.Front {
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblApplicationContent;
+        
+        /// <summary>
+        /// rptApplication 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Repeater rptApplication;
+        
+        /// <summary>
+        /// sdcApplicationCategoryInfo 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource sdcApplicationCategoryInfo;
         
         /// <summary>
         /// Master 属性。
