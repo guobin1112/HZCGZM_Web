@@ -10,10 +10,10 @@
         height: 320px;
     }
 
-    .ck-slide ul.ck-slide-wrapper li a img{
-        width:960px;
-        height: 320px;
-    }
+        .ck-slide ul.ck-slide-wrapper li a img {
+            width: 960px;
+            height: 320px;
+        }
 
 /* product */
 .product {
@@ -54,12 +54,23 @@
 
 .product_img {
     text-align: center;
-    width: 100px;
+    width: 200px;
     display: table-cell;
     background: #e2e2e2;
-    height: 100px;
-    font-size: 95px;
+    height: 160px;
     vertical-align: middle;
+}
+
+.product_img img {
+    width: 200px;
+    height: 160px;
+}
+
+
+.product_name {
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
 }
 
 .product_array a {

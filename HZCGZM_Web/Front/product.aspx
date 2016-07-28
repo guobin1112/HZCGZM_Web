@@ -19,7 +19,16 @@
                         </li>
                     </ItemTemplate>
                 </asp:Repeater>--%>
-                <li>产品类型1<img src="Image/triangle_right_orange.png" /></li>
+                <li>产品类型1<img src="Image/triangle_right_orange.png" />
+                    <ul>
+                        <li>
+                            子产品
+                        </li>
+                        <li>
+                            子产品
+                        </li>
+                    </ul>
+                </li>
                 <li>产品类型2<img src="Image/triangle_right_orange.png" /></li>
                 <li>产品类型3<img src="Image/triangle_right_orange.png" /></li>
             </ul>
@@ -32,32 +41,52 @@
                 <img src="Image/home.png" class="right" />
             </div>
             <div class="product_list">
+
                 <ul>
-                    <li>
-                        <span>新闻标题</span><span>[2016/7/20]</span>
+                      <li>
+                        <img src="Image/1.jpg" />
+                        <span class="application_title">标题名称</span>
+                        <hr />
+                        <p>内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介</p>
+                        <a href="#">查看更多  <img src="Image/triangle_right_orange.png" /></a>
+                    </li>
+                   <li>
+                        <img src="Image/1.jpg" />
+                        <span class="application_title">标题名称</span>
+                        <hr />
+                        <p>内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介</p>
+                        <a href="#">查看更多  <img src="Image/triangle_right_orange.png" /></a>
                     </li>
                     <li>
-                        <span>新闻标题</span><span>[2016/7/20]</span>
+                        <img src="Image/1.jpg" />
+                        <span class="application_title">标题名称</span>
+                        <hr />
+                        <p>内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介</p>
+                        <a href="#">查看更多  <img src="Image/triangle_right_orange.png" /></a>
                     </li>
                     <li>
-                        <span>新闻标题</span><span>[2016/7/20]</span>
+                        <img src="Image/1.jpg" />
+                        <span class="application_title">标题名称</span>
+                        <hr />
+                        <p>内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介</p>
+                        <a href="#">查看更多  <img src="Image/triangle_right_orange.png" /></a>
                     </li>
                     <li>
-                        <span>新闻标题</span><span>[2016/7/20]</span>
+                        <img src="Image/1.jpg" />
+                        <span class="application_title">标题名称</span>
+                        <hr />
+                        <p>内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介</p>
+                        <a href="#">查看更多  <img src="Image/triangle_right_orange.png" /></a>
                     </li>
                     <li>
-                        <span>新闻标题</span><span>[2016/7/20]</span>
-                    </li>
-                    <li>
-                        <span>新闻标题</span><span>[2016/7/20]</span>
-                    </li>
-                    <li>
-                        <span>新闻标题</span><span>[2016/7/20]</span>
-                    </li>
-                    <li>
-                        <span>新闻标题</span><span>[2016/7/20]</span>
+                        <img src="Image/1.jpg" />
+                        <span class="application_title">标题名称</span>
+                        <hr />
+                        <p>内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介</p>
+                        <a href="#">查看更多  <img src="Image/triangle_right_orange.png" /></a>
                     </li>
                 </ul>
+                
             </div>
             <div class="page">
                 <ul>

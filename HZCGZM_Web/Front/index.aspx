@@ -59,12 +59,12 @@
             <div class="ck-slidebox">
                 <div class="slideWrap">
                     <ul class="dot-wrap">
-                        <asp:Repeater ID="rptDot" runat="server" DataSourceID="sdcBanner"> 
+                        <asp:Repeater ID="rptDot" runat="server" DataSourceID="sdcBanner">
                             <ItemTemplate>
                                 <li class="<%# (Container.ItemIndex)==0?"current":"" %>"><em><%#Eval("rowId") %></em></li>
                             </ItemTemplate>
                         </asp:Repeater>
-                    <%--    <li class="current"><em>1</em></li>
+                        <%--    <li class="current"><em>1</em></li>
                         <li><em>2</em></li>
                         <li><em>3</em></li>
                         <li><em>4</em></li>
@@ -81,84 +81,107 @@
             </div>
             <div class="product_nav">
                 <div class="product_w">
-                    <div class="product_array">
+                    <asp:Repeater ID="rptProductCategory" runat="server" DataSourceID="sdcProductCategory">
+                        <ItemTemplate>
+                            <div class="product_array">
+                                <div class="product_name"><%#Eval("categoryName") %></div>
+                                <div class="product_img">
+                                    <asp:Image ID="imgProduct" runat="server" ImageUrl='<%#Eval("imageURL") %>' />
+                                </div>
+                            </div>
+                        </ItemTemplate>
+                    </asp:Repeater>
+                    <asp:SqlDataSource ID="sdcProductCategory" runat="server" ConnectionString="<%$ ConnectionStrings:HZCGZMConnectionString %>" SelectCommand="SELECT tbCategory.categoryId, tbCategory.categoryName,tbImage.imageURL FROM tbCategory INNER JOIN tbImage ON tbCategory.categoryId = tbImage.bindId WHERE (tbCategory.categoryState = '1') AND (tbCategory.categoryType = '1') AND (tbImage.imageState = '1') AND (tbImage.imageType = '4')"></asp:SqlDataSource>
+                  <%--  <div class="product_array">
+                        <div class="product_name">123</div>
                         <div class="product_img">
                             <img src="Image/sinaminiblog.gif" />
                         </div>
                     </div>
 
                     <div class="product_array">
+                        <div class="product_name">123</div>
                         <div class="product_img">
                             <img src="Image/kaixin001.gif" />
                         </div>
                     </div>
 
                     <div class="product_array">
+                        <div class="product_name">123</div>
                         <div class="product_img">
                             <img src="Image/renren.gif" />
                         </div>
                     </div>
 
                     <div class="product_array">
+                        <div class="product_name">123</div>
                         <div class="product_img">
                             <img src="Image/baiducang.gif" />
                         </div>
                     </div>
 
                     <div class="product_array">
+                        <div class="product_name">123</div>
                         <div class="product_img">
                             <img src="Image/qq.gif" />
                         </div>
                     </div>
 
                     <div class="product_array">
+                        <div class="product_name">123</div>
                         <div class="product_img">
                             <img src="Image/qqshuqian.gif" />
                         </div>
                     </div>
 
                     <div class="product_array">
+                        <div class="product_name">123</div>
                         <div class="product_img">
                             <img src="Image/qqzone.gif" />
                         </div>
                     </div>
 
                     <div class="product_array">
+                        <div class="product_name">123</div>
                         <div class="product_img">
                             <img src="Image/sinavivi.gif" />
                         </div>
                     </div>
 
                     <div class="product_array">
+                        <div class="product_name">123</div>
                         <div class="product_img">
                             <img src="Image/sohubai.gif" />
                         </div>
                     </div>
 
                     <div class="product_array">
+                        <div class="product_name">123</div>
                         <div class="product_img">
                             <img src="Image/douban.gif" />
                         </div>
                     </div>
 
                     <div class="product_array">
+                        <div class="product_name">123</div>
                         <div class="product_img">
                             <img src="Image/zhuaxia.gif" />
                         </div>
                     </div>
 
                     <div class="product_array">
+                        <div class="product_name">123</div>
                         <div class="product_img">
                             <img src="Image/gmail.gif" />
                         </div>
                     </div>
 
                     <div class="product_array">
+                        <div class="product_name">123</div>
                         <div class="product_img">
                             <img src="Image/delicious.gif" />
                         </div>
-                    </div>
-
+                    </div>--%>
                 </div>
             </div>
             <div class="img_r">
@@ -171,7 +194,8 @@
             <p>联系我们</p>
             <img src="Image/1.jpg" />
             <div>
-                <a href="contact.aspx"><img src="Image/triangle_right_orange.png" /></a>
+                <a href="contact.aspx">
+                    <img src="Image/triangle_right_orange.png" /></a>
                 <a href="contact.aspx">more</a>
             </div>
         </div>
@@ -179,7 +203,8 @@
             <p>产品册</p>
             <img src="Image/1.jpg" />
             <div>
-                <a href="product.aspx"><img src="Image/triangle_right_orange.png" /></a>
+                <a href="product.aspx">
+                    <img src="Image/triangle_right_orange.png" /></a>
                 <a href="product.aspx">more</a>
             </div>
 
@@ -188,7 +213,8 @@
             <p>新闻资讯</p>
             <img src="Image/1.jpg" />
             <div>
-                <a href="news.aspx"><img src="Image/triangle_right_orange.png" /></a>
+                <a href="news.aspx">
+                    <img src="Image/triangle_right_orange.png" /></a>
                 <a href="news.aspx">more</a>
             </div>
         </div>

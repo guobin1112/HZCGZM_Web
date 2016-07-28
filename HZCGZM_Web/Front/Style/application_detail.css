@@ -1,0 +1,46 @@
+﻿.application_top ul {
+    width: 780px;
+    overflow: hidden;
+}
+
+    .application_top ul li {
+        text-align: center;
+        height: 40px;
+        line-height: 40px;
+        width: 78px;
+        float: left;
+        background: #666;
+        color: #fff;
+    }
+
+        .application_top ul li.current {
+            background: #ff7f00;
+        }
+
+        .application_top ul li a {
+            height: 40px;
+            width: 78px;
+            line-height: 40px;
+            color: #fff;
+            display: inline-block;
+        }
+
+.location {
+    height: 40px;
+    border-bottom: 1px dashed #ff7f00;
+    margin-bottom: 10px;
+    line-height: 40px;
+}
+
+#applicationType {
+    color: #ff7f00;
+    font-size: 16px;
+}
+.application_detail{
+    margin-top:20px;
+}
+.application_detail img{
+    width:300px;
+    height:200px;
+    margin-right:50px;
+}

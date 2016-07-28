@@ -25,9 +25,6 @@
                         </li>
                     </ItemTemplate>
                 </asp:Repeater>
-                <%--<li>应用类型1<img src="Image/triangle_right_orange.png" /></li>
-                <li>应用类型2<img src="Image/triangle_right_orange.png" /></li>
-                <li>应用类型3<img src="Image/triangle_right_orange.png" /></li>--%>
             </ul>
             <asp:SqlDataSource ID="sdcApplicationCategory" runat="server" ConnectionString="<%$ ConnectionStrings:HZCGZMConnectionString %>" SelectCommand="SELECT [categoryId], [categoryName] FROM [tbCategory] WHERE (([categoryState] = @categoryState) AND ([categoryType] = @categoryType))">
                 <SelectParameters>

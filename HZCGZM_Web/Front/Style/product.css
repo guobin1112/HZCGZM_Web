@@ -8,3 +8,40 @@
     padding:10px;
     height:880px;
 }
+.nav_left ul li{
+    height:auto;
+}
+
+.nav_left ul li ul li{
+    height:30px;
+    line-height:30px;
+}
+
+ .product_list ul li {
+        padding: 9px;
+        width: 160px;
+        margin-right: 20px;
+        border: 1px solid #cccccc;
+        float: left;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+        .product_list ul li:nth-child(4n) {
+            margin-right: 0;
+        }
+
+        .product_list ul li span {
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .product_list ul li > img {
+            width: 160px;
+            height: 160px;
+        }
+
+    .product_list a {
+        text-decoration: none;
+        color: #ff7f00;
+    }

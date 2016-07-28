@@ -24,7 +24,21 @@
             </div>
             <div class="download_list">
                 <ul>
-                    <li>
+                    <asp:Repeater ID="rptDownload" runat="server" DataSourceID="sdcDownload">
+                        <ItemTemplate>
+                            <li>
+                                <asp:Image ID="imgPdf" runat="server" ImageUrl='<%#Eval("imageURL") %>' />
+                                <p class="download_title"><%#Eval("pdfName") %></p>
+                                <a href='<%#Eval("pdfURL") %>'>点击下载 
+                            <img src="Image/triangle_right_orange.png" /></a>
+                            </li>
+                        </ItemTemplate>
+                    </asp:Repeater>
+                    <asp:SqlDataSource ID="sdcDownload" runat="server" ConnectionString="<%$ ConnectionStrings:HZCGZMConnectionString %>" SelectCommand="SELECT     dbo.tbPdf.pdfId, dbo.tbImage.imageURL,dbo.tbPdf.pdfName, dbo.tbPdf.pdfURL
+FROM         dbo.tbImage INNER JOIN
+                      dbo.tbPdf ON dbo.tbImage.bindId = dbo.tbPdf.pdfId
+WHERE   dbo.tbImage.imageState='1' and dbo.tbPdf.pdfState='1' and dbo.tbImage.imageType='5'"></asp:SqlDataSource>
+                   <%-- <li>
                         <img src="Image/1.jpg" />
                         <p class="download_title">标题名称</p>
                         <a href="#">点击下载 
@@ -101,7 +115,7 @@
                         <p class="download_title">标题名称</p>
                         <a href="#">点击下载 
                             <img src="Image/triangle_right_orange.png" /></a>
-                    </li>
+                    </li>--%>
                 </ul>
             </div>
         </div>
