@@ -1,47 +1,85 @@
 ﻿.product_top {
     padding: 10px;
     border-bottom: 1px solid #ff7f00;
-    height:20px;
+    height: 20px;
 }
 
-.product_list{
-    padding:10px;
-    height:880px;
-}
-.nav_left ul li{
-    height:auto;
+.product_list {
+    padding: 10px;
+    height: 880px;
 }
 
-.nav_left ul li ul li{
-    height:30px;
-    line-height:30px;
+.nav_left ul li {
+    height: auto;
 }
 
- .product_list ul li {
-        padding: 9px;
+    .nav_left ul li ul li {
+        height: 30px;
+        line-height: 30px;
+    }
+
+.product_list ul li {
+    padding: 9px;
+    width: 160px;
+    margin-right: 10px;
+    border: 1px solid #cccccc;
+    float: left;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+    .product_list ul li:nth-child(4n) {
+        margin-right: 0;
+    }
+
+    .product_list ul li span {
+        text-align: center;
+    }
+
+    .product_list ul li a img {
         width: 160px;
-        margin-right: 20px;
-        border: 1px solid #cccccc;
-        float: left;
-        margin-top: 10px;
-        margin-bottom: 10px;
+        height: 160px;
     }
 
-        .product_list ul li:nth-child(4n) {
-            margin-right: 0;
-        }
-
-        .product_list ul li span {
-            font-weight: 600;
-            text-align: center;
-        }
-
-        .product_list ul li > img {
-            width: 160px;
-            height: 160px;
-        }
-
-    .product_list a {
-        text-decoration: none;
-        color: #ff7f00;
+    .product_list ul li a span {
+        color: #333333;
     }
+
+
+.product_list a {
+    text-decoration: none;
+    color: #ff7f00;
+}
+
+.product_detail {
+    height: 1200px;
+}
+
+    .product_detail .left {
+        display: inline;
+        width: 600px;
+    }
+
+    .product_detail .right {
+        display: inline;
+        width: 330px;
+        margin-left: 30px;
+        margin-top: 30px;
+    }
+
+.product_name {
+    height: 50px;
+    font-size: 20px;
+    font-weight: 800;
+    text-align: center;
+    line-height: 50px;
+}
+
+.product_content {
+    clear: both;
+    padding: 10px;
+}
+
+div#divProductContentHtmlStr {
+   
+}

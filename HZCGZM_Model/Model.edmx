@@ -63,8 +63,9 @@
           </Key>
           <Property Name="productId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="productName" Type="nvarchar" MaxLength="100" Nullable="false" />
-          <Property Name="productCategory" Type="int" Nullable="false" />
-          <Property Name="productSubcategory" Type="int" Nullable="false" />
+          <Property Name="productNumber" Type="nchar" MaxLength="100" Nullable="false" />
+          <Property Name="productCategoryId" Type="int" Nullable="false" />
+          <Property Name="productSubcategoryId" Type="int" Nullable="false" />
           <Property Name="productDetailHtmlString" Type="nvarchar(max)" />
           <Property Name="productState" Type="int" Nullable="false" />
         </EntityType>
@@ -146,8 +147,9 @@
           </Key>
           <Property Name="productId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="productName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
-          <Property Name="productCategory" Type="Int32" Nullable="false" />
-          <Property Name="productSubcategory" Type="Int32" Nullable="false" />
+          <Property Name="productNumber" Type="String" Nullable="false" MaxLength="100" FixedLength="true" Unicode="true" />
+          <Property Name="productCategoryId" Type="Int32" Nullable="false" />
+          <Property Name="productSubcategoryId" Type="Int32" Nullable="false" />
           <Property Name="productDetailHtmlString" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="productState" Type="Int32" Nullable="false" />
         </EntityType>
@@ -219,8 +221,9 @@
               <MappingFragment StoreEntitySet="tbProduct">
                 <ScalarProperty Name="productState" ColumnName="productState" />
                 <ScalarProperty Name="productDetailHtmlString" ColumnName="productDetailHtmlString" />
-                <ScalarProperty Name="productSubcategory" ColumnName="productSubcategory" />
-                <ScalarProperty Name="productCategory" ColumnName="productCategory" />
+                <ScalarProperty Name="productSubcategoryId" ColumnName="productSubcategoryId" />
+                <ScalarProperty Name="productCategoryId" ColumnName="productCategoryId" />
+                <ScalarProperty Name="productNumber" ColumnName="productNumber" />
                 <ScalarProperty Name="productName" ColumnName="productName" />
                 <ScalarProperty Name="productId" ColumnName="productId" />
               </MappingFragment>

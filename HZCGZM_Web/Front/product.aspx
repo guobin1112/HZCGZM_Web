@@ -6,20 +6,35 @@
     <link href="Style/product.css" rel="stylesheet" />
 </asp:Content>
 <asp:Content ID="content_product" ContentPlaceHolderID="content" runat="server">
-        <div class="content">
+    <div class="content">
         <div class="left nav_left">
             <div class="top">
                 产品中心
             </div>
             <ul>
-               <%-- <asp:Repeater ID="rptProductCatefory" runat="server">
+                <asp:Repeater ID="rptProductCategory" runat="server" OnItemDataBound="rptProductCategory_ItemDataBound">
                     <ItemTemplate>
-                        <li  id='<%#Eval("categoryId") %>' >
-                            <a href='product.aspx?type=<%#Eval("categoryId") %>'><%#Eval("categoryName") %><img src="Image/triangle_right_orange.png" /></a>
+
+                        <li>
+                            <asp:LinkButton ID="lkbProductCategory" runat="server" OnClick="lkbProductCategory_Click" Text='<%#Eval("categoryName") %>'>
+                                <img src="Image/triangle_right_orange.png" /></asp:LinkButton>
+                            <asp:HiddenField ID="hfCategoryId" runat="server" Value='<%#Eval("categoryId") %>' />
+                            <%-- <a href='product.aspx?type=<%#Eval("categoryId") %>'><%#Eval("categoryName") %><img src="Image/triangle_right_orange.png" /></a>--%>
+                            <ul>
+                                <asp:Repeater ID="rptProductSubcategory" runat="server">
+                                    <ItemTemplate>
+                                        <li>
+                                            <asp:LinkButton ID="lkbProductSubcategory" runat="server" OnClick="lkbProductSubcategory_Click" Text='<%#Eval("categoryName") %>'>
+                                <img src="Image/triangle_right_orange.png" /></asp:LinkButton>
+                                            <asp:HiddenField ID="hfSubategoryId" runat="server" Value='<%#Eval("categoryId") %>' />
+                                        </li>
+                                    </ItemTemplate>
+                                </asp:Repeater>
+                            </ul>
                         </li>
                     </ItemTemplate>
-                </asp:Repeater>--%>
-                <li>产品类型1<img src="Image/triangle_right_orange.png" />
+                </asp:Repeater>
+                <%--                <li>产品类型1<img src="Image/triangle_right_orange.png" />
                     <ul>
                         <li>
                             子产品
@@ -30,7 +45,7 @@
                     </ul>
                 </li>
                 <li>产品类型2<img src="Image/triangle_right_orange.png" /></li>
-                <li>产品类型3<img src="Image/triangle_right_orange.png" /></li>
+                <li>产品类型3<img src="Image/triangle_right_orange.png" /></li>--%>
             </ul>
 
         </div>
@@ -43,50 +58,66 @@
             <div class="product_list">
 
                 <ul>
-                      <li>
+                    <asp:Repeater ID="rptProduct" runat="server">
+                        <ItemTemplate>
+                            <li>
+                                <a href='product_detail.aspx?id=<%#Eval("productId") %>'>
+                                    <asp:Image ID="imgProduct" runat="server" ImageUrl='<%#Eval("imageURL") %>' />
+                                <span><%#Eval("productName") %></span>
+                                </a>
+                            </li>
+                        </ItemTemplate>
+                    </asp:Repeater>
+                    <%--<li>
                         <img src="Image/1.jpg" />
                         <span class="application_title">标题名称</span>
                         <hr />
                         <p>内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介</p>
-                        <a href="#">查看更多  <img src="Image/triangle_right_orange.png" /></a>
-                    </li>
-                   <li>
-                        <img src="Image/1.jpg" />
-                        <span class="application_title">标题名称</span>
-                        <hr />
-                        <p>内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介</p>
-                        <a href="#">查看更多  <img src="Image/triangle_right_orange.png" /></a>
-                    </li>
-                    <li>
-                        <img src="Image/1.jpg" />
-                        <span class="application_title">标题名称</span>
-                        <hr />
-                        <p>内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介</p>
-                        <a href="#">查看更多  <img src="Image/triangle_right_orange.png" /></a>
+                        <a href="#">查看更多 
+                            <img src="Image/triangle_right_orange.png" /></a>
                     </li>
                     <li>
                         <img src="Image/1.jpg" />
                         <span class="application_title">标题名称</span>
                         <hr />
                         <p>内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介</p>
-                        <a href="#">查看更多  <img src="Image/triangle_right_orange.png" /></a>
+                        <a href="#">查看更多 
+                            <img src="Image/triangle_right_orange.png" /></a>
                     </li>
                     <li>
                         <img src="Image/1.jpg" />
                         <span class="application_title">标题名称</span>
                         <hr />
                         <p>内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介</p>
-                        <a href="#">查看更多  <img src="Image/triangle_right_orange.png" /></a>
+                        <a href="#">查看更多 
+                            <img src="Image/triangle_right_orange.png" /></a>
                     </li>
                     <li>
                         <img src="Image/1.jpg" />
                         <span class="application_title">标题名称</span>
                         <hr />
                         <p>内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介</p>
-                        <a href="#">查看更多  <img src="Image/triangle_right_orange.png" /></a>
+                        <a href="#">查看更多 
+                            <img src="Image/triangle_right_orange.png" /></a>
                     </li>
+                    <li>
+                        <img src="Image/1.jpg" />
+                        <span class="application_title">标题名称</span>
+                        <hr />
+                        <p>内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介</p>
+                        <a href="#">查看更多 
+                            <img src="Image/triangle_right_orange.png" /></a>
+                    </li>
+                    <li>
+                        <img src="Image/1.jpg" />
+                        <span class="application_title">标题名称</span>
+                        <hr />
+                        <p>内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介</p>
+                        <a href="#">查看更多 
+                            <img src="Image/triangle_right_orange.png" /></a>
+                    </li>--%>
                 </ul>
-                
+
             </div>
             <div class="page">
                 <ul>

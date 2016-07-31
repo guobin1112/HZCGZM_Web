@@ -16,8 +16,9 @@ namespace HZCGZM_Model
     {
         public int productId { get; set; }
         public string productName { get; set; }
-        public int productCategory { get; set; }
-        public int productSubcategory { get; set; }
+        public string productNumber { get; set; }
+        public int productCategoryId { get; set; }
+        public int productSubcategoryId { get; set; }
         public string productDetailHtmlString { get; set; }
         public int productState { get; set; }
     }

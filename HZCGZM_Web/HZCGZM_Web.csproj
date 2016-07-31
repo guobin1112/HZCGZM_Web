@@ -71,8 +71,27 @@
     <Content Include="Front\Image\application_category_3.jpg" />
     <Content Include="Front\Image\application_category_4.jpg" />
     <Content Include="Front\Image\application_category_5.jpg" />
+    <Content Include="Front\Image\img1.jpg" />
+    <Content Include="Front\Image\img2.jpg" />
+    <Content Include="Front\Image\img3.jpg" />
+    <Content Include="Front\Image\img4.jpg" />
+    <Content Include="Front\Image\img5.jpg" />
+    <Content Include="Front\Image\img6.jpg" />
+    <Content Include="Front\Image\next_off.png" />
+    <Content Include="Front\Image\next_page.png" />
+    <Content Include="Front\Image\prev_off.png" />
+    <Content Include="Front\Image\prev_page.png" />
+    <Content Include="Front\Image\thum1.jpg" />
+    <Content Include="Front\Image\thum2.jpg" />
+    <Content Include="Front\Image\thum3.jpg" />
+    <Content Include="Front\Image\thum4.jpg" />
+    <Content Include="Front\Image\thum5.jpg" />
+    <Content Include="Front\Image\thum6.jpg" />
     <Content Include="Front\news_detail.aspx" />
+    <Content Include="Front\product_detail.aspx" />
+    <Content Include="Front\Script\jquery.DB_gallery.js" />
     <Content Include="Front\Style\application_detail.css" />
+    <Content Include="Front\Style\DB_gallery.css" />
     <Content Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -199,6 +218,13 @@
     </Compile>
     <Compile Include="Front\product.aspx.designer.cs">
       <DependentUpon>product.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Front\product_detail.aspx.cs">
+      <DependentUpon>product_detail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Front\product_detail.aspx.designer.cs">
+      <DependentUpon>product_detail.aspx</DependentUpon>
     </Compile>
     <Compile Include="Front\support.aspx.cs">
       <DependentUpon>support.aspx</DependentUpon>
