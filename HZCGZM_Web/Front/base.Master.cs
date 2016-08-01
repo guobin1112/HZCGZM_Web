@@ -97,6 +97,18 @@ namespace HZCGZM_Web.Web
 
         }
 
+        protected void btnSearch_Click(object sender, EventArgs e)
+        {
+            if (String.IsNullOrEmpty(tbxSearch.Text))
+            {
+                Response.Write("<script>alert('请输入搜索内容')</script>");
+            }
+            else
+            {
+                Response.Redirect("product.aspx?search=" + tbxSearch.Text);
+            }
+        }
+
 
 
     }

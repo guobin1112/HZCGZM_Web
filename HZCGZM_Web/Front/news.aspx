@@ -13,9 +13,10 @@
             <ul id="ul_news">
                 <asp:Repeater ID="rptNewCategory" runat="server" DataSourceID="sdcNewsCategory">
                     <ItemTemplate>
-                        <li  id='<%#Eval("categoryId") %>' >
-                            <a href='news.aspx?type=<%#Eval("categoryId") %>'><%#Eval("categoryName") %><img src="Image/triangle_right_orange.png" /></a>
-                        </li>
+                        <li>
+                        <asp:LinkButton ID="lkbCategory" runat="server" OnClick="lkbCategory_Click" Text='<%#Eval("categoryName") %>'><img src="Image/triangle_right_orange.png" /></asp:LinkButton>
+                            <asp:HiddenField ID="hfCategory" runat="server"  Value='<%#Eval("categoryId") %>'/>
+                       </li>
                     </ItemTemplate>
                 </asp:Repeater>
                 <asp:SqlDataSource ID="sdcNewsCategory" runat="server" ConnectionString="<%$ ConnectionStrings:HZCGZMConnectionString %>" SelectCommand="SELECT [categoryId], [categoryName] FROM [tbCategory] WHERE (([categoryState] = @categoryState) AND ([categoryType] = @categoryType))">
@@ -30,7 +31,7 @@
         </div>
         <div class="right content_right">
             <div class="news_top">
-                <span id="newsType" class="left" style="color: #ff7f00"></span>
+                <span id="newsType" class="left" style="color: #ff7f00" runat="server"></span>
                 <asp:Label ID="lblNewContent" runat="server" Text="所在位置：新闻资讯" CssClass="right"></asp:Label>
                 <img src="Image/home.png" class="right" />
             </div>
@@ -51,56 +52,11 @@
                                     <asp:QueryStringParameter Name="newsType" QueryStringField="type" Type="Int32" />
                                 </SelectParameters>
                             </asp:SqlDataSource>
-                            <%--<li>
-                        <span class="left">新闻标题</span><span class="right">[2016/7/20]</span>
-                    </li>
-                    <li>
-                        <span class="left">新闻标题</span><span class="right">[2016/7/20]</span>
-                    </li>
-                    <li>
-                        <span class="left">新闻标题</span><span class="right">[2016/7/20]</span>
-                    </li>
-                    <li>
-                        <span class="left">新闻标题</span><span class="right">[2016/7/20]</span>
-                    </li>
-                    <li>
-                        <span class="left">新闻标题</span><span class="right">[2016/7/20]</span>
-                    </li>
-                    <li>
-                        <span class="left">新闻标题</span><span class="right">[2016/7/20]</span>
-                    </li>
-                    <li>
-                        <span class="left">新闻标题</span><span class="right">[2016/7/20]</span>
-                    </li>
-                    <li>
-                        <span class="left">新闻标题</span><span class="right">[2016/7/20]</span>
-                    </li>--%>
+
                         </ul>
                     </ContentTemplate>
                 </asp:UpdatePanel>
             </div>
-            <div class="page">
-                <ul>
-                    <li>1</li>
-                    <li>2</li>
-                    <li>3</li>
-                    <li>4</li>
-                    <li>5</li>
-                    <li>6</li>
-                </ul>
-            </div>
         </div>
     </div>
-    <script>
-        $(function () {
-            var type = getQueryString("type");
-            $("#ul_news li").each(function () {
-
-                if(this.id==type){
-                    $(this).addClass("current").siblings().removeClass("current");
-                    $("#newsType").text($(this).children("a").text());
-                }
-            })
-        })
-    </script>
 </asp:Content>

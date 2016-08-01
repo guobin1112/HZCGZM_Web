@@ -12,19 +12,21 @@ namespace HZCGZM_Web.Front
 
     public partial class application_detail : System.Web.UI.Page
     {
-        public string type;
+        tbCategory defaultCategory;
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            //foreach (RepeaterItem item in rptApplicationSubcategory.Items)
-            //{
-            //    ((LinkButton)item.FindControl("lbApplicationCategory")).BackColor = Color.FromArgb(102, 102, 102);
-            //}
+            if (!IsPostBack)
+            {
+                int type = Convert.ToInt32(Request.QueryString["type"]);
 
-            //string firstChooseName = ((LinkButton)(rptApplicationSubcategory.Items[0].FindControl("lbApplicationCategory"))).Text;
+                if (type > 0)
+                {
+                    HZCGZMEntities entity = new HZCGZMEntities();
+                    defaultCategory = entity.tbCategory.Where(m => m.categoryType == (int)CategoryType.SUBAPPLICATION && m.parentId == type).FirstOrDefault();
 
-            //updateDetailInfo(firstChooseName);
-
+                }
+            }
 
         }
 
@@ -56,7 +58,7 @@ namespace HZCGZM_Web.Front
                i.imageURL
            }).FirstOrDefault();
 
-            imgApplication.ImageUrl ="";
+            imgApplication.ImageUrl = "";
             lblApplication.Text = "";
 
             if (applicationDetail != null)
@@ -64,6 +66,31 @@ namespace HZCGZM_Web.Front
                 imgApplication.ImageUrl = applicationDetail.imageURL;
                 lblApplication.Text = applicationDetail.categoryInfo;
             }
+        }
+
+        protected void rptApplicationSubcategory_ItemDataBound(object sender, RepeaterItemEventArgs e)
+        {
+
+            if (defaultCategory != null)
+            {
+                if (e.Item.ItemType == ListItemType.Item || e.Item.ItemType == ListItemType.AlternatingItem)
+                {
+                   
+                        LinkButton lb = ((LinkButton)e.Item.FindControl("lbApplicationCategory"));
+                        if (lb.Text == defaultCategory.categoryName)
+                        {
+                            lb.BackColor = Color.FromArgb(255, 127, 0);
+                            updateDetailInfo(defaultCategory.categoryName);
+                        }
+                        else
+                        {
+                            lb.BackColor = Color.FromArgb(102, 102, 102);
+                        }
+
+                }
+
+            }
+
         }
     }
 }

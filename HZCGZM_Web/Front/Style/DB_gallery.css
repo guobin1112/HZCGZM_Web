@@ -18,4 +18,4 @@ body{font:12px/180% Arial, Helvetica, sans-serif, "新宋体";}
 #DB_gallery .DB_thumSet .DB_thumMove li{display:inline;margin-right:8px}
 #DB_gallery .DB_thumSet .DB_prevPageBtn{position:absolute;top:0;cursor:pointer;left:0;}
 #DB_gallery .DB_thumSet .DB_nextPageBtn{position:absolute;top:0;cursor:pointer;right:0;}
-#DB_gallery .DB_thumSet .DB_thumLine{position:absolute;width:100px;height:63px;border:5px solid #ff0000;left:0;top:0}
+#DB_gallery .DB_thumSet .DB_thumLine{position:absolute;width:100px;height:63px;border:5px solid #ff7f00;left:0;top:0}

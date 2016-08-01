@@ -14,7 +14,7 @@
                 <asp:Repeater ID="rptBanner" runat="server" DataSourceID="sdcBanner">
                     <ItemTemplate>
                         <li>
-                            <a href='<%#Eval("bannerActionURL") %>'>
+                            <a href='<%#Eval("bannerActionURL").ToString() %>'>
                                 <asp:Image ID="img_banner" runat="server" ImageUrl='<%#Eval("imageURL") %>' />
                             </a>
                         </li>
@@ -86,13 +86,15 @@
                             <div class="product_array">
                                 <div class="product_name"><%#Eval("categoryName") %></div>
                                 <div class="product_img">
-                                    <asp:Image ID="imgProduct" runat="server" ImageUrl='<%#Eval("imageURL") %>' />
+                                    <a href='product.aspx?type=<%#Eval("categoryId") %>'>
+                                        <asp:Image ID="imgProduct" runat="server" ImageUrl='<%#Eval("imageURL") %>' />
+                                    </a>
                                 </div>
                             </div>
                         </ItemTemplate>
                     </asp:Repeater>
                     <asp:SqlDataSource ID="sdcProductCategory" runat="server" ConnectionString="<%$ ConnectionStrings:HZCGZMConnectionString %>" SelectCommand="SELECT tbCategory.categoryId, tbCategory.categoryName,tbImage.imageURL FROM tbCategory INNER JOIN tbImage ON tbCategory.categoryId = tbImage.bindId WHERE (tbCategory.categoryState = '1') AND (tbCategory.categoryType = '1') AND (tbImage.imageState = '1') AND (tbImage.imageType = '4')"></asp:SqlDataSource>
-                  <%--  <div class="product_array">
+                    <%--  <div class="product_array">
                         <div class="product_name">123</div>
                         <div class="product_img">
                             <img src="Image/sinaminiblog.gif" />

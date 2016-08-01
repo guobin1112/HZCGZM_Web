@@ -36,7 +36,7 @@
                 <ul>
                     <li>应用领域 >
                     </li>
-                    <asp:Repeater ID="rptApplicationSubcategory" runat="server" DataSourceID="sdcApplicationSubcategory">
+                    <asp:Repeater ID="rptApplicationSubcategory" runat="server" DataSourceID="sdcApplicationSubcategory" OnItemDataBound="rptApplicationSubcategory_ItemDataBound">
                         <ItemTemplate>
                             <li>
                                 <asp:LinkButton ID="lbApplicationCategory" runat="server" OnClick="lbApplicationCategory_Click" Text='<%#Eval("categoryName")  %>'></asp:LinkButton>

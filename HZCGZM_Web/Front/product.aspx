@@ -119,7 +119,7 @@
                 </ul>
 
             </div>
-            <div class="page">
+            <div id="divPageBox" class="page" runat="server">
                 <ul>
                     <li>1</li>
                     <li>2</li>

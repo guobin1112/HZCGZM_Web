@@ -11,7 +11,6 @@
 
     $left.click(function () {
         if (lc < 1) {
-            alert("已经是第一张图片");
             return;
         }
         lc--;
@@ -21,7 +20,6 @@
 
     $right.click(function () {
         if (rc < 1) {
-            alert("已经是最后一张图片");
             return;
         }
         lc++;

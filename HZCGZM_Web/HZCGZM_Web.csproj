@@ -93,6 +93,7 @@
     <Content Include="Front\Style\application_detail.css" />
     <Content Include="Front\Style\DB_gallery.css" />
     <Content Include="packages.config" />
+    <None Include="Properties\PublishProfiles\HZCGZM.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -244,6 +245,7 @@
     <Compile Include="Front\base.Master.designer.cs">
       <DependentUpon>base.Master</DependentUpon>
     </Compile>
+    <Compile Include="Utility.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
