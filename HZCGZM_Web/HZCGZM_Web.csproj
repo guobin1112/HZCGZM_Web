@@ -66,6 +66,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Backup\Login.aspx" />
     <Content Include="Front\Image\application_category_1.jpg" />
     <Content Include="Front\Image\application_category_2.jpg" />
     <Content Include="Front\Image\application_category_3.jpg" />
@@ -77,6 +78,7 @@
     <Content Include="Front\Image\img4.jpg" />
     <Content Include="Front\Image\img5.jpg" />
     <Content Include="Front\Image\img6.jpg" />
+    <Content Include="Front\Image\map.jpg" />
     <Content Include="Front\Image\next_off.png" />
     <Content Include="Front\Image\next_page.png" />
     <Content Include="Front\Image\prev_off.png" />
@@ -90,6 +92,7 @@
     <Content Include="Front\news_detail.aspx" />
     <Content Include="Front\product_detail.aspx" />
     <Content Include="Front\Script\jquery.DB_gallery.js" />
+    <Content Include="Front\Style\contact.css" />
     <Content Include="Front\Style\application_detail.css" />
     <Content Include="Front\Style\DB_gallery.css" />
     <Content Include="packages.config" />
@@ -157,6 +160,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Backup\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Backup\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Front\about.aspx.cs">
       <DependentUpon>about.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -249,7 +259,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Backup\" />
     <Folder Include="Model\" />
   </ItemGroup>
   <ItemGroup>

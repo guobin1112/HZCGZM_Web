@@ -198,7 +198,7 @@
             <div>
                 <a href="contact.aspx">
                     <img src="Image/triangle_right_orange.png" /></a>
-                <a href="contact.aspx">more</a>
+                <a href="contact.aspx">更多</a>
             </div>
         </div>
         <div class="product">
@@ -207,7 +207,7 @@
             <div>
                 <a href="product.aspx">
                     <img src="Image/triangle_right_orange.png" /></a>
-                <a href="product.aspx">more</a>
+                <a href="product.aspx">更多</a>
             </div>
 
         </div>
@@ -217,7 +217,7 @@
             <div>
                 <a href="news.aspx">
                     <img src="Image/triangle_right_orange.png" /></a>
-                <a href="news.aspx">more</a>
+                <a href="news.aspx">更多</a>
             </div>
         </div>
     </div>

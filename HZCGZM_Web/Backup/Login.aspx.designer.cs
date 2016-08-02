@@ -7,30 +7,27 @@
 // </自动生成>
 //------------------------------------------------------------------------------
 
-namespace HZCGZM_Web.Front {
+namespace HZCGZM_Web.Backup {
     
     
-    public partial class contact {
+    public partial class Login {
         
         /// <summary>
-        /// lblNav 控件。
+        /// form1 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblNav;
+        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// Master 属性。
+        /// loginBox 控件。
         /// </summary>
         /// <remarks>
-        /// 自动生成的属性。
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        public new HZCGZM_Web.Web.web Master {
-            get {
-                return ((HZCGZM_Web.Web.web)(base.Master));
-            }
-        }
+        protected global::System.Web.UI.WebControls.Login loginBox;
     }
 }
