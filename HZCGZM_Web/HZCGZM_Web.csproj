@@ -66,29 +66,126 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Backup\Login.aspx" />
+    <Content Include="Backup\banner_detail.aspx" />
+    <Content Include="Backup\banner_list.aspx" />
+    <Content Include="Backup\css\bootstrap.css" />
+    <Content Include="Backup\css\css.css" />
+    <Content Include="Backup\img\171.png" />
+    <Content Include="Backup\img\20150212154319.jpg" />
+    <Content Include="Backup\img\glyphicons-halflings-white.png" />
+    <Content Include="Backup\img\glyphicons-halflings.png" />
+    <Content Include="Backup\img\input_icon_1.png" />
+    <Content Include="Backup\img\input_icon_2.png" />
+    <Content Include="Backup\img\left.png" />
+    <Content Include="Backup\img\left2.png" />
+    <Content Include="Backup\img\left_bg.png" />
+    <Content Include="Backup\img\logo.png" />
+    <Content Include="Backup\img\select.png" />
+    <Content Include="Backup\img\Switch.png" />
+    <Content Include="Backup\img\Switch2.png" />
+    <Content Include="Backup\img\tit.png" />
+    <Content Include="Backup\img\top.png" />
+    <Content Include="Backup\index.aspx" />
+    <Content Include="Backup\js\bootstrap.min.js" />
+    <Content Include="Backup\js\jquery1.9.0.min.js" />
+    <Content Include="Backup\js\laydate\laydate.js" />
+    <Content Include="Backup\js\laydate\need\laydate.css" />
+    <Content Include="Backup\js\laydate\skins\dahong\icon.png" />
+    <Content Include="Backup\js\laydate\skins\dahong\laydate.css" />
+    <Content Include="Backup\js\laydate\skins\danlan\icon.png" />
+    <Content Include="Backup\js\laydate\skins\danlan\laydate.css" />
+    <Content Include="Backup\js\laydate\skins\default\icon.png" />
+    <Content Include="Backup\js\laydate\skins\default\laydate.css" />
+    <Content Include="Backup\js\laydate\skins\molv\icon.png" />
+    <Content Include="Backup\js\laydate\skins\molv\laydate.css" />
+    <Content Include="Backup\js\laydate\skins\qianhuang\icon.png" />
+    <Content Include="Backup\js\laydate\skins\qianhuang\laydate.css" />
+    <Content Include="Backup\js\laydate\skins\yahui\icon.png" />
+    <Content Include="Backup\js\laydate\skins\yahui\laydate.css" />
+    <Content Include="Backup\js\laydate\skins\yalan\icon.png" />
+    <Content Include="Backup\js\laydate\skins\yalan\laydate.css" />
+    <Content Include="Backup\js\sdmenu.js" />
+    <Content Include="Backup\js\说明.txt" />
+    <Content Include="Backup\login.aspx" />
+    <Content Include="Backup\分理处发货排行榜.html" />
+    <Content Include="Backup\客户投诉.html" />
+    <Content Include="Backup\开票界面.html" />
+    <Content Include="Backup\查询页面.html" />
+    <Content Include="Backup\登录.html" />
+    <Content Include="Backup\线路管理.html" />
+    <Content Include="Front\Image\1.jpg" />
+    <Content Include="Front\Image\2.jpg" />
+    <Content Include="Front\Image\3.jpg" />
+    <Content Include="Front\Image\4.jpg" />
+    <Content Include="Front\Image\5.jpg" />
     <Content Include="Front\Image\application_category_1.jpg" />
     <Content Include="Front\Image\application_category_2.jpg" />
     <Content Include="Front\Image\application_category_3.jpg" />
     <Content Include="Front\Image\application_category_4.jpg" />
     <Content Include="Front\Image\application_category_5.jpg" />
+    <Content Include="Front\Image\arrow_left_gray.png" />
+    <Content Include="Front\Image\arrow_left_orange.png" />
+    <Content Include="Front\Image\arrow_right_gray.png" />
+    <Content Include="Front\Image\arrow_right_orange.png" />
+    <Content Include="Front\Image\baiducang.gif" />
+    <Content Include="Front\Image\delicious.gif" />
+    <Content Include="Front\Image\douban.gif" />
+    <Content Include="Front\Image\gmail.gif" />
+    <Content Include="Front\Image\home.png" />
     <Content Include="Front\Image\img1.jpg" />
     <Content Include="Front\Image\img2.jpg" />
     <Content Include="Front\Image\img3.jpg" />
     <Content Include="Front\Image\img4.jpg" />
     <Content Include="Front\Image\img5.jpg" />
     <Content Include="Front\Image\img6.jpg" />
+    <Content Include="Front\Image\kaixin001.gif" />
+    <Content Include="Front\Image\left.gif" />
+    <Content Include="Front\Image\logo.png" />
     <Content Include="Front\Image\map.jpg" />
     <Content Include="Front\Image\next_off.png" />
     <Content Include="Front\Image\next_page.png" />
     <Content Include="Front\Image\prev_off.png" />
     <Content Include="Front\Image\prev_page.png" />
+    <Content Include="Front\Image\qq.gif" />
+    <Content Include="Front\Image\qqshuqian.gif" />
+    <Content Include="Front\Image\qqzone.gif" />
+    <Content Include="Front\Image\renren.gif" />
+    <Content Include="Front\Image\right.gif" />
+    <Content Include="Front\Image\sinaminiblog.gif" />
+    <Content Include="Front\Image\sinavivi.gif" />
+    <Content Include="Front\Image\sohubai.gif" />
     <Content Include="Front\Image\thum1.jpg" />
     <Content Include="Front\Image\thum2.jpg" />
     <Content Include="Front\Image\thum3.jpg" />
     <Content Include="Front\Image\thum4.jpg" />
     <Content Include="Front\Image\thum5.jpg" />
     <Content Include="Front\Image\thum6.jpg" />
+    <Content Include="Front\Image\triangle_down_orange.png" />
+    <Content Include="Front\Image\triangle_right_orange.png" />
+    <Content Include="Front\Image\vote.gif" />
+    <Content Include="Front\Image\zhuaxia.gif" />
+    <Content Include="Image\application_category_1.jpg" />
+    <Content Include="Image\application_category_2.jpg" />
+    <Content Include="Image\application_category_3.jpg" />
+    <Content Include="Image\application_category_4.jpg" />
+    <Content Include="Image\application_category_5.jpg" />
+    <Content Include="Image\img1.jpg" />
+    <Content Include="Image\img2.jpg" />
+    <Content Include="Image\img3.jpg" />
+    <Content Include="Image\img4.jpg" />
+    <Content Include="Image\img5.jpg" />
+    <Content Include="Image\img6.jpg" />
+    <Content Include="Image\map.jpg" />
+    <Content Include="Image\next_off.png" />
+    <Content Include="Image\next_page.png" />
+    <Content Include="Image\prev_off.png" />
+    <Content Include="Image\prev_page.png" />
+    <Content Include="Image\thum1.jpg" />
+    <Content Include="Image\thum2.jpg" />
+    <Content Include="Image\thum3.jpg" />
+    <Content Include="Image\thum4.jpg" />
+    <Content Include="Image\thum5.jpg" />
+    <Content Include="Image\thum6.jpg" />
     <Content Include="Front\news_detail.aspx" />
     <Content Include="Front\product_detail.aspx" />
     <Content Include="Front\Script\jquery.DB_gallery.js" />
@@ -96,6 +193,8 @@
     <Content Include="Front\Style\application_detail.css" />
     <Content Include="Front\Style\DB_gallery.css" />
     <Content Include="packages.config" />
+    <Content Include="Backup\img\thumbs.db" />
+    <Content Include="Backup\base.Master" />
     <None Include="Properties\PublishProfiles\HZCGZM.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -108,36 +207,36 @@
     <Content Include="Front\application_detail.aspx" />
     <Content Include="Front\contact.aspx" />
     <Content Include="Front\download.aspx" />
-    <Content Include="Front\Image\1.jpg" />
-    <Content Include="Front\Image\2.jpg" />
-    <Content Include="Front\Image\3.jpg" />
-    <Content Include="Front\Image\4.jpg" />
-    <Content Include="Front\Image\5.jpg" />
-    <Content Include="Front\Image\home.png" />
-    <Content Include="Front\Image\arrow_left_gray.png" />
-    <Content Include="Front\Image\arrow_left_orange.png" />
-    <Content Include="Front\Image\arrow_right_gray.png" />
-    <Content Include="Front\Image\arrow_right_orange.png" />
-    <Content Include="Front\Image\baiducang.gif" />
-    <Content Include="Front\Image\delicious.gif" />
-    <Content Include="Front\Image\douban.gif" />
-    <Content Include="Front\Image\gmail.gif" />
-    <Content Include="Front\Image\kaixin001.gif" />
-    <Content Include="Front\Image\left.gif" />
-    <Content Include="Front\Image\qq.gif" />
-    <Content Include="Front\Image\qqshuqian.gif" />
-    <Content Include="Front\Image\qqzone.gif" />
-    <Content Include="Front\Image\renren.gif" />
-    <Content Include="Front\Image\right.gif" />
-    <Content Include="Front\Image\sinaminiblog.gif" />
-    <Content Include="Front\Image\sinavivi.gif" />
-    <Content Include="Front\Image\sohubai.gif" />
-    <Content Include="Front\Image\triangle_down_orange.png" />
-    <Content Include="Front\Image\triangle_right_orange.png" />
-    <Content Include="Front\Image\vote.gif" />
-    <Content Include="Front\Image\zhuaxia.gif" />
+    <Content Include="Image\1.jpg" />
+    <Content Include="Image\2.jpg" />
+    <Content Include="Image\3.jpg" />
+    <Content Include="Image\4.jpg" />
+    <Content Include="Image\5.jpg" />
+    <Content Include="Image\home.png" />
+    <Content Include="Image\arrow_left_gray.png" />
+    <Content Include="Image\arrow_left_orange.png" />
+    <Content Include="Image\arrow_right_gray.png" />
+    <Content Include="Image\arrow_right_orange.png" />
+    <Content Include="Image\baiducang.gif" />
+    <Content Include="Image\delicious.gif" />
+    <Content Include="Image\douban.gif" />
+    <Content Include="Image\gmail.gif" />
+    <Content Include="Image\kaixin001.gif" />
+    <Content Include="Image\left.gif" />
+    <Content Include="Image\qq.gif" />
+    <Content Include="Image\qqshuqian.gif" />
+    <Content Include="Image\qqzone.gif" />
+    <Content Include="Image\renren.gif" />
+    <Content Include="Image\right.gif" />
+    <Content Include="Image\sinaminiblog.gif" />
+    <Content Include="Image\sinavivi.gif" />
+    <Content Include="Image\sohubai.gif" />
+    <Content Include="Image\triangle_down_orange.png" />
+    <Content Include="Image\triangle_right_orange.png" />
+    <Content Include="Image\vote.gif" />
+    <Content Include="Image\zhuaxia.gif" />
     <Content Include="Front\index.aspx" />
-    <Content Include="Front\Image\logo.png" />
+    <Content Include="Image\logo.png" />
     <Content Include="Front\base.Master" />
   </ItemGroup>
   <ItemGroup>
@@ -160,12 +259,40 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Backup\Login.aspx.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
+    <Compile Include="Backup\banner_detail.aspx.cs">
+      <DependentUpon>banner_detail.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Backup\Login.aspx.designer.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
+    <Compile Include="Backup\banner_detail.aspx.designer.cs">
+      <DependentUpon>banner_detail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Backup\banner_list.aspx.cs">
+      <DependentUpon>banner_list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Backup\banner_list.aspx.designer.cs">
+      <DependentUpon>banner_list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Backup\index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Backup\index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Backup\login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Backup\login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Backup\base.Master.cs">
+      <DependentUpon>base.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Backup\base.Master.designer.cs">
+      <DependentUpon>base.Master</DependentUpon>
     </Compile>
     <Compile Include="Front\about.aspx.cs">
       <DependentUpon>about.aspx</DependentUpon>
@@ -260,6 +387,9 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Model\" />
+    <Folder Include="upload\201608061105177304\" />
+    <Folder Include="upload\201608061106530623\" />
+    <Folder Include="upload\201608061107077417\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\HZCGZM_Model\HZCGZM_Model.csproj">

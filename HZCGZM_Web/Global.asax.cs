@@ -51,8 +51,15 @@ namespace HZCGZM_Web
 
     public enum ImageType
     {
-        BANNER=1,
-        APPLICATION=2,
-        SUBAPPLICATION=3
+        BANNER = 1,
+        APPLICATION = 2,
+        SUBAPPLICATION = 3
+    }
+
+    public class ActionType
+    {
+        public static string ADD = "add";
+        public static string EDIT = "edit";
+        public static string DELETE = "delete";
     }
 }

@@ -5,12 +5,13 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="af6b491626e543b1b6599792e9ef06df" Name="Diagram1" ZoomLevel="62">
-        <EntityTypeShape EntityType="HZCGZMModel.tbBanner" Width="1.5" PointX="0.75" PointY="0.75" />
-        <EntityTypeShape EntityType="HZCGZMModel.tbCategory" Width="1.5" PointX="2.75" PointY="0.75" />
-        <EntityTypeShape EntityType="HZCGZMModel.tbImage" Width="1.5" PointX="4.75" PointY="0.75" />
-        <EntityTypeShape EntityType="HZCGZMModel.tbNews" Width="1.5" PointX="0.75" PointY="4.75" />
-        <EntityTypeShape EntityType="HZCGZMModel.tbPdf" Width="1.5" PointX="2.75" PointY="4.75" />
-        <EntityTypeShape EntityType="HZCGZMModel.tbProduct" Width="1.5" PointX="4.75" PointY="3.75" />
+        <EntityTypeShape EntityType="HZCGZMModel.tbAdmin" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="HZCGZMModel.tbBanner" Width="1.5" PointX="2.75" PointY="0.75" />
+        <EntityTypeShape EntityType="HZCGZMModel.tbCategory" Width="1.5" PointX="0.75" PointY="3.75" />
+        <EntityTypeShape EntityType="HZCGZMModel.tbImage" Width="1.5" PointX="2.75" PointY="3.75" />
+        <EntityTypeShape EntityType="HZCGZMModel.tbNews" Width="1.5" PointX="4.75" PointY="0.75" />
+        <EntityTypeShape EntityType="HZCGZMModel.tbPdf" Width="1.5" PointX="4.75" PointY="3.75" />
+        <EntityTypeShape EntityType="HZCGZMModel.tbProduct" Width="1.5" PointX="6.75" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

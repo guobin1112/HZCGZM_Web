@@ -106,5 +106,11 @@ namespace HZCGZM_Web
             }
             return pageStr.ToString();
         }
+
+        static public string AlertString(string message)
+        {
+            string result="<script>alert('"+message+"')</script>";
+            return result;
+        }
     }
 }

@@ -5,6 +5,14 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
     <Schema Namespace="HZCGZMModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="tbAdmin">
+          <Key>
+            <PropertyRef Name="adminId" />
+          </Key>
+          <Property Name="adminId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="adminName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="password" Type="nvarchar" MaxLength="255" Nullable="false" />
+        </EntityType>
         <EntityType Name="tbBanner">
           <Key>
             <PropertyRef Name="bannerId" />
@@ -70,6 +78,7 @@
           <Property Name="productState" Type="int" Nullable="false" />
         </EntityType>
         <EntityContainer Name="HZCGZMModelStoreContainer">
+          <EntitySet Name="tbAdmin" EntityType="Self.tbAdmin" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbBanner" EntityType="Self.tbBanner" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbCategory" EntityType="Self.tbCategory" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbImage" EntityType="Self.tbImage" Schema="dbo" store:Type="Tables" />
@@ -82,6 +91,7 @@
     <edmx:ConceptualModels>
       <Schema Namespace="HZCGZMModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityContainer Name="HZCGZMEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="tbAdmin" EntityType="HZCGZMModel.tbAdmin" />
           <EntitySet Name="tbBanner" EntityType="HZCGZMModel.tbBanner" />
           <EntitySet Name="tbCategory" EntityType="HZCGZMModel.tbCategory" />
           <EntitySet Name="tbImage" EntityType="HZCGZMModel.tbImage" />
@@ -89,6 +99,14 @@
           <EntitySet Name="tbPdf" EntityType="HZCGZMModel.tbPdf" />
           <EntitySet Name="tbProduct" EntityType="HZCGZMModel.tbProduct" />
         </EntityContainer>
+        <EntityType Name="tbAdmin">
+          <Key>
+            <PropertyRef Name="adminId" />
+          </Key>
+          <Property Name="adminId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="adminName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="password" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+        </EntityType>
         <EntityType Name="tbBanner">
           <Key>
             <PropertyRef Name="bannerId" />
@@ -159,6 +177,15 @@
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="HZCGZMModelStoreContainer" CdmEntityContainer="HZCGZMEntities">
+          <EntitySetMapping Name="tbAdmin">
+            <EntityTypeMapping TypeName="HZCGZMModel.tbAdmin">
+              <MappingFragment StoreEntitySet="tbAdmin">
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="adminName" ColumnName="adminName" />
+                <ScalarProperty Name="adminId" ColumnName="adminId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="tbBanner">
             <EntityTypeMapping TypeName="HZCGZMModel.tbBanner">
               <MappingFragment StoreEntitySet="tbBanner">

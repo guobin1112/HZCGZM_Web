@@ -25,6 +25,7 @@ namespace HZCGZM_Model
             throw new UnintentionalCodeFirstException();
         }
     
+        public DbSet<tbAdmin> tbAdmin { get; set; }
         public DbSet<tbBanner> tbBanner { get; set; }
         public DbSet<tbCategory> tbCategory { get; set; }
         public DbSet<tbImage> tbImage { get; set; }
