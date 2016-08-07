@@ -68,6 +68,10 @@
   <ItemGroup>
     <Content Include="Backup\banner_detail.aspx" />
     <Content Include="Backup\banner_list.aspx" />
+    <Content Include="Backup\pic_category_detail.aspx" />
+    <Content Include="Backup\pic_category_list.aspx" />
+    <Content Include="Backup\subcategory_list.aspx" />
+    <Content Include="Backup\category_list.aspx" />
     <Content Include="Backup\css\bootstrap.css" />
     <Content Include="Backup\css\css.css" />
     <Content Include="Backup\img\171.png" />
@@ -272,6 +276,34 @@
     </Compile>
     <Compile Include="Backup\banner_list.aspx.designer.cs">
       <DependentUpon>banner_list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Backup\pic_category_detail.aspx.cs">
+      <DependentUpon>pic_category_detail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Backup\pic_category_detail.aspx.designer.cs">
+      <DependentUpon>pic_category_detail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Backup\pic_category_list.aspx.cs">
+      <DependentUpon>pic_category_list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Backup\pic_category_list.aspx.designer.cs">
+      <DependentUpon>pic_category_list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Backup\subcategory_list.aspx.cs">
+      <DependentUpon>subcategory_list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Backup\subcategory_list.aspx.designer.cs">
+      <DependentUpon>subcategory_list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Backup\category_list.aspx.cs">
+      <DependentUpon>category_list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Backup\category_list.aspx.designer.cs">
+      <DependentUpon>category_list.aspx</DependentUpon>
     </Compile>
     <Compile Include="Backup\index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>

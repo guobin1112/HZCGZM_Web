@@ -101,7 +101,7 @@
                 </tr>
                 <tr>
                     <td class="auto-style1">
-                        <asp:TextBox ID="tbUserName" runat="server" CssClass="login_input login_user"></asp:TextBox>
+                        <asp:TextBox ID="tbUserName" runat="server" CssClass="login_input login_user"  Height="26px"></asp:TextBox>
                         </td>
                 </tr>
                 <tr>
@@ -109,7 +109,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <asp:TextBox ID="tbPassword" runat="server" CssClass="login_input login_password" TextMode="Password"></asp:TextBox>
+                        <asp:TextBox ID="tbPassword" runat="server" CssClass="login_input login_password" TextMode="Password"  Height="26px"></asp:TextBox>
                         </td>
                 </tr>
                 <tr>

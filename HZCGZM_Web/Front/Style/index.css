@@ -19,7 +19,7 @@
 .product {
     width: 960px;
     margin: 20px auto 0 auto;
-    height: 282px;
+    height:322px;
     background: #eeeeee;
 }
 
@@ -28,7 +28,7 @@
     padding: 16px;
     width: 200px;
     float: left;
-    height: 200px;
+    height: 240px;
     margin-left: 28px;
     margin-right: 28px;
     background: #ffffff;
@@ -56,14 +56,13 @@
     text-align: center;
     width: 200px;
     display: table-cell;
-    background: #e2e2e2;
-    height: 160px;
+    height: 200px;
     vertical-align: middle;
 }
 
 .product_img img {
     width: 200px;
-    height: 160px;
+    height: 200px;
 }
 
 
@@ -99,7 +98,7 @@
     position: relative;
     width: 868px;
     float: left;
-    height: 282px;
+    height: 322px;
     overflow: hidden;
 }
 

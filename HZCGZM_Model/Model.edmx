@@ -11,14 +11,15 @@
           </Key>
           <Property Name="adminId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="adminName" Type="nvarchar" MaxLength="50" Nullable="false" />
-          <Property Name="password" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="password" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="lastLoginTime" Type="smalldatetime" />
         </EntityType>
         <EntityType Name="tbBanner">
           <Key>
             <PropertyRef Name="bannerId" />
           </Key>
           <Property Name="bannerId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="bannerActionURL" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="bannerActionURL" Type="nvarchar" MaxLength="255" />
           <Property Name="bannerState" Type="int" Nullable="false" />
           <Property Name="bannerType" Type="int" Nullable="false" />
           <Property Name="sortNumber" Type="int" Nullable="false" />
@@ -105,14 +106,15 @@
           </Key>
           <Property Name="adminId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="adminName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="password" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="password" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="lastLoginTime" Type="DateTime" Precision="0" />
         </EntityType>
         <EntityType Name="tbBanner">
           <Key>
             <PropertyRef Name="bannerId" />
           </Key>
           <Property Name="bannerId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="bannerActionURL" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="bannerActionURL" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <Property Name="bannerState" Type="Int32" Nullable="false" />
           <Property Name="bannerType" Type="Int32" Nullable="false" />
           <Property Name="sortNumber" Type="Int32" Nullable="false" />
@@ -180,6 +182,7 @@
           <EntitySetMapping Name="tbAdmin">
             <EntityTypeMapping TypeName="HZCGZMModel.tbAdmin">
               <MappingFragment StoreEntitySet="tbAdmin">
+                <ScalarProperty Name="lastLoginTime" ColumnName="lastLoginTime" />
                 <ScalarProperty Name="password" ColumnName="password" />
                 <ScalarProperty Name="adminName" ColumnName="adminName" />
                 <ScalarProperty Name="adminId" ColumnName="adminId" />

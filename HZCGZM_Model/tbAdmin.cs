@@ -17,5 +17,6 @@ namespace HZCGZM_Model
         public int adminId { get; set; }
         public string adminName { get; set; }
         public string password { get; set; }
+        public Nullable<System.DateTime> lastLoginTime { get; set; }
     }
 }
