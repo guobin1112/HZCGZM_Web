@@ -54,7 +54,10 @@ namespace HZCGZM_Web
         BANNER = 1,
         APPLICATION = 2,
         SUBAPPLICATION = 3,
-        PRODUCT=4
+        PRODUCT=4,
+        DOWNLOAD=5,
+        PRODUCT_DETAIL=6
+
     }
 
     public class ActionType
