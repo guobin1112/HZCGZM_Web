@@ -68,6 +68,9 @@
   <ItemGroup>
     <Content Include="Backup\banner_detail.aspx" />
     <Content Include="Backup\banner_list.aspx" />
+    <Content Include="Backup\download_detail.aspx" />
+    <Content Include="Backup\download_list.aspx" />
+    <Content Include="Backup\news_list.aspx" />
     <Content Include="Backup\pic_category_detail.aspx" />
     <Content Include="Backup\pic_category_list.aspx" />
     <Content Include="Backup\subcategory_list.aspx" />
@@ -276,6 +279,27 @@
     </Compile>
     <Compile Include="Backup\banner_list.aspx.designer.cs">
       <DependentUpon>banner_list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Backup\download_detail.aspx.cs">
+      <DependentUpon>download_detail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Backup\download_detail.aspx.designer.cs">
+      <DependentUpon>download_detail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Backup\download_list.aspx.cs">
+      <DependentUpon>download_list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Backup\download_list.aspx.designer.cs">
+      <DependentUpon>download_list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Backup\news_list.aspx.cs">
+      <DependentUpon>news_list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Backup\news_list.aspx.designer.cs">
+      <DependentUpon>news_list.aspx</DependentUpon>
     </Compile>
     <Compile Include="Backup\pic_category_detail.aspx.cs">
       <DependentUpon>pic_category_detail.aspx</DependentUpon>
