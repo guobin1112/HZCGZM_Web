@@ -28,10 +28,6 @@ namespace HZCGZM_Web
             {
                 return "";
             }
-            if (pageCount <= 1)
-            {
-                return "";
-            }
 
             if (totalCount % pageSize > 0)
             {

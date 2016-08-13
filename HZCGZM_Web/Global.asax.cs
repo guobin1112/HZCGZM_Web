@@ -56,7 +56,8 @@ namespace HZCGZM_Web
         SUBAPPLICATION = 3,
         PRODUCT=4,
         DOWNLOAD=5,
-        PRODUCT_DETAIL=6
+        PRODUCT_FACE=6,
+        PRODUCT_BANNER=7
 
     }
 

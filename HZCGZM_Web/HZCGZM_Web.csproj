@@ -77,6 +77,8 @@
     <Content Include="Backup\news_list.aspx" />
     <Content Include="Backup\pic_category_detail.aspx" />
     <Content Include="Backup\pic_category_list.aspx" />
+    <Content Include="Backup\product_detail.aspx" />
+    <Content Include="Backup\product_list.aspx" />
     <Content Include="Backup\subcategory_list.aspx" />
     <Content Include="Backup\category_list.aspx" />
     <Content Include="Backup\css\bootstrap.css" />
@@ -526,6 +528,20 @@
     </Compile>
     <Compile Include="Backup\pic_category_list.aspx.designer.cs">
       <DependentUpon>pic_category_list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Backup\product_detail.aspx.cs">
+      <DependentUpon>product_detail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Backup\product_detail.aspx.designer.cs">
+      <DependentUpon>product_detail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Backup\product_list.aspx.cs">
+      <DependentUpon>product_list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Backup\product_list.aspx.designer.cs">
+      <DependentUpon>product_list.aspx</DependentUpon>
     </Compile>
     <Compile Include="Backup\subcategory_list.aspx.cs">
       <DependentUpon>subcategory_list.aspx</DependentUpon>
