@@ -9,17 +9,17 @@
     <div class="content">
         <div class="left nav_left">
             <div class="top">
-                下载专区
+                <%=Resources.lang.nav_download%>
             </div>
             <ul>
-                <li>产品<img src="Image/triangle_right_orange.png" /></li>
+                <li><span class="left"><%=Resources.lang.catalog%></span><img src="Image/triangle_right_orange.png" /></li>
             </ul>
 
         </div>
         <div class="right content_right">
             <div class="download_top">
-                <asp:Label ID="lbldownloadType" runat="server" Text="产品" CssClass="left"></asp:Label>
-                <asp:Label ID="lbldownloadContent" runat="server" Text="所在位置：下载专区" CssClass="right"></asp:Label>
+                <span class="left"><%=Resources.lang.catalog%></span>
+                <span class="right"><%=Resources.lang.location%>：<%=Resources.lang.nav_download%></span>
                 <img src="Image/home.png" class="right" />
             </div>
             <div class="download_list">
@@ -29,7 +29,7 @@
                             <li>
                                 <asp:Image ID="imgPdf" runat="server" ImageUrl='<%#Eval("imageURL") %>' />
                                 <p class="download_title"><%#Eval("pdfName") %></p>
-                                <a href='<%#Eval("pdfURL") %>'>点击下载 
+                                <a href='<%#Eval("pdfURL") %>'><%=Resources.lang.download%>
                             <img src="Image/triangle_right_orange.png" /></a>
                             </li>
                         </ItemTemplate>
@@ -38,84 +38,6 @@
 FROM         dbo.tbImage INNER JOIN
                       dbo.tbPdf ON dbo.tbImage.bindId = dbo.tbPdf.pdfId
 WHERE   dbo.tbImage.imageState='1' and dbo.tbPdf.pdfState='1' and dbo.tbImage.imageType='5'"></asp:SqlDataSource>
-                   <%-- <li>
-                        <img src="Image/1.jpg" />
-                        <p class="download_title">标题名称</p>
-                        <a href="#">点击下载 
-                            <img src="Image/triangle_right_orange.png" /></a>
-                    </li>
-                    <li>
-                        <img src="Image/1.jpg" />
-                        <p class="download_title">标题名称</p>
-                        <a href="#">点击下载 
-                            <img src="Image/triangle_right_orange.png" /></a>
-                    </li>
-                    <li>
-                        <img src="Image/1.jpg" />
-                        <p class="download_title">标题名称</p>
-                        <a href="#">点击下载 
-                            <img src="Image/triangle_right_orange.png" /></a>
-                    </li>
-                    <li>
-                        <img src="Image/1.jpg" />
-                        <p class="download_title">标题名称</p>
-                        <a href="#">点击下载 
-                            <img src="Image/triangle_right_orange.png" /></a>
-                    </li>
-                    <li>
-                        <img src="Image/1.jpg" />
-                        <p class="download_title">标题名称</p>
-                        <a href="#">点击下载 
-                            <img src="Image/triangle_right_orange.png" /></a>
-                    </li>
-                    <li>
-                        <img src="Image/1.jpg" />
-                        <p class="download_title">标题名称</p>
-                        <a href="#">点击下载 
-                            <img src="Image/triangle_right_orange.png" /></a>
-                    </li>
-                    <li>
-                        <img src="Image/1.jpg" />
-                        <p class="download_title">标题名称</p>
-                        <a href="#">点击下载 
-                            <img src="Image/triangle_right_orange.png" /></a>
-                    </li>
-                    <li>
-                        <img src="Image/1.jpg" />
-                        <p class="download_title">标题名称</p>
-                        <a href="#">点击下载 
-                            <img src="Image/triangle_right_orange.png" /></a>
-                    </li>
-                    <li>
-                        <img src="Image/1.jpg" />
-                        <p class="download_title">标题名称</p>
-                        <a href="#">点击下载 
-                            <img src="Image/triangle_right_orange.png" /></a>
-                    </li>
-                    <li>
-                        <img src="Image/1.jpg" />
-                        <p class="download_title">标题名称</p>
-                        <a href="#">点击下载 
-                            <img src="Image/triangle_right_orange.png" /></a>
-                    </li>
-                    <li>
-                        <img src="Image/1.jpg" />
-                        <p class="download_title">标题名称</p>
-                        <a href="#">点击下载 
-                            <img src="Image/triangle_right_orange.png" /></a>
-                    </li>
-                    <li>
-                        <img src="Image/1.jpg" />
-                        <p class="download_title">标题名称</p>
-                        <a href="#">点击下载 
-                            <img src="Image/triangle_right_orange.png" /></a>
-                    </li>
-                    <li>
-                        <img src="Image/1.jpg" />
-                        <p class="download_title">标题名称</p>
-                        <a href="#">点击下载 
-                            <img src="Image/triangle_right_orange.png" /></a>
-                    </li>--%>
                 </ul>
             </div>
         </div>

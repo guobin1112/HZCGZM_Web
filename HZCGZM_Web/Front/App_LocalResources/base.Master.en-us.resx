@@ -117,97 +117,76 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="about_us" xml:space="preserve">
-    <value>关于我们</value>
+  <data name="btnSearchResource1.Text" xml:space="preserve">
+    <value>Search</value>
   </data>
-  <data name="address" xml:space="preserve">
-    <value>地址</value>
+  <data name="btnSearchResource1.ToolTip" xml:space="preserve">
+    <value />
   </data>
-  <data name="address_info" xml:space="preserve">
-    <value>浙江省杭州市临安花桥路68号</value>
+  <data name="lkbAboutResource1.Text" xml:space="preserve">
+    <value>&lt;%=Resources.lang.nav_about_us%&gt;</value>
   </data>
-  <data name="all" xml:space="preserve">
-    <value>全部</value>
+  <data name="lkbAboutResource1.ToolTip" xml:space="preserve">
+    <value />
   </data>
-  <data name="catalog" xml:space="preserve">
-    <value>产品册</value>
+  <data name="lkbApplicationResource1.Text" xml:space="preserve">
+    <value>&lt;%=Resources.lang.nav_application%&gt;</value>
   </data>
-  <data name="company_profile" xml:space="preserve">
-    <value>公司简介</value>
+  <data name="lkbApplicationResource1.ToolTip" xml:space="preserve">
+    <value />
   </data>
-  <data name="contact_us" xml:space="preserve">
-    <value>联系我们</value>
+  <data name="lkbChineseResource1.Text" xml:space="preserve">
+    <value>Chinese</value>
   </data>
-  <data name="download" xml:space="preserve">
-    <value>点击下载</value>
+  <data name="lkbChineseResource1.ToolTip" xml:space="preserve">
+    <value />
   </data>
-  <data name="email" xml:space="preserve">
-    <value>邮箱</value>
+  <data name="lkbContactResource1.Text" xml:space="preserve">
+    <value>&lt;%=Resources.lang.nav_contact_us%&gt;</value>
   </data>
-  <data name="fax" xml:space="preserve">
-    <value>传真</value>
+  <data name="lkbContactResource1.ToolTip" xml:space="preserve">
+    <value />
   </data>
-  <data name="location" xml:space="preserve">
-    <value>所在位置</value>
+  <data name="lkbDownloadResource1.Text" xml:space="preserve">
+    <value>&lt;%=Resources.lang.nav_download%&gt;</value>
   </data>
-  <data name="more" xml:space="preserve">
-    <value>更多</value>
+  <data name="lkbDownloadResource1.ToolTip" xml:space="preserve">
+    <value />
   </data>
-  <data name="nav_about_us" xml:space="preserve">
-    <value>关于我们</value>
+  <data name="lkbEnglishResource1.Text" xml:space="preserve">
+    <value>English</value>
   </data>
-  <data name="nav_application" xml:space="preserve">
-    <value>应用领域</value>
+  <data name="lkbEnglishResource1.ToolTip" xml:space="preserve">
+    <value />
   </data>
-  <data name="nav_contact_us" xml:space="preserve">
-    <value>联系我们</value>
+  <data name="lkbMainResource1.Text" xml:space="preserve">
+    <value>&lt;%=Resources.lang.nav_home%&gt;</value>
   </data>
-  <data name="nav_download" xml:space="preserve">
-    <value>下载专区</value>
+  <data name="lkbMainResource1.ToolTip" xml:space="preserve">
+    <value />
   </data>
-  <data name="nav_home" xml:space="preserve">
-    <value>首页</value>
+  <data name="lkbNewsResource1.Text" xml:space="preserve">
+    <value>&lt;%=Resources.lang.nav_news_center%&gt;</value>
   </data>
-  <data name="nav_news_center" xml:space="preserve">
-    <value>新闻资讯</value>
+  <data name="lkbNewsResource1.ToolTip" xml:space="preserve">
+    <value />
   </data>
-  <data name="nav_oem_support" xml:space="preserve">
-    <value>应用支持</value>
+  <data name="lkbProductResource1.Text" xml:space="preserve">
+    <value>&lt;%=Resources.lang.nav_products%&gt;</value>
   </data>
-  <data name="nav_products" xml:space="preserve">
-    <value>产品中心</value>
+  <data name="lkbProductResource1.ToolTip" xml:space="preserve">
+    <value />
   </data>
-  <data name="news_center" xml:space="preserve">
-    <value>新闻资讯</value>
+  <data name="lkbSupportResource1.Text" xml:space="preserve">
+    <value>&lt;%=Resources.lang.nav_oem_support%&gt;</value>
   </data>
-  <data name="oem_support" xml:space="preserve">
-    <value>应用支持</value>
+  <data name="lkbSupportResource1.ToolTip" xml:space="preserve">
+    <value />
   </data>
-  <data name="package_design" xml:space="preserve">
-    <value>包装设计</value>
+  <data name="tbxSearchResource1.Text" xml:space="preserve">
+    <value />
   </data>
-  <data name="phone" xml:space="preserve">
-    <value>电话</value>
-  </data>
-  <data name="post" xml:space="preserve">
-    <value>邮编</value>
-  </data>
-  <data name="producing_process" xml:space="preserve">
-    <value>生产流程</value>
-  </data>
-  <data name="product_detail" xml:space="preserve">
-    <value>产品详情</value>
-  </data>
-  <data name="product_name" xml:space="preserve">
-    <value>产品名称</value>
-  </data>
-  <data name="product_number" xml:space="preserve">
-    <value>产品编号</value>
-  </data>
-  <data name="promotion_material_design" xml:space="preserve">
-    <value>样品设计</value>
-  </data>
-  <data name="search" xml:space="preserve">
-    <value>搜索</value>
+  <data name="tbxSearchResource1.ToolTip" xml:space="preserve">
+    <value />
   </data>
 </root>

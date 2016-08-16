@@ -9,12 +9,12 @@
     <div class="content">
         <div class="left nav_left">
             <div class="top">
-                应用领域
+                <%=Resources.lang.nav_application%>
             </div>
             <ul id="ul_application">
                 <li  class="current">
                     <a href="application.aspx">
-                        全部类型
+                        <%=Resources.lang.all%>
                         <img src="Image/triangle_right_orange.png" />
                     </a>
                 </li>
@@ -36,7 +36,7 @@
         <div class="right content_right">
             <div class="application_top">
                 <span id="applicationType" class="left" style="color: #ff7f00"></span>
-                <asp:Label ID="lblApplicationContent" runat="server" Text="所在位置：应用领域" CssClass="right"></asp:Label>
+                <span class="right"><%=Resources.lang.location%>：<%=Resources.lang.nav_application%></span>
                 <img src="Image/home.png" class="right" />
             </div>
             <div class="application_list">

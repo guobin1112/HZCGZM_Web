@@ -8,7 +8,7 @@
     <div class="content">
         <div class="left nav_left">
             <div class="top">
-                新闻资讯
+                <%=Resources.lang.news_center%>
             </div>
             <ul id="ul_news">
                 <asp:Repeater ID="rptNewCategory" runat="server" DataSourceID="sdcNewsCategory">

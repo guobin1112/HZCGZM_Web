@@ -415,6 +415,10 @@
       <LastGenOutput>lang.en-us.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <Content Include="Front\App_LocalResources\base.Master.resx" />
+    <Content Include="Front\App_LocalResources\base.Master.en-us.resx" />
+    <Content Include="Front\App_LocalResources\product_detail.aspx.resx" />
+    <Content Include="Front\App_LocalResources\product_detail.aspx.en-us.resx" />
     <None Include="Properties\PublishProfiles\HZCGZM.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

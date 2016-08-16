@@ -26,12 +26,12 @@
             <img src="Image/1.jpg" />
 
             <p>
-                &nbsp;&nbsp;&nbsp;&nbsp;地址：浙江省杭州市临安花桥路68号
+                &nbsp;&nbsp;&nbsp;&nbsp;<%=Resources.lang.address%>：<%=Resources.lang.address_info%>
             </p>
-            <p>&nbsp;&nbsp;&nbsp;&nbsp;电话：+86-0571-58605168</p>
-            <p>&nbsp;&nbsp;&nbsp;&nbsp;传真：+86-0571-58605169</p>
-            <p>&nbsp;&nbsp;&nbsp;&nbsp;邮编：311300</p>
-            <p>&nbsp;&nbsp;&nbsp;&nbsp;邮箱：</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;<%=Resources.lang.phone%>：+86-0571-58605168</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;<%=Resources.lang.fax%>：+86-0571-58605169</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;<%=Resources.lang.post%>：311300</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;<%=Resources.lang.email%>：</p>
 
             <a  href="Image/map.jpg"><img class="map"  src="Image/map.jpg" /></a>
         </div>

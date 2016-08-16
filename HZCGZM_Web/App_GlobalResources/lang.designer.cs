@@ -70,6 +70,33 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   查找类似 地址 的本地化字符串。
+        /// </summary>
+        internal static string address {
+            get {
+                return ResourceManager.GetString("address", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 浙江省杭州市临安花桥路68号 的本地化字符串。
+        /// </summary>
+        internal static string address_info {
+            get {
+                return ResourceManager.GetString("address_info", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 全部 的本地化字符串。
+        /// </summary>
+        internal static string all {
+            get {
+                return ResourceManager.GetString("all", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 产品册 的本地化字符串。
         /// </summary>
         internal static string catalog {
@@ -93,6 +120,33 @@ namespace Resources {
         internal static string contact_us {
             get {
                 return ResourceManager.GetString("contact_us", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 点击下载 的本地化字符串。
+        /// </summary>
+        internal static string download {
+            get {
+                return ResourceManager.GetString("download", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 邮箱 的本地化字符串。
+        /// </summary>
+        internal static string email {
+            get {
+                return ResourceManager.GetString("email", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 传真 的本地化字符串。
+        /// </summary>
+        internal static string fax {
+            get {
+                return ResourceManager.GetString("fax", resourceCulture);
             }
         }
         
@@ -192,6 +246,87 @@ namespace Resources {
         internal static string news_center {
             get {
                 return ResourceManager.GetString("news_center", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 应用支持 的本地化字符串。
+        /// </summary>
+        internal static string oem_support {
+            get {
+                return ResourceManager.GetString("oem_support", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 包装设计 的本地化字符串。
+        /// </summary>
+        internal static string package_design {
+            get {
+                return ResourceManager.GetString("package_design", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 电话 的本地化字符串。
+        /// </summary>
+        internal static string phone {
+            get {
+                return ResourceManager.GetString("phone", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 邮编 的本地化字符串。
+        /// </summary>
+        internal static string post {
+            get {
+                return ResourceManager.GetString("post", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 生产流程 的本地化字符串。
+        /// </summary>
+        internal static string producing_process {
+            get {
+                return ResourceManager.GetString("producing_process", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 产品详情 的本地化字符串。
+        /// </summary>
+        internal static string product_detail {
+            get {
+                return ResourceManager.GetString("product_detail", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 产品名称 的本地化字符串。
+        /// </summary>
+        internal static string product_name {
+            get {
+                return ResourceManager.GetString("product_name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 产品编号 的本地化字符串。
+        /// </summary>
+        internal static string product_number {
+            get {
+                return ResourceManager.GetString("product_number", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 样品设计 的本地化字符串。
+        /// </summary>
+        internal static string promotion_material_design {
+            get {
+                return ResourceManager.GetString("promotion_material_design", resourceCulture);
             }
         }
         

@@ -7,57 +7,45 @@
 // </自动生成>
 //------------------------------------------------------------------------------
 
-namespace HZCGZM_Web.Front {
+namespace HZCGZM_Web.Backup {
     
     
-    public partial class product {
+    public partial class category_list {
         
         /// <summary>
-        /// rptProductCategory 控件。
+        /// sdcCategory 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater rptProductCategory;
+        protected global::System.Web.UI.WebControls.SqlDataSource sdcCategory;
         
         /// <summary>
-        /// lblproductType 控件。
+        /// tbNewCategory 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblproductType;
+        protected global::System.Web.UI.WebControls.TextBox tbNewCategory;
         
         /// <summary>
-        /// rptProduct 控件。
+        /// btnAdd 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater rptProduct;
+        protected global::System.Web.UI.WebControls.Button btnAdd;
         
         /// <summary>
-        /// divPageBox 控件。
+        /// rptCategory 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divPageBox;
-        
-        /// <summary>
-        /// Master 属性。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的属性。
-        /// </remarks>
-        public new HZCGZM_Web.Web.web Master {
-            get {
-                return ((HZCGZM_Web.Web.web)(base.Master));
-            }
-        }
+        protected global::System.Web.UI.WebControls.Repeater rptCategory;
     }
 }
