@@ -42,37 +42,29 @@
             <div class="nav nofloat ">
                 <ul>
                     <li>
-                        <asp:LinkButton ID="lkbMain" runat="server" OnClick="lkbMain_Click"  PostBackUrl="~/Front/index.aspx">主页</asp:LinkButton><img src="Image/triangle_down_orange.png" /></li>
+                        <asp:LinkButton ID="lkbMain" runat="server" OnClick="lkbMain_Click"  PostBackUrl="~/Front/index.aspx"><%=Resources.lang.nav_home%></asp:LinkButton><img src="Image/triangle_down_orange.png" /></li>
                     <li>
                         <asp:LinkButton ID="lkbAbout" runat="server" OnClick="lkbAbout_Click"
-                           PostBackUrl="~/Front/about.aspx">关于我们</asp:LinkButton>
+                           PostBackUrl="~/Front/about.aspx"><%=Resources.lang.nav_about_us%></asp:LinkButton>
                         <img src="Image/triangle_down_orange.png" /></li>
                     <li>
-                        <asp:LinkButton ID="lkbNews" runat="server" OnClick="lkbNews_Click" PostBackUrl="~/Front/news.aspx">新闻资讯</asp:LinkButton>
+                        <asp:LinkButton ID="lkbNews" runat="server" OnClick="lkbNews_Click" PostBackUrl="~/Front/news.aspx"><%=Resources.lang.nav_news_center%></asp:LinkButton>
                         <img src="Image/triangle_down_orange.png" /></li>
                     <li>
-                        <asp:LinkButton ID="lkbProduct" runat="server" OnClick="lkbProduct_Click" PostBackUrl="~/Front/product.aspx">产品中心</asp:LinkButton>
+                        <asp:LinkButton ID="lkbProduct" runat="server" OnClick="lkbProduct_Click" PostBackUrl="~/Front/product.aspx"><%=Resources.lang.nav_products%></asp:LinkButton>
                         <img src="Image/triangle_down_orange.png" /></li>
                     <li>
-                        <asp:LinkButton ID="lkbApplication" runat="server" OnClick="lkbApplication_Click" PostBackUrl="~/Front/application.aspx">应用领域</asp:LinkButton>
+                        <asp:LinkButton ID="lkbApplication" runat="server" OnClick="lkbApplication_Click" PostBackUrl="~/Front/application.aspx"><%=Resources.lang.nav_application%></asp:LinkButton>
                         <img src="Image/triangle_down_orange.png" /></li>
                     <li>
-                        <asp:LinkButton ID="lkbSupport" runat="server" OnClick="lkbSupport_Click" PostBackUrl="~/Front/support.aspx">应用支持</asp:LinkButton>
+                        <asp:LinkButton ID="lkbSupport" runat="server" OnClick="lkbSupport_Click" PostBackUrl="~/Front/support.aspx"><%=Resources.lang.nav_oem_support%></asp:LinkButton>
                      <img src="Image/triangle_down_orange.png" /></li>
                     <li>
-                        <asp:LinkButton ID="lkbDownload" runat="server" OnClick="lkbDownload_Click" PostBackUrl="~/Front/download.aspx">下载专区</asp:LinkButton>
+                        <asp:LinkButton ID="lkbDownload" runat="server" OnClick="lkbDownload_Click" PostBackUrl="~/Front/download.aspx"><%=Resources.lang.nav_download%></asp:LinkButton>
                         <img src="Image/triangle_down_orange.png" /></li>
                     <li>
-                        <asp:LinkButton ID="lkbContact" runat="server" OnClick="lkbContact_Click" PostBackUrl="~/Front/contact.aspx">联系我们</asp:LinkButton>
+                        <asp:LinkButton ID="lkbContact" runat="server" OnClick="lkbContact_Click" PostBackUrl="~/Front/contact.aspx"><%=Resources.lang.nav_contact_us%></asp:LinkButton>
                      <img src="Image/triangle_down_orange.png" /></li>
-                    <%--<li><a href="#" >主页</a><img src="Image/triangle_down_orange.png"/></li>
-                <li><a href="#">关于我们</a><img src="Image/triangle_down_orange.png"/></li>
-                <li><a href="#">产品</a><img src="Image/triangle_down_orange.png"/></li>
-                <li><a href="#">应用</a><img src="Image/triangle_down_orange.png"/></li>
-                <li><a href="#">OEM支持</a><img src="Image/triangle_down_orange.png"/></li>
-                <li><a href="#">下载专区</a><img src="Image/triangle_down_orange.png"/></li>
-                <li><a href="#">新闻资讯</a><img src="Image/triangle_down_orange.png"/></li>
-                <li><a href="#">联系我们</a><img src="Image/triangle_down_orange.png"/></li>--%>
                 </ul>
             </div>
         </div>

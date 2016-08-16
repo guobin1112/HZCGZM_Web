@@ -410,6 +410,11 @@
     <Content Include="Backup\base.Master" />
     <Content Include="Backup\editor\asp.net\file_manager_json.ashx" />
     <Content Include="Backup\editor\asp.net\upload_json.ashx" />
+    <EmbeddedResource Include="App_GlobalResources\lang.en-us.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>lang.en-us.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <None Include="Properties\PublishProfiles\HZCGZM.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -474,6 +479,16 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_GlobalResources\lang.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>lang.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\lang.en-us.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>lang.en-us.resx</DependentUpon>
+    </Compile>
     <Compile Include="Backup\banner_detail.aspx.cs">
       <DependentUpon>banner_detail.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -693,6 +708,12 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\lang.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>lang.designer.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

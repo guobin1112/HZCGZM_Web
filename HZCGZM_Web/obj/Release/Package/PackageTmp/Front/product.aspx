@@ -19,7 +19,7 @@
                             <asp:LinkButton ID="lkbProductCategory" runat="server" OnClick="lkbProductCategory_Click" Text='<%#Eval("categoryName") %>'>
                                 <img src="Image/triangle_right_orange.png" /></asp:LinkButton>
                             <asp:HiddenField ID="hfCategoryId" runat="server" Value='<%#Eval("categoryId") %>' />
-                            <%-- <a href='product.aspx?type=<%#Eval("categoryId") %>'><%#Eval("categoryName") %><img src="Image/triangle_right_orange.png" /></a>--%>
+                         
                             <ul>
                                 <asp:Repeater ID="rptProductSubcategory" runat="server">
                                     <ItemTemplate>
@@ -34,18 +34,7 @@
                         </li>
                     </ItemTemplate>
                 </asp:Repeater>
-                <%--                <li>产品类型1<img src="Image/triangle_right_orange.png" />
-                    <ul>
-                        <li>
-                            子产品
-                        </li>
-                        <li>
-                            子产品
-                        </li>
-                    </ul>
-                </li>
-                <li>产品类型2<img src="Image/triangle_right_orange.png" /></li>
-                <li>产品类型3<img src="Image/triangle_right_orange.png" /></li>--%>
+
             </ul>
 
         </div>
@@ -68,66 +57,19 @@
                             </li>
                         </ItemTemplate>
                     </asp:Repeater>
-                    <%--<li>
-                        <img src="Image/1.jpg" />
-                        <span class="application_title">标题名称</span>
-                        <hr />
-                        <p>内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介</p>
-                        <a href="#">查看更多 
-                            <img src="Image/triangle_right_orange.png" /></a>
-                    </li>
-                    <li>
-                        <img src="Image/1.jpg" />
-                        <span class="application_title">标题名称</span>
-                        <hr />
-                        <p>内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介</p>
-                        <a href="#">查看更多 
-                            <img src="Image/triangle_right_orange.png" /></a>
-                    </li>
-                    <li>
-                        <img src="Image/1.jpg" />
-                        <span class="application_title">标题名称</span>
-                        <hr />
-                        <p>内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介</p>
-                        <a href="#">查看更多 
-                            <img src="Image/triangle_right_orange.png" /></a>
-                    </li>
-                    <li>
-                        <img src="Image/1.jpg" />
-                        <span class="application_title">标题名称</span>
-                        <hr />
-                        <p>内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介</p>
-                        <a href="#">查看更多 
-                            <img src="Image/triangle_right_orange.png" /></a>
-                    </li>
-                    <li>
-                        <img src="Image/1.jpg" />
-                        <span class="application_title">标题名称</span>
-                        <hr />
-                        <p>内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介</p>
-                        <a href="#">查看更多 
-                            <img src="Image/triangle_right_orange.png" /></a>
-                    </li>
-                    <li>
-                        <img src="Image/1.jpg" />
-                        <span class="application_title">标题名称</span>
-                        <hr />
-                        <p>内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介</p>
-                        <a href="#">查看更多 
-                            <img src="Image/triangle_right_orange.png" /></a>
-                    </li>--%>
+
                 </ul>
 
             </div>
-            <div class="page">
-              <%--  <ul>
+            <div id="divPageBox" class="page" runat="server">
+                <ul>
                     <li>1</li>
                     <li>2</li>
                     <li>3</li>
                     <li>4</li>
                     <li>5</li>
                     <li>6</li>
-                </ul>--%>
+                </ul>
             </div>
         </div>
     </div>

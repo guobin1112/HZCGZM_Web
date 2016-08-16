@@ -9,15 +9,15 @@
       <img class="contact" src="Image/1.jpg" />
     <div class="nav_about">
         <img src="Image/home.png" />
-        <asp:Label ID="lblNav" runat="server" Text="所在位置：联系我们"></asp:Label>
+        <span><%=Resources.lang.location%>：<%=Resources.lang.contact_us%></span>
     </div>
     <div class="content">
         <div class="left nav_left">
             <div class="top">
-                联系我们
+                <%=Resources.lang.contact_us%>
             </div>
             <ul>
-                <li a class="current"><a  href="contact.aspx">联系我们<img src="Image/triangle_right_orange.png" /></a></li>
+                <li a class="current"><a  href="contact.aspx"><%=Resources.lang.contact_us%><img src="Image/triangle_right_orange.png" /></a></li>
             </ul>
 
         </div>

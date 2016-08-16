@@ -8,15 +8,15 @@
     <img class="about" src="Image/1.jpg" />
     <div class="nav_about">
         <img src="Image/home.png" />
-        <asp:Label ID="lblNav" runat="server" Text="所在位置：关于我们 - 公司简介"></asp:Label>
+        <span><%=Resources.lang.location%>：<%=Resources.lang.about_us%> - <%=Resources.lang.company_profile%></span>
     </div>
     <div class="content">
         <div class="left nav_left">
             <div class="top">
-                关于我们
+                <%=Resources.lang.about_us%>
             </div>
             <ul>
-                <li a class="current"><a  href="about.aspx">公司简介<img src="Image/triangle_right_orange.png" /></a></li>
+                <li a class="current"><a  href="about.aspx"><%=Resources.lang.company_profile%><img src="Image/triangle_right_orange.png" /></a></li>
             </ul>
 
         </div>
