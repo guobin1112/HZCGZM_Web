@@ -6,6 +6,8 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using HZCGZM_Model;
+using System.Threading;
+using System.Globalization;
 
 namespace HZCGZM_Web.Front
 {
@@ -16,6 +18,19 @@ namespace HZCGZM_Web.Front
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["lang"] == null)
+            {
+                Thread.CurrentThread.CurrentUICulture =CultureInfo.CreateSpecificCulture("");
+            }
+            else if (Session["lang"].ToString() == "en-us")
+            {
+                Thread.CurrentThread.CurrentUICulture =CultureInfo.CreateSpecificCulture("en-us"); ;
+            }
+            else
+            {
+                Thread.CurrentThread.CurrentUICulture =CultureInfo.CreateSpecificCulture("");
+            }
+
             if (!IsPostBack)
             {
                 int type = Convert.ToInt32(Request.QueryString["type"]);

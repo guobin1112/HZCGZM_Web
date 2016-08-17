@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
+using System.Threading;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -13,7 +15,18 @@ namespace HZCGZM_Web.Web
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+            if (Session["lang"] == null)
+            {
+                Thread.CurrentThread.CurrentUICulture = CultureInfo.CreateSpecificCulture(""); 
+            }
+            else if (Session["lang"].ToString() == "en-us")
+            {
+                Thread.CurrentThread.CurrentUICulture = CultureInfo.CreateSpecificCulture("en-us"); ;
+            }
+            else
+            {
+                Thread.CurrentThread.CurrentUICulture = CultureInfo.CreateSpecificCulture(""); 
+            }
         }
 
         protected void lkbMain_Click(object sender, EventArgs e)
@@ -107,6 +120,21 @@ namespace HZCGZM_Web.Web
             {
                 Response.Redirect("product.aspx?search=" + tbxSearch.Text);
             }
+        }
+
+        protected void lkbChinese_Click(object sender, EventArgs e)
+        {
+
+            Session["lang"] = "";
+
+            Thread.CurrentThread.CurrentUICulture = CultureInfo.CreateSpecificCulture(""); ;
+        }
+
+        protected void lkbEnglish_Click(object sender, EventArgs e)
+        {
+            Session["lang"] = "en-us";
+
+            Thread.CurrentThread.CurrentUICulture = CultureInfo.CreateSpecificCulture("en-us");  
         }
 
 

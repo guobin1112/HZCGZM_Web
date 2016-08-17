@@ -27,9 +27,9 @@
                 <img class="logo left" src="Image/logo.png" />
                 <div class="right" style="display: inline-block">
                     <div class="language" style="display: block">
-                        <asp:LinkButton ID="lkbChinese" runat="server" meta:resourcekey="lkbChineseResource1">Chinese</asp:LinkButton>
+                        <asp:LinkButton ID="lkbChinese" runat="server" meta:resourcekey="lkbChineseResource1" OnClick="lkbChinese_Click">Chinese</asp:LinkButton>
                          | 
-                        <asp:LinkButton ID="lkbEnglish" runat="server" meta:resourcekey="lkbEnglishResource1">English</asp:LinkButton>
+                        <asp:LinkButton ID="lkbEnglish" runat="server" meta:resourcekey="lkbEnglishResource1" OnClick="lkbEnglish_Click">English</asp:LinkButton>
                     </div>
                     <div class="search">
                         <asp:TextBox ID="tbxSearch" runat="server" meta:resourcekey="tbxSearchResource1"></asp:TextBox>
