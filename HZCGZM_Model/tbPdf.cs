@@ -18,5 +18,6 @@ namespace HZCGZM_Model
         public string pdfName { get; set; }
         public string pdfURL { get; set; }
         public int pdfState { get; set; }
+        public string pdfNameEN { get; set; }
     }
 }

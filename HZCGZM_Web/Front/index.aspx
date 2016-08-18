@@ -59,7 +59,7 @@
                     <asp:Repeater ID="rptProductCategory" runat="server" DataSourceID="sdcProductCategory">
                         <ItemTemplate>
                             <div class="product_array">
-                                <div class="product_name"><%#Eval("categoryName") %></div>
+                                <div class="product_name"><%#isEn?Eval("categoryNameEN"):Eval("categoryName") %></div>
                                 <div class="product_img">
                                     <a href='product.aspx?type=<%#Eval("categoryId") %>'>
                                         <asp:Image ID="imgProduct" runat="server" ImageUrl='<%#Eval("imageURL") %>' />
@@ -68,7 +68,7 @@
                             </div>
                         </ItemTemplate>
                     </asp:Repeater>
-                    <asp:SqlDataSource ID="sdcProductCategory" runat="server" ConnectionString="<%$ ConnectionStrings:HZCGZMConnectionString %>" SelectCommand="SELECT tbCategory.categoryId, tbCategory.categoryName,tbImage.imageURL FROM tbCategory INNER JOIN tbImage ON tbCategory.categoryId = tbImage.bindId WHERE (tbCategory.categoryState = '1') AND (tbCategory.categoryType = '1') AND (tbImage.imageState = '1') AND (tbImage.imageType = '4')"></asp:SqlDataSource>
+                    <asp:SqlDataSource ID="sdcProductCategory" runat="server" ConnectionString="<%$ ConnectionStrings:HZCGZMConnectionString %>" SelectCommand="SELECT tbCategory.categoryId, tbCategory.categoryName,tbCategory.categoryNameEN,tbImage.imageURL FROM tbCategory INNER JOIN tbImage ON tbCategory.categoryId = tbImage.bindId WHERE (tbCategory.categoryState = '1') AND (tbCategory.categoryType = '1') AND (tbImage.imageState = '1') AND (tbImage.imageType = '4')"></asp:SqlDataSource>
                 </div>
             </div>
             <div class="img_r">

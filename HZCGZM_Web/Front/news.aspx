@@ -14,12 +14,12 @@
                 <asp:Repeater ID="rptNewCategory" runat="server" DataSourceID="sdcNewsCategory">
                     <ItemTemplate>
                         <li>
-                        <asp:LinkButton ID="lkbCategory" runat="server" OnClick="lkbCategory_Click" Text='<%#Eval("categoryName") %>'><img src="Image/triangle_right_orange.png" /></asp:LinkButton>
+                        <asp:LinkButton ID="lkbCategory" runat="server" OnClick="lkbCategory_Click" Text='<%#isEn?Eval("categoryNameEN"):Eval("categoryName") %>'><img src="Image/triangle_right_orange.png" /></asp:LinkButton>
                             <asp:HiddenField ID="hfCategory" runat="server"  Value='<%#Eval("categoryId") %>'/>
                        </li>
                     </ItemTemplate>
                 </asp:Repeater>
-                <asp:SqlDataSource ID="sdcNewsCategory" runat="server" ConnectionString="<%$ ConnectionStrings:HZCGZMConnectionString %>" SelectCommand="SELECT [categoryId], [categoryName] FROM [tbCategory] WHERE (([categoryState] = @categoryState) AND ([categoryType] = @categoryType))">
+                <asp:SqlDataSource ID="sdcNewsCategory" runat="server" ConnectionString="<%$ ConnectionStrings:HZCGZMConnectionString %>" SelectCommand="SELECT [categoryId], [categoryName],[categoryNameEN] FROM [tbCategory] WHERE (([categoryState] = @categoryState) AND ([categoryType] = @categoryType))">
                     <SelectParameters>
                         <asp:Parameter DefaultValue="1" Name="categoryState" Type="Int32" />
                         <asp:Parameter DefaultValue="5" Name="categoryType" Type="Int32" />
@@ -32,7 +32,7 @@
         <div class="right content_right">
             <div class="news_top">
                 <span id="newsType" class="left" style="color: #ff7f00" runat="server"></span>
-                <asp:Label ID="lblNewContent" runat="server" Text="所在位置：新闻资讯" CssClass="right"></asp:Label>
+                <span class="right"><%=Resources.lang.location%>：<%=Resources.lang.news_center%></span>
                 <img src="Image/home.png" class="right" />
             </div>
             <div class="news_list">
@@ -42,11 +42,11 @@
                             <asp:Repeater ID="rptNews" runat="server" DataSourceID="sdcNews">
                                 <ItemTemplate>
                                     <li>
-                                        <a href='news_detail.aspx?id=<%#Eval("newsId") %>'><span class="left"><%#Eval("newsTitle") %></span></a><span class="right"><%#Convert.ToDateTime(Eval("newsPublishTime")).ToString("yyyy/MM/dd") %></span>
+                                        <a href='news_detail.aspx?id=<%#Eval("newsId") %>'><span class="left"><%#isEn?Eval("newsTitleEN"):Eval("newsTitle") %></span></a><span class="right"><%#Convert.ToDateTime(Eval("newsPublishTime")).ToString("yyyy/MM/dd") %></span>
                                     </li>
                                 </ItemTemplate>
                             </asp:Repeater>
-                            <asp:SqlDataSource ID="sdcNews" runat="server" ConnectionString="<%$ ConnectionStrings:HZCGZMConnectionString %>" SelectCommand="SELECT [newsId], [newsTitle], [newsPublishTime] FROM [tbNews] WHERE (([newsState] = @newsState) AND ([newsType] = @newsType)) ORDER BY [newsPublishTime] DESC">
+                            <asp:SqlDataSource ID="sdcNews" runat="server" ConnectionString="<%$ ConnectionStrings:HZCGZMConnectionString %>" SelectCommand="SELECT [newsId], [newsTitle],  [newsTitleEN],[newsPublishTime] FROM [tbNews] WHERE (([newsState] = @newsState) AND ([newsType] = @newsType)) ORDER BY [newsPublishTime] DESC">
                                 <SelectParameters>
                                     <asp:Parameter DefaultValue="1" Name="newsState" Type="Int32" />
                                     <asp:QueryStringParameter Name="newsType" QueryStringField="type" Type="Int32" />

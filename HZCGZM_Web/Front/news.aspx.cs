@@ -18,27 +18,45 @@ namespace HZCGZM_Web.Front
         private int totalCount;
         private int categoryId;
 
+        public bool isEn = false;
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Session["lang"] == null)
             {
-                Thread.CurrentThread.CurrentUICulture =CultureInfo.CreateSpecificCulture("");
+                Thread.CurrentThread.CurrentUICulture = CultureInfo.CreateSpecificCulture("");
+                isEn = false;
             }
             else if (Session["lang"].ToString() == "en-us")
             {
-                Thread.CurrentThread.CurrentUICulture =CultureInfo.CreateSpecificCulture("en-us"); ;
+                Thread.CurrentThread.CurrentUICulture = CultureInfo.CreateSpecificCulture("en-us");
+                isEn = true;
             }
             else
             {
                 Thread.CurrentThread.CurrentUICulture = CultureInfo.CreateSpecificCulture("");
+                isEn = false;
             }
+
+            rptNewCategory.DataBind();
+            rptNews.DataBind();
 
             if (!IsPostBack)
             {
                 HZCGZMEntities entity = new HZCGZMEntities();
                 Master.updateNav((int)NavType.NAV_NEWS);
                 tbCategory defaultCategory = entity.tbCategory.Where(m => m.categoryType == (int)CategoryType.NEWS).FirstOrDefault();
-                newsType.InnerText = defaultCategory.categoryName;
+
+                if (isEn)
+                {
+                    newsType.InnerText = defaultCategory.categoryNameEN;
+                }
+                else
+                {
+                    newsType.InnerText = defaultCategory.categoryName;
+                }
+
+                
                 sdcNews.SelectParameters[1].DefaultValue = defaultCategory.categoryId.ToString();
             }
 
@@ -55,7 +73,18 @@ namespace HZCGZM_Web.Front
             ((LinkButton)i.FindControl("lkbCategory")).ForeColor = Color.FromArgb(255, 127, 0);
 
             HZCGZMEntities entity = new HZCGZMEntities();
-            newsType.InnerText = entity.tbCategory.Where(m => m.categoryId == categoryId).FirstOrDefault().categoryName;
+
+            var category= entity.tbCategory.Where(m => m.categoryId == categoryId).FirstOrDefault();
+
+            if (isEn)
+            {
+                newsType.InnerText = category.categoryNameEN;
+            }
+            else
+            {
+                newsType.InnerText = category.categoryName;
+            }
+           
             sdcNews.SelectParameters[1].DefaultValue = categoryId.ToString();
         }
     }

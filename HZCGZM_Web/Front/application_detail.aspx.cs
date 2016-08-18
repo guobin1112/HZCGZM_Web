@@ -16,20 +16,28 @@ namespace HZCGZM_Web.Front
     {
         tbCategory defaultCategory;
 
+        public bool isEn = false;
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Session["lang"] == null)
             {
-                Thread.CurrentThread.CurrentUICulture =CultureInfo.CreateSpecificCulture("");
+                Thread.CurrentThread.CurrentUICulture = CultureInfo.CreateSpecificCulture("");
+                isEn = false;
             }
             else if (Session["lang"].ToString() == "en-us")
             {
-                Thread.CurrentThread.CurrentUICulture =CultureInfo.CreateSpecificCulture("en-us"); ;
+                Thread.CurrentThread.CurrentUICulture = CultureInfo.CreateSpecificCulture("en-us");
+                isEn = true;
             }
             else
             {
-                Thread.CurrentThread.CurrentUICulture =CultureInfo.CreateSpecificCulture("");
+                Thread.CurrentThread.CurrentUICulture = CultureInfo.CreateSpecificCulture("");
+                isEn = false;
             }
+
+            rptApplicationCategory.DataBind();
+            rptApplicationSubcategory.DataBind();
 
             if (!IsPostBack)
             {
@@ -69,6 +77,8 @@ namespace HZCGZM_Web.Front
                .Join(entity.tbImage.Where(m => m.imageState == (int)NormalState.AVALIABLE && m.imageType == (int)ImageType.SUBAPPLICATION), c => c.categoryId, i => i.bindId, (c, i) => new
            {
                c.categoryName,
+               c.categoryNameEN,
+               c.categoryInfoEN,
                c.categoryInfo,
                i.imageURL
            }).FirstOrDefault();
@@ -78,8 +88,16 @@ namespace HZCGZM_Web.Front
 
             if (applicationDetail != null)
             {
+                if (isEn)
+                {
+                    lblApplication.Text = applicationDetail.categoryInfoEN;
+                }
+                else
+                {
+                    lblApplication.Text = applicationDetail.categoryInfo;
+                }
                 imgApplication.ImageUrl = applicationDetail.imageURL;
-                lblApplication.Text = applicationDetail.categoryInfo;
+              
             }
         }
 
@@ -95,7 +113,16 @@ namespace HZCGZM_Web.Front
                         if (lb.Text == defaultCategory.categoryName)
                         {
                             lb.BackColor = Color.FromArgb(255, 127, 0);
-                            updateDetailInfo(defaultCategory.categoryName);
+
+                            if (isEn)
+                            {
+                                updateDetailInfo(defaultCategory.categoryNameEN);
+                            }
+                            else
+                            {
+                                updateDetailInfo(defaultCategory.categoryName);
+                            }
+
                         }
                         else
                         {
@@ -105,6 +132,11 @@ namespace HZCGZM_Web.Front
                 }
 
             }
+
+        }
+
+        protected void rptApplicationSubcategory_ItemCommand(object source, RepeaterCommandEventArgs e)
+        {
 
         }
     }

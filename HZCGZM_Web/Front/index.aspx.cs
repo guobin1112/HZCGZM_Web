@@ -11,20 +11,26 @@ namespace HZCGZM_Web.Front
 {
     public partial class index : System.Web.UI.Page
     {
+        public bool isEn = false;
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Session["lang"] == null)
             {
-                Thread.CurrentThread.CurrentUICulture =CultureInfo.CreateSpecificCulture("");
+                Thread.CurrentThread.CurrentUICulture = CultureInfo.CreateSpecificCulture("");
+                isEn = false;
             }
             else if (Session["lang"].ToString() == "en-us")
             {
-                Thread.CurrentThread.CurrentUICulture =CultureInfo.CreateSpecificCulture("en-us"); ;
+                Thread.CurrentThread.CurrentUICulture = CultureInfo.CreateSpecificCulture("en-us");
+                isEn = true;
             }
             else
             {
                 Thread.CurrentThread.CurrentUICulture = CultureInfo.CreateSpecificCulture("");
+                isEn = false;
             }
+
+            rptProductCategory.DataBind();
 
             Master.updateNav((int)NavType.NAV_MAIN);
            

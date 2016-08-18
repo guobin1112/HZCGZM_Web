@@ -59,7 +59,7 @@ namespace HZCGZM_Web.Backup
                 if (!IsPostBack)
                 {
 
-                    var pdfInfo = entity.tbPdf.Where(m => m.pdfId == id).Join(entity.tbImage.Where(m => m.imageType == (int)ImageType.DOWNLOAD && m.imageState == (int)NormalState.AVALIABLE), p => p.pdfId, i => i.bindId, (p, i) => new { p.pdfId, p.pdfName, p.pdfURL, i.imageURL }).FirstOrDefault();
+                    var pdfInfo = entity.tbPdf.Where(m => m.pdfId == id).Join(entity.tbImage.Where(m => m.imageType == (int)ImageType.DOWNLOAD && m.imageState == (int)NormalState.AVALIABLE), p => p.pdfId, i => i.bindId, (p, i) => new { p.pdfId, p.pdfName,p.pdfNameEN, p.pdfURL, i.imageURL }).FirstOrDefault();
 
                     if (pdfInfo == null)
                     {
@@ -69,6 +69,7 @@ namespace HZCGZM_Web.Backup
                     }
 
                     tbDownloadName.Text = pdfInfo.pdfName;
+                    tbDownloadNameEN.Text = pdfInfo.pdfNameEN;
                     imgDownload.ImageUrl = pdfInfo.imageURL;
                     hlPdf.NavigateUrl = pdfInfo.pdfURL;
                 }
@@ -106,6 +107,13 @@ namespace HZCGZM_Web.Backup
                             if (String.IsNullOrEmpty(tbDownloadName.Text.Trim()))
                             {
                                 Response.Write("<script>alert('请输入名称')</script>");
+                                return;
+                            }
+
+                            if (String.IsNullOrEmpty(tbDownloadNameEN.Text.Trim()))
+                            {
+                                Response.Write("<script>alert('请输入名称英文')</script>");
+                                return;
                             }
 
                             if (fuDownloadPdf.HasFile)
@@ -123,7 +131,9 @@ namespace HZCGZM_Web.Backup
                                         fuDownloadPdf.PostedFile.SaveAs(_uploadURL);
 
                                         tbPdf pdf = new tbPdf();
+
                                         pdf.pdfName = tbDownloadName.Text.Trim();
+                                        pdf.pdfNameEN = tbDownloadNameEN.Text.Trim();
                                         pdf.pdfState = (int)NormalState.AVALIABLE;
                                         pdf.pdfURL = pdfURL;
 
@@ -282,7 +292,14 @@ namespace HZCGZM_Web.Backup
                     return;
                 }
 
+                if (String.IsNullOrEmpty(tbDownloadNameEN.Text.Trim()))
+                {
+                    Response.Write("<script>alert('请输入名称英文')</script>");
+                    return;
+                }
+
                 pdf.pdfName = tbDownloadName.Text.Trim();
+                pdf.pdfNameEN = tbDownloadNameEN.Text.Trim();
 
                 if (entity.SaveChanges() > 0)
                 {

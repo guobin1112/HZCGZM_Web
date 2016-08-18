@@ -22,6 +22,12 @@
                 </td>
             </tr>
             <tr>
+                <td>产品册名称-English：</td>
+                <td>
+                    <asp:TextBox ID="tbDownloadNameEN" CssClass="login_input" runat="server" MaxLength="20"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
                 <td>展示图：</td>
                 <td>
                     <asp:FileUpload ID="fuDownloadImage" runat="server" /><span>注：建议尺寸  宽 124px 高 240px</span>

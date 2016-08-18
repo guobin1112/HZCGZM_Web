@@ -28,13 +28,13 @@
                         <ItemTemplate>
                             <li>
                                 <asp:Image ID="imgPdf" runat="server" ImageUrl='<%#Eval("imageURL") %>' />
-                                <p class="download_title"><%#Eval("pdfName") %></p>
-                                <a href='<%#Eval("pdfURL") %>'><%=Resources.lang.download%>
-                            <img src="Image/triangle_right_orange.png" /></a>
+                                <p class="download_title"><%#isEn?Eval("pdfNameEN"):Eval("pdfName") %></p>
+                                <a href='<%#Eval("pdfURL")%>'><%=Resources.lang.download%>
+                                    <img src="Image/triangle_right_orange.png" /></a>
                             </li>
                         </ItemTemplate>
                     </asp:Repeater>
-                    <asp:SqlDataSource ID="sdcDownload" runat="server" ConnectionString="<%$ ConnectionStrings:HZCGZMConnectionString %>" SelectCommand="SELECT     dbo.tbPdf.pdfId, dbo.tbImage.imageURL,dbo.tbPdf.pdfName, dbo.tbPdf.pdfURL
+                    <asp:SqlDataSource ID="sdcDownload" runat="server" ConnectionString="<%$ ConnectionStrings:HZCGZMConnectionString %>" SelectCommand="SELECT     dbo.tbPdf.pdfId, dbo.tbImage.imageURL,dbo.tbPdf.pdfName,dbo.tbPdf.pdfNameEN,  dbo.tbPdf.pdfURL
 FROM         dbo.tbImage INNER JOIN
                       dbo.tbPdf ON dbo.tbImage.bindId = dbo.tbPdf.pdfId
 WHERE   dbo.tbImage.imageState='1' and dbo.tbPdf.pdfState='1' and dbo.tbImage.imageType='5'"></asp:SqlDataSource>

@@ -4,6 +4,7 @@
 }
 
     .application_top ul li {
+        vertical-align:central;
         text-align: center;
         height: 40px;
         line-height: 40px;

@@ -20,5 +20,7 @@ namespace HZCGZM_Model
         public string newsContentHtmlString { get; set; }
         public int newsState { get; set; }
         public Nullable<int> newsType { get; set; }
+        public string newsTitleEN { get; set; }
+        public string newsContentHtmlStringEN { get; set; }
     }
 }

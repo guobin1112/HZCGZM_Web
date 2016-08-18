@@ -35,6 +35,8 @@
           <Property Name="categoryType" Type="int" Nullable="false" />
           <Property Name="sortNumber" Type="int" Nullable="false" />
           <Property Name="categoryInfo" Type="nvarchar" MaxLength="512" />
+          <Property Name="categoryNameEN" Type="nvarchar" MaxLength="200" />
+          <Property Name="categoryInfoEN" Type="nvarchar" MaxLength="1024" />
         </EntityType>
         <EntityType Name="tbImage">
           <Key>
@@ -53,9 +55,11 @@
           <Property Name="newsId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="newsTitle" Type="nvarchar" MaxLength="100" Nullable="false" />
           <Property Name="newsPublishTime" Type="smalldatetime" Nullable="false" />
-          <Property Name="newsContentHtmlString" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="newsContentHtmlString" Type="nvarchar(max)" />
           <Property Name="newsState" Type="int" Nullable="false" />
           <Property Name="newsType" Type="int" />
+          <Property Name="newsTitleEN" Type="nvarchar" MaxLength="200" />
+          <Property Name="newsContentHtmlStringEN" Type="nvarchar(max)" />
         </EntityType>
         <EntityType Name="tbPdf">
           <Key>
@@ -65,6 +69,7 @@
           <Property Name="pdfName" Type="nvarchar" MaxLength="100" Nullable="false" />
           <Property Name="pdfURL" Type="nvarchar" MaxLength="255" Nullable="false" />
           <Property Name="pdfState" Type="int" Nullable="false" />
+          <Property Name="pdfNameEN" Type="nvarchar" MaxLength="200" />
         </EntityType>
         <EntityType Name="tbProduct">
           <Key>
@@ -72,11 +77,13 @@
           </Key>
           <Property Name="productId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="productName" Type="nvarchar" MaxLength="100" Nullable="false" />
-          <Property Name="productNumber" Type="nchar" MaxLength="100" Nullable="false" />
+          <Property Name="productNumber" Type="nvarchar" MaxLength="100" Nullable="false" />
           <Property Name="productCategoryId" Type="int" Nullable="false" />
           <Property Name="productSubcategoryId" Type="int" Nullable="false" />
           <Property Name="productDetailHtmlString" Type="nvarchar(max)" />
           <Property Name="productState" Type="int" Nullable="false" />
+          <Property Name="productNameEN" Type="nvarchar" MaxLength="200" />
+          <Property Name="productDetailHtmlStringEN" Type="nvarchar(max)" />
         </EntityType>
         <EntityContainer Name="HZCGZMModelStoreContainer">
           <EntitySet Name="tbAdmin" EntityType="Self.tbAdmin" Schema="dbo" store:Type="Tables" />
@@ -130,6 +137,8 @@
           <Property Name="categoryType" Type="Int32" Nullable="false" />
           <Property Name="sortNumber" Type="Int32" Nullable="false" />
           <Property Name="categoryInfo" Type="String" MaxLength="512" FixedLength="false" Unicode="true" />
+          <Property Name="categoryNameEN" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="categoryInfoEN" Type="String" MaxLength="1024" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="tbImage">
           <Key>
@@ -148,9 +157,11 @@
           <Property Name="newsId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="newsTitle" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="newsPublishTime" Type="DateTime" Nullable="false" Precision="0" />
-          <Property Name="newsContentHtmlString" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="newsContentHtmlString" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="newsState" Type="Int32" Nullable="false" />
           <Property Name="newsType" Type="Int32" />
+          <Property Name="newsTitleEN" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="newsContentHtmlStringEN" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="tbPdf">
           <Key>
@@ -160,6 +171,7 @@
           <Property Name="pdfName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="pdfURL" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
           <Property Name="pdfState" Type="Int32" Nullable="false" />
+          <Property Name="pdfNameEN" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="tbProduct">
           <Key>
@@ -167,11 +179,13 @@
           </Key>
           <Property Name="productId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="productName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
-          <Property Name="productNumber" Type="String" Nullable="false" MaxLength="100" FixedLength="true" Unicode="true" />
+          <Property Name="productNumber" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="productCategoryId" Type="Int32" Nullable="false" />
           <Property Name="productSubcategoryId" Type="Int32" Nullable="false" />
           <Property Name="productDetailHtmlString" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="productState" Type="Int32" Nullable="false" />
+          <Property Name="productNameEN" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="productDetailHtmlStringEN" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
         </EntityType>
         </Schema>
     </edmx:ConceptualModels>
@@ -203,6 +217,8 @@
           <EntitySetMapping Name="tbCategory">
             <EntityTypeMapping TypeName="HZCGZMModel.tbCategory">
               <MappingFragment StoreEntitySet="tbCategory">
+                <ScalarProperty Name="categoryInfoEN" ColumnName="categoryInfoEN" />
+                <ScalarProperty Name="categoryNameEN" ColumnName="categoryNameEN" />
                 <ScalarProperty Name="categoryInfo" ColumnName="categoryInfo" />
                 <ScalarProperty Name="sortNumber" ColumnName="sortNumber" />
                 <ScalarProperty Name="categoryType" ColumnName="categoryType" />
@@ -227,6 +243,8 @@
           <EntitySetMapping Name="tbNews">
             <EntityTypeMapping TypeName="HZCGZMModel.tbNews">
               <MappingFragment StoreEntitySet="tbNews">
+                <ScalarProperty Name="newsContentHtmlStringEN" ColumnName="newsContentHtmlStringEN" />
+                <ScalarProperty Name="newsTitleEN" ColumnName="newsTitleEN" />
                 <ScalarProperty Name="newsType" ColumnName="newsType" />
                 <ScalarProperty Name="newsState" ColumnName="newsState" />
                 <ScalarProperty Name="newsContentHtmlString" ColumnName="newsContentHtmlString" />
@@ -239,6 +257,7 @@
           <EntitySetMapping Name="tbPdf">
             <EntityTypeMapping TypeName="HZCGZMModel.tbPdf">
               <MappingFragment StoreEntitySet="tbPdf">
+                <ScalarProperty Name="pdfNameEN" ColumnName="pdfNameEN" />
                 <ScalarProperty Name="pdfState" ColumnName="pdfState" />
                 <ScalarProperty Name="pdfURL" ColumnName="pdfURL" />
                 <ScalarProperty Name="pdfName" ColumnName="pdfName" />
@@ -249,6 +268,8 @@
           <EntitySetMapping Name="tbProduct">
             <EntityTypeMapping TypeName="HZCGZMModel.tbProduct">
               <MappingFragment StoreEntitySet="tbProduct">
+                <ScalarProperty Name="productDetailHtmlStringEN" ColumnName="productDetailHtmlStringEN" />
+                <ScalarProperty Name="productNameEN" ColumnName="productNameEN" />
                 <ScalarProperty Name="productState" ColumnName="productState" />
                 <ScalarProperty Name="productDetailHtmlString" ColumnName="productDetailHtmlString" />
                 <ScalarProperty Name="productSubcategoryId" ColumnName="productSubcategoryId" />

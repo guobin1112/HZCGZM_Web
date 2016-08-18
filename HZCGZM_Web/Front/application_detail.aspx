@@ -7,18 +7,18 @@
     <div class="content">
         <div class="left nav_left">
             <div class="top">
-                应用领域
+                <%=Resources.lang.nav_application%>
             </div>
             <ul id="ul_application">
                 <asp:Repeater ID="rptApplicationCategory" runat="server" DataSourceID="sdcApplicationCategory">
                     <ItemTemplate>
                         <li id='<%#Eval("categoryId")%>'>
-                            <a href='application_detail.aspx?type=<%#Eval("categoryId") %>'><%#Eval("categoryName") %><img src="Image/triangle_right_orange.png" /></a>
+                            <a href='application_detail.aspx?type=<%#Eval("categoryId") %>'><%#isEn?Eval("categoryNameEN"):Eval("categoryName") %><img src="Image/triangle_right_orange.png" /></a>
                         </li>
                     </ItemTemplate>
                 </asp:Repeater>
             </ul>
-            <asp:SqlDataSource ID="sdcApplicationCategory" runat="server" ConnectionString="<%$ ConnectionStrings:HZCGZMConnectionString %>" SelectCommand="SELECT [categoryId], [categoryName] FROM [tbCategory] WHERE (([categoryState] = @categoryState) AND ([categoryType] = @categoryType))">
+            <asp:SqlDataSource ID="sdcApplicationCategory" runat="server" ConnectionString="<%$ ConnectionStrings:HZCGZMConnectionString %>" SelectCommand="SELECT [categoryId], [categoryName], [categoryNameEN]  FROM [tbCategory] WHERE (([categoryState] = @categoryState) AND ([categoryType] = @categoryType))">
                 <SelectParameters>
                     <asp:Parameter DefaultValue="1" Name="categoryState" Type="Int32" />
                     <asp:Parameter DefaultValue="3" Name="categoryType" Type="Int32" />
@@ -30,20 +30,20 @@
 
                 <div class="location">
                     <span id="applicationType" class="left"></span>
-                    <asp:Label ID="lblApplicationLocation" runat="server" Text="所在位置：应用支持" CssClass="right"></asp:Label>
+                    <span class="right"><%=Resources.lang.location%>：<%=Resources.lang.nav_application%></span>
                 </div>
 
                 <ul>
-                    <li>应用领域 >
+                    <li><%=Resources.lang.nav_application%>>
                     </li>
-                    <asp:Repeater ID="rptApplicationSubcategory" runat="server" DataSourceID="sdcApplicationSubcategory" OnItemDataBound="rptApplicationSubcategory_ItemDataBound">
+                    <asp:Repeater ID="rptApplicationSubcategory" runat="server" DataSourceID="sdcApplicationSubcategory" OnItemDataBound="rptApplicationSubcategory_ItemDataBound" OnItemCommand="rptApplicationSubcategory_ItemCommand">
                         <ItemTemplate>
                             <li>
-                                <asp:LinkButton ID="lbApplicationCategory" runat="server" OnClick="lbApplicationCategory_Click" Text='<%#Eval("categoryName")  %>'></asp:LinkButton>
+                                <asp:LinkButton ID="lbApplicationCategory" runat="server" OnClick="lbApplicationCategory_Click" Text='<%#isEn?Eval("categoryNameEN"):Eval("categoryName")  %>'></asp:LinkButton>
                             </li>
                         </ItemTemplate>
                     </asp:Repeater>
-                    <asp:SqlDataSource ID="sdcApplicationSubcategory" runat="server" ConnectionString="<%$ ConnectionStrings:HZCGZMConnectionString %>" SelectCommand="SELECT [categoryId], [categoryName] FROM [tbCategory] WHERE (([categoryState] = @categoryState) AND ([categoryType] = @categoryType) AND ([parentId] = @parentId))">
+                    <asp:SqlDataSource ID="sdcApplicationSubcategory" runat="server" ConnectionString="<%$ ConnectionStrings:HZCGZMConnectionString %>" SelectCommand="SELECT [categoryId], [categoryName],[categoryNameEN] FROM [tbCategory] WHERE (([categoryState] = @categoryState) AND ([categoryType] = @categoryType) AND ([parentId] = @parentId))">
                         <SelectParameters>
                             <asp:Parameter DefaultValue="1" Name="categoryState" Type="Int32" />
                             <asp:Parameter DefaultValue="4" Name="categoryType" Type="Int32" />

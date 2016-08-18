@@ -21,12 +21,12 @@
                 <asp:Repeater ID="rptApplicationCategory" runat="server" DataSourceID="sdcApplicationCategory">
                     <ItemTemplate>
                         <li id='<%#Eval("categoryId") %>'>
-                            <a href='application_detail.aspx?type=<%#Eval("categoryId") %>'><%#Eval("categoryName") %><img src="Image/triangle_right_orange.png" /></a>
+                            <a href='application_detail.aspx?type=<%#Eval("categoryId") %>'><%#isEn?Eval("categoryNameEN"):Eval("categoryName") %><img src="Image/triangle_right_orange.png" /></a>
                         </li>
                     </ItemTemplate>
                 </asp:Repeater>
             </ul>
-            <asp:SqlDataSource ID="sdcApplicationCategory" runat="server" ConnectionString="<%$ ConnectionStrings:HZCGZMConnectionString %>" SelectCommand="SELECT [categoryId], [categoryName] FROM [tbCategory] WHERE (([categoryState] = @categoryState) AND ([categoryType] = @categoryType))">
+            <asp:SqlDataSource ID="sdcApplicationCategory" runat="server" ConnectionString="<%$ ConnectionStrings:HZCGZMConnectionString %>" SelectCommand="SELECT [categoryId], [categoryName],[categoryNameEN], [categoryNameEN] FROM [tbCategory] WHERE (([categoryState] = @categoryState) AND ([categoryType] = @categoryType))">
                 <SelectParameters>
                     <asp:Parameter DefaultValue="1" Name="categoryState" Type="Int32" />
                     <asp:Parameter DefaultValue="3" Name="categoryType" Type="Int32" />
@@ -45,15 +45,15 @@
                         <ItemTemplate>
                             <li>
                                 <asp:Image ID="image" ImageUrl='<%#Eval("imageURL") %>' runat="server" />
-                                <span class="application_title"><%#Eval("categoryName") %></span>
+                                <span class="application_title"><%#isEn?Eval("categoryNameEN"):Eval("categoryName") %></span>
                                 <hr />
-                                <p><%#Eval("categoryInfo") %></p>
-                                <a href='application_detail.aspx?type=<%#Eval("categoryId")%>'>查看更多 
+                                <p><%#isEn?Eval("categoryInfoEN"):Eval("categoryInfo") %></p>
+                                <a href='application_detail.aspx?type=<%#Eval("categoryId")%>'><%=Resources.lang.more%>
                                     <img src="Image/triangle_right_orange.png" /></a>
                             </li>
                         </ItemTemplate>
                     </asp:Repeater>
-                    <asp:SqlDataSource ID="sdcApplicationCategoryInfo" runat="server" ConnectionString="<%$ ConnectionStrings:HZCGZMConnectionString %>" SelectCommand="SELECT     dbo.tbCategory.categoryId, dbo.tbCategory.categoryName, dbo.tbCategory.sortNumber, dbo.tbCategory.categoryInfo, 
+                    <asp:SqlDataSource ID="sdcApplicationCategoryInfo" runat="server" ConnectionString="<%$ ConnectionStrings:HZCGZMConnectionString %>" SelectCommand="SELECT     dbo.tbCategory.categoryId, dbo.tbCategory.categoryName,dbo.tbCategory.categoryNameEN, dbo.tbCategory.sortNumber, dbo.tbCategory.categoryInfo, dbo.tbCategory.categoryInfoEN,
                       dbo.tbImage.imageURL
 FROM         dbo.tbCategory INNER JOIN
                       dbo.tbImage ON dbo.tbCategory.categoryId = dbo.tbImage.bindId

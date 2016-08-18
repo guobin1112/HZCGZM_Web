@@ -21,5 +21,7 @@ namespace HZCGZM_Model
         public int productSubcategoryId { get; set; }
         public string productDetailHtmlString { get; set; }
         public int productState { get; set; }
+        public string productNameEN { get; set; }
+        public string productDetailHtmlStringEN { get; set; }
     }
 }
