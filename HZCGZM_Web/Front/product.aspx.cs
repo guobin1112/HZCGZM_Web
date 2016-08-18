@@ -24,19 +24,24 @@ namespace HZCGZM_Web.Front
         private int subcategoryId;
         private string search;
 
+        public bool isEn = false;
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Session["lang"] == null)
             {
-                Thread.CurrentThread.CurrentUICulture =CultureInfo.CreateSpecificCulture("");
+                Thread.CurrentThread.CurrentUICulture = CultureInfo.CreateSpecificCulture("");
+                isEn = false;
             }
             else if (Session["lang"].ToString() == "en-us")
             {
-                Thread.CurrentThread.CurrentUICulture =CultureInfo.CreateSpecificCulture("en-us"); ;
+                Thread.CurrentThread.CurrentUICulture = CultureInfo.CreateSpecificCulture("en-us");
+                isEn = true;
             }
             else
             {
                 Thread.CurrentThread.CurrentUICulture = CultureInfo.CreateSpecificCulture("");
+                isEn = false;
             }
 
             Master.updateNav((int)NavType.NAV_PRODUCT);
@@ -65,7 +70,17 @@ namespace HZCGZM_Web.Front
 
             if (categoryId > 0)
             {
-                lblproductType.Text = new HZCGZMEntities().tbCategory.Where(m => m.categoryId == categoryId).FirstOrDefault().categoryName;
+                var category=new HZCGZMEntities().tbCategory.Where(m => m.categoryId == categoryId).FirstOrDefault();
+
+                if (isEn)
+                {
+                    lblproductType.Text = category.categoryNameEN;
+                }
+                else
+                {
+                    lblproductType.Text = category.categoryName;
+                }
+                
                 updateProductList();
             }
             else if (!String.IsNullOrEmpty(search))
@@ -76,7 +91,16 @@ namespace HZCGZM_Web.Front
             else
             {
                 tbCategory defaultCategory = new HZCGZMEntities().tbCategory.Where(m => m.categoryType == (int)CategoryType.PRODUCT && m.categoryState == (int)NormalState.AVALIABLE).FirstOrDefault();
-                lblproductType.Text = defaultCategory.categoryName;
+
+                if (isEn)
+                {
+                    lblproductType.Text = defaultCategory.categoryNameEN;
+                }
+                else
+                {
+                    lblproductType.Text = defaultCategory.categoryName;
+                }
+
                 categoryId = defaultCategory.categoryId;
                 updateProductList();
             }
@@ -100,7 +124,7 @@ namespace HZCGZM_Web.Front
         private DataTable GetProductCategory()
         {
 
-            string cmdTxt = "SELECT [categoryId] ,[categoryName] ,[parentId],[categoryState] ,[categoryType] ,[sortNumber] ,[categoryInfo] FROM [HZCGZM].[dbo].[tbCategory]   WHERE [categoryType] ='1' and [categoryState]='1' ";
+            string cmdTxt = "SELECT [categoryId] ,[categoryName] ,[categoryNameEN] ,[parentId],[categoryState] ,[categoryType] ,[sortNumber] ,[categoryInfo] FROM [HZCGZM].[dbo].[tbCategory]   WHERE [categoryType] ='1' and [categoryState]='1' ";
 
             StringBuilder sb = new StringBuilder();
             string connStr = WebConfigurationManager.ConnectionStrings["HZCGZMConnectionString"].ConnectionString;
@@ -125,7 +149,7 @@ namespace HZCGZM_Web.Front
 
         private DataTable GetProductSubcategory(int category)
         {
-            string cmdTxt = String.Format("SELECT [categoryId],[categoryName],[parentId],[categoryState],[categoryType],[sortNumber],[categoryInfo] FROM [HZCGZM].[dbo].[tbCategory] WHERE [categoryType] ='2' and [categoryState]='1' and [parentId] ='{0}'", category);
+            string cmdTxt = String.Format("SELECT [categoryId],[categoryName],[categoryNameEN] ,[parentId],[categoryState],[categoryType],[sortNumber],[categoryInfo] FROM [HZCGZM].[dbo].[tbCategory] WHERE [categoryType] ='2' and [categoryState]='1' and [parentId] ='{0}'", category);
 
             StringBuilder sb = new StringBuilder();
             string connStr = WebConfigurationManager.ConnectionStrings["HZCGZMConnectionString"].ConnectionString;
@@ -177,9 +201,17 @@ namespace HZCGZM_Web.Front
             //    ((LinkButton)item.FindControl("lkbProductSubcategory")).ForeColor = Color.FromArgb(102, 102, 102);
             //}
             //((LinkButton)i.FindControl("lkbProductSubcategory")).ForeColor = Color.FromArgb(255, 127, 0);
-            string category = new HZCGZM_Model.HZCGZMEntities().tbCategory.Where(m => m.categoryId == categoryId).FirstOrDefault().categoryName;
+            var category = new HZCGZM_Model.HZCGZMEntities().tbCategory.Where(m => m.categoryId == categoryId).FirstOrDefault();
 
-            lblproductType.Text = (category + " - " + ((LinkButton)sender).Text);
+            if (isEn)
+            {
+                lblproductType.Text = (category.categoryNameEN + " - " + ((LinkButton)sender).Text);
+            }
+            else
+            {
+                lblproductType.Text = (category.categoryName + " - " + ((LinkButton)sender).Text);
+            }
+            
             updateProductList();
         }
 
@@ -192,7 +224,7 @@ namespace HZCGZM_Web.Front
             if (!String.IsNullOrEmpty(search))
             {
 
-                cmdTxt = String.Format("SELECT * FROM (select ROW_NUMBER() over(order by B.productId) as 'sequence',A.imageURL,B.productId,B.productName, B.productDetailHtmlString from dbo.tbImage as A INNER JOIN dbo.tbProduct as B ON A.bindId = B.productId WHERE A.imageType='6' and A.imageState='1' and B.productState='1' and B.productName like '%{0}%' ) as t where t.sequence between {1} and {2}", search, (this.page - 1) * this.pageSize + 1, this.page * this.pageSize);
+                cmdTxt = String.Format("SELECT * FROM (select ROW_NUMBER() over(order by B.productId) as 'sequence',A.imageURL,B.productId,B.productName, B.productNameEN,B.productDetailHtmlString from dbo.tbImage as A INNER JOIN dbo.tbProduct as B ON A.bindId = B.productId WHERE A.imageType='6' and A.imageState='1' and B.productState='1' and B.productName like '%{0}%' ) as t where t.sequence between {1} and {2}", search, (this.page - 1) * this.pageSize + 1, this.page * this.pageSize);
 
                 cmdCountTxt = String.Format("SELECT count(dbo.tbProduct.productId) FROM dbo.tbImage INNER JOIN dbo.tbProduct ON dbo.tbImage.bindId = dbo.tbProduct.productId WHERE dbo.tbImage.imageType='6' and dbo.tbImage.imageState='1' and productState='1' and productName like '%{0}%' ", search);
 
@@ -241,14 +273,14 @@ namespace HZCGZM_Web.Front
 
             if (subcategoryId > 0)
             {
-                cmdTxt = String.Format("SELECT * FROM (select ROW_NUMBER() over(order by B.productId) as 'sequence',A.imageURL,B.productId,B.productName, B.productDetailHtmlString from dbo.tbImage as A INNER JOIN dbo.tbProduct as B ON A.bindId = B.productId WHERE A.imageType='6' and A.imageState='1' and B.productState='1' and B.productCategoryId='{0}' and B.productSubcategoryId = '{1}' ) as t where t.sequence between {2} and {3}", categoryId, subcategoryId, (this.page - 1) * this.pageSize + 1, this.page * this.pageSize);
+                cmdTxt = String.Format("SELECT * FROM (select ROW_NUMBER() over(order by B.productId) as 'sequence',A.imageURL,B.productId,B.productName, B.productNameEN,B.productDetailHtmlString from dbo.tbImage as A INNER JOIN dbo.tbProduct as B ON A.bindId = B.productId WHERE A.imageType='6' and A.imageState='1' and B.productState='1' and B.productCategoryId='{0}' and B.productSubcategoryId = '{1}' ) as t where t.sequence between {2} and {3}", categoryId, subcategoryId, (this.page - 1) * this.pageSize + 1, this.page * this.pageSize);
                 queryString = String.Format("type={0}&subtype={1}", categoryId, subcategoryId);
 
                 cmdCountTxt = String.Format("SELECT count(dbo.tbProduct.productId) FROM dbo.tbImage INNER JOIN dbo.tbProduct ON dbo.tbImage.bindId = dbo.tbProduct.productId WHERE dbo.tbImage.imageType='6' and dbo.tbImage.imageState='1' and productState='1' and dbo.tbProduct.productCategoryId='{0}' and [productSubcategoryId] = '{1}' ", categoryId, subcategoryId);
             }
             else
             {
-                cmdTxt = String.Format("SELECT * FROM (select ROW_NUMBER() over(order by B.productId) as 'sequence',A.imageURL,B.productId,B.productName, B.productDetailHtmlString from dbo.tbImage as A INNER JOIN dbo.tbProduct as B ON A.bindId = B.productId WHERE A.imageType='6' and A.imageState='1' and B.productState='1' and B.productCategoryId='{0}' ) as t where t.sequence between {1} and {2} ", categoryId, (this.page - 1) * this.pageSize + 1, this.page * this.pageSize);
+                cmdTxt = String.Format("SELECT * FROM (select ROW_NUMBER() over(order by B.productId) as 'sequence',A.imageURL,B.productId,B.productName, B.productNameEN,B.productDetailHtmlString from dbo.tbImage as A INNER JOIN dbo.tbProduct as B ON A.bindId = B.productId WHERE A.imageType='6' and A.imageState='1' and B.productState='1' and B.productCategoryId='{0}' ) as t where t.sequence between {1} and {2} ", categoryId, (this.page - 1) * this.pageSize + 1, this.page * this.pageSize);
                 queryString = String.Format("type={0}", categoryId);
 
                 cmdCountTxt = String.Format("SELECT count(dbo.tbProduct.productId) FROM dbo.tbImage INNER JOIN dbo.tbProduct ON dbo.tbImage.bindId = dbo.tbProduct.productId WHERE dbo.tbImage.imageType='6' and dbo.tbImage.imageState='1' and productState='1' and dbo.tbProduct.productCategoryId='{0}' ", categoryId);

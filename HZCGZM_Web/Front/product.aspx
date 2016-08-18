@@ -16,15 +16,15 @@
                     <ItemTemplate>
 
                         <li>
-                            <asp:LinkButton ID="lkbProductCategory" runat="server" OnClick="lkbProductCategory_Click" Text='<%#Eval("categoryName") %>'>
+                            <asp:LinkButton ID="lkbProductCategory" runat="server" OnClick="lkbProductCategory_Click" Text='<%#isEn?Eval("categoryNameEN"):Eval("categoryName") %>'>
                                 <img src="Image/triangle_right_orange.png" /></asp:LinkButton>
                             <asp:HiddenField ID="hfCategoryId" runat="server" Value='<%#Eval("categoryId") %>' />
-                         
+
                             <ul>
                                 <asp:Repeater ID="rptProductSubcategory" runat="server">
                                     <ItemTemplate>
                                         <li>
-                                            <asp:LinkButton ID="lkbProductSubcategory" runat="server" OnClick="lkbProductSubcategory_Click" Text='<%#Eval("categoryName") %>'>
+                                            <asp:LinkButton ID="lkbProductSubcategory" runat="server" OnClick="lkbProductSubcategory_Click" Text='<%#isEn?Eval("categoryNameEN"):Eval("categoryName") %>'>
                                 <img src="Image/triangle_right_orange.png" /></asp:LinkButton>
                                             <asp:HiddenField ID="hfSubategoryId" runat="server" Value='<%#Eval("categoryId") %>' />
                                         </li>
@@ -40,7 +40,7 @@
         </div>
         <div class="right content_right">
             <div class="product_top">
-                 <asp:Label ID="lblproductType" runat="server" Text="产品类型" CssClass="left"></asp:Label>
+                <asp:Label ID="lblproductType" runat="server" Text="产品类型" CssClass="left"></asp:Label>
                 <span class="right"><%=Resources.lang.location%>：<%=Resources.lang.nav_products%></span>
 
                 <img src="Image/home.png" class="right" />
@@ -53,7 +53,7 @@
                             <li>
                                 <a href='product_detail.aspx?id=<%#Eval("productId") %>'>
                                     <asp:Image ID="imgProduct" runat="server" ImageUrl='<%#Eval("imageURL") %>' />
-                                <span><%#Eval("productName") %></span>
+                                    <span><%#isEn?Eval("productNameEN"):Eval("productName") %></span>
                                 </a>
                             </li>
                         </ItemTemplate>
