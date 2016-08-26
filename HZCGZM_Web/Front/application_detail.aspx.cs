@@ -48,7 +48,18 @@ namespace HZCGZM_Web.Front
                     HZCGZMEntities entity = new HZCGZMEntities();
                     defaultCategory = entity.tbCategory.Where(m => m.categoryType == (int)CategoryType.SUBAPPLICATION && m.parentId == type).FirstOrDefault();
 
+                    if (isEn)
+                    {
+                        updateDetailInfo(defaultCategory.categoryNameEN);
+                    }
+                    else
+                    {
+                        updateDetailInfo(defaultCategory.categoryName);
+                    }
+
                 }
+
+                
             }
 
         }
@@ -73,7 +84,7 @@ namespace HZCGZM_Web.Front
 
             var applicationDetail = entity.tbCategory
                .Where(m => m.categoryState == (int)NormalState.AVALIABLE && m.categoryType == (int)CategoryType.SUBAPPLICATION)
-               .Where(m => m.categoryName == name)
+               .Where(m => m.categoryName == name||m.categoryNameEN==name)
                .Join(entity.tbImage.Where(m => m.imageState == (int)NormalState.AVALIABLE && m.imageType == (int)ImageType.SUBAPPLICATION), c => c.categoryId, i => i.bindId, (c, i) => new
            {
                c.categoryName,
@@ -85,15 +96,18 @@ namespace HZCGZM_Web.Front
 
             imgApplication.ImageUrl = "";
             lblApplication.Text = "";
+            lblApplicationName.Text = "";
 
             if (applicationDetail != null)
             {
                 if (isEn)
                 {
+                    lblApplicationName.Text = applicationDetail.categoryNameEN;
                     lblApplication.Text = applicationDetail.categoryInfoEN;
                 }
                 else
                 {
+                    lblApplicationName.Text = applicationDetail.categoryName;
                     lblApplication.Text = applicationDetail.categoryInfo;
                 }
                 imgApplication.ImageUrl = applicationDetail.imageURL;

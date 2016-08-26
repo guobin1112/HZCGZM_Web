@@ -47,7 +47,7 @@
                                 <asp:Image ID="image" ImageUrl='<%#Eval("imageURL") %>' runat="server" />
                                 <span class="application_title"><%#isEn?Eval("categoryNameEN"):Eval("categoryName") %></span>
                                 <hr />
-                                <p><%#isEn?Eval("categoryInfoEN"):Eval("categoryInfo") %></p>
+                                <p style="height:62px"><%#isEn?Eval("categoryInfoEN"):Eval("categoryInfo") %></p>
                                 <a href='application_detail.aspx?type=<%#Eval("categoryId")%>'><%=Resources.lang.more%>
                                     <img src="Image/triangle_right_orange.png" /></a>
                             </li>

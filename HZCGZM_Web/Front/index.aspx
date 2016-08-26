@@ -79,7 +79,7 @@
     <div class="more">
         <div class="contact">
             <p><%=Resources.lang.contact_us%></p>
-            <img src="Image/1.jpg" />
+            <img src="../upload/contact.jpg" />
             <div>
                 <a href="contact.aspx">
                     <img src="Image/triangle_right_orange.png" /></a>
@@ -88,7 +88,7 @@
         </div>
         <div class="product">
             <p><%=Resources.lang.catalog%></p>
-            <img src="Image/1.jpg" />
+            <img src="../upload/category.jpg" />
             <div>
                 <a href="product.aspx">
                     <img src="Image/triangle_right_orange.png" /></a>
@@ -98,7 +98,7 @@
         </div>
         <div class="news">
             <p><%=Resources.lang.news_center%></p>
-            <img src="Image/1.jpg" />
+            <img src="../upload/news.jpg" />
             <div>
                 <a href="news.aspx">
                     <img src="Image/triangle_right_orange.png" /></a>

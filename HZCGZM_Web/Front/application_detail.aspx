@@ -55,6 +55,9 @@
 
             <div class="application_detail">
                 <asp:Image ID="imgApplication" runat="server" CssClass="left" />
+                <asp:Label ID="lblApplicationName" runat="server" Text="" ForeColor="#ff7f00" Font-Size="16px" Font-Bold="true"></asp:Label>
+                <br />
+                <br />
                 <asp:Label ID="lblApplication" runat="server" Text=""></asp:Label>
 
             </div>

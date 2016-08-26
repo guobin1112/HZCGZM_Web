@@ -16,19 +16,19 @@ namespace HZCGZM_Web.Backup
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            Response.Write("1");
             id = Convert.ToInt32(Request.QueryString["id"]);
             action = Request.QueryString["action"];
-
+            Response.Write("2");
             HZCGZMEntities entity = new HZCGZMEntities();
-
+            Response.Write("3");
             if (id < 0 || String.IsNullOrEmpty(action))
             {
                 Response.Write("<script>alert('入参有误')</script>");
                 return;
             }
 
-
-
+            Response.Write("4");
             if (action.Equals(ActionType.DELETE))
             {
                 tbPdf tbPdf = entity.tbPdf.Where(m => m.pdfId == id).FirstOrDefault();
@@ -53,7 +53,7 @@ namespace HZCGZM_Web.Backup
                 }
 
             }
-
+            Response.Write("5");
             if (action.Equals(ActionType.EDIT))
             {
                 if (!IsPostBack)
@@ -74,7 +74,7 @@ namespace HZCGZM_Web.Backup
                     hlPdf.NavigateUrl = pdfInfo.pdfURL;
                 }
             }
-
+            Response.Write("6");
             if (action.Equals(ActionType.ADD))
             {
                 imgDownload.Visible = false;

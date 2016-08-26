@@ -61,6 +61,20 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   查找类似 &lt;br /&gt;
+        ///            &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;杭州陈光照明科技有限公司是一家专业从事各类照明产品（CFL、LED）设计、研发、销售的科技服务型企业。成立于2006年的陈光照明，以“提供照明系统解决方案，改善人们的生活品质和生存环境”为使命，致力于全球照明市场的开发和服务。公司有着优秀的销售团队，为客户带来专业、诚信、值得信赖的服务理念；以最合理的价格，最完善的服务，提供最优质的产品为服务宗旨，赢得海内外客户的青睐。
+        ///            &lt;br /&gt;
+        ///            &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;公司的所属地：杭州临安。作为中国最大的照明基地，距上海和宁波港各250公里，便利的交通、良好的照明发展氛围，为公司拥有优秀的研发和销售团队提供发展的源泉，同时为节能照明事业的发展提供综合、行之有效的管理系统。&lt;/p&gt;
+        ///            &lt;br /&gt;
+        ///            &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;公司积极开拓市场，提高“辰光”品牌影响力，在广泛的应用中（商业照明、室内照明、户外照明、工程照明等）为客户提供持续的 [字符串的其余部分被截断]&quot;; 的本地化字符串。
+        /// </summary>
+        internal static string about {
+            get {
+                return ResourceManager.GetString("about", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 关于我们 的本地化字符串。
         /// </summary>
         internal static string about_us {

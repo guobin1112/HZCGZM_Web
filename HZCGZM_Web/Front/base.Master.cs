@@ -128,13 +128,17 @@ namespace HZCGZM_Web.Web
             Session["lang"] = "";
 
             Thread.CurrentThread.CurrentUICulture = CultureInfo.CreateSpecificCulture(""); ;
+
+            Response.Redirect("index.aspx");
         }
 
         protected void lkbEnglish_Click(object sender, EventArgs e)
         {
             Session["lang"] = "en-us";
 
-            Thread.CurrentThread.CurrentUICulture = CultureInfo.CreateSpecificCulture("en-us");  
+            Thread.CurrentThread.CurrentUICulture = CultureInfo.CreateSpecificCulture("en-us");
+
+            Response.Redirect("index.aspx");
         }
 
 
