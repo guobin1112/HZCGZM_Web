@@ -31,7 +31,7 @@
             <p>&nbsp;&nbsp;&nbsp;&nbsp;<%=Resources.lang.phone%>：+86-0571-58605168</p>
             <p>&nbsp;&nbsp;&nbsp;&nbsp;<%=Resources.lang.fax%>：+86-0571-58605169</p>
             <p>&nbsp;&nbsp;&nbsp;&nbsp;<%=Resources.lang.post%>：311300</p>
-            <p>&nbsp;&nbsp;&nbsp;&nbsp;<%=Resources.lang.email%>：</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;<%=Resources.lang.email%>：sunrise@hzcgzm.com</p>
 
             <a  href="Image/map.jpg"><img class="map"  src="Image/map.jpg" /></a>
         </div>
