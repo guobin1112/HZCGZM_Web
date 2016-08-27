@@ -1,11 +1,11 @@
 ;(function($){
 $.fn.DB_gallery=function(options){
 	var opt={
-		thumWidth:110,              //芥匙老啊肺
-		thumGap:8,                  //芥匙老埃拜
-		thumMoveStep:5,             //芥匙老捞悼肮荐
-		moveSpeed:300,              //捞悼加档
-		fadeSpeed:300,              //拳搁傈券加档
+		thumWidth:110,              
+		thumGap:8,                  
+		thumMoveStep:5,             
+		moveSpeed:300,             
+		fadeSpeed:300,            
 		end:''
 	}
 	$.extend(opt,options);
@@ -83,7 +83,6 @@ $.fn.DB_gallery=function(options){
 			setVisibleBtn();
 		}
 
-		//捞固瘤函版俊 蝶弗 滚瓢贸府
 		function setVisibleBtn(){
 			$prevPageBtn.show();
 			$nextPageBtn.show();
@@ -95,22 +94,19 @@ $.fn.DB_gallery=function(options){
 			if(currentObj==objNum-1)$nextBtn.hide();
 		}
 
-		//捞固瘤函版
 		function changeImg(){
 			if(oldImg!=null){
-				//何靛矾款 傈券阑 困秦 硅版俊 扁粮捞固瘤甫 硅摹
-				$imgWin.css('background','url('+oldImg+') no-repeat');
+			    $imgWin.css('background', 'url(' + oldImg + ') no-repeat');
+			    $imgWin.css('height', "387px");
+			    $imgWin.css('width', "580px");
 			}
-			//努腐捞固瘤
 			var $thum=$thumList.eq(currentObj)
 			var _src=oldImg=$thum.find('a').attr('href');
 			$imgWin.find('img').hide().attr('src',_src).fadeIn(opt.fadeSpeed);
 			oldImg=_src
 
-			//芥匙老扼牢 困摹函版
 			$thumLine.css({'left':$thum.position().left})
 
-			//其捞瘤函版
 			$pageCurrent.text(currentObj+1);
 			$pageTotal.text(objNum);
 			
