@@ -5,7 +5,16 @@
 <asp:Content ID="head_index" ContentPlaceHolderID="head" runat="server">
     <link rel="stylesheet" href="Style/index.css" />
     <link rel="stylesheet" href="Style/slide.css" />
+    <link href="Style/scroll.css" rel="stylesheet" />
     <script src="Script/index.js"></script>
+    <script src="Script/scroll.js"></script>
+    <style type="text/css">
+        table {
+            empty-cells: show;
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+    </style>
 </asp:Content>
 <asp:Content ID="content_index" ContentPlaceHolderID="content" runat="server">
     <div class="banner">
@@ -76,6 +85,41 @@
             </div>
         </div>
     </div>
+    <div class="scroll" id="scrollbox" onmousemove="MoveDiv(event);" onmouseout="MoveOutDiv();">
+        <div id="scrollcon" style="width: 100%;">
+            <table>
+                <tbody>
+                    <tr>
+                        <td valign="top">
+                            <table width="100%">
+                                <tr>
+                                    <td><a href="../Front/product_detail.aspx?id=56" target="_blank">
+                                        <img height="150" width="150" src="Image/product_1.png" /></a></td>
+                                    <td><a href="../Front/product_detail.aspx?id=44" target="_blank">
+                                        <img height="150" width="150" src="Image/product_2.png" /></a></td>
+                                    <td><a href="../Front/product_detail.aspx?id=50" target="_blank">
+                                        <img height="150" width="150" src="Image/product_3.png" /></a></td>
+                                    <td><a href="../Front/product_detail.aspx?id=26" target="_blank">
+                                        <img height="150" width="150" src="Image/product_4.png" /></a></td>
+                                    <td><a href="../Front/product_detail.aspx?id=37" target="_blank">
+                                        <img height="150" width="150" src="Image/product_5.png" /></a></td>
+                                    <td><a href="../Front/product_detail.aspx?id=39" target="_blank">
+                                        <img height="150" width="150" src="Image/product_6.png" /></a></td>
+                                    <td><a href="../Front/product_detail.aspx?id=32" target="_blank">
+                                        <img height="150" width="150" src="Image/product_7.png" /></a></td>
+                                    <td><a href="../Front/product_detail.aspx?id=57" target="_blank">
+                                        <img height="150" width="150" src="Image/product_8.png" /></a></td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td>
+                            <div id="scrollcopy" style="width: 100%;"></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
     <div class="more">
         <div class="contact">
             <p><%=Resources.lang.contact_us%></p>
@@ -106,6 +150,7 @@
             </div>
         </div>
     </div>
+
     <script src="Script/slide.min.js"></script>
     <script>
         $('.ck-slide').ckSlide({
@@ -113,5 +158,9 @@
             dir: 'x',//默认效果淡隐淡出，x为水平移动，y 为垂直滚动
             interval: 3000//默认间隔2000毫秒
         });
+    </script>
+    <script type="text/javascript">
+        document.getElementById("scrollcopy").innerHTML = document.getElementById("scrollcon").innerHTML;
+        MyMar = setInterval(Marquee, speed);
     </script>
 </asp:Content>

@@ -354,11 +354,20 @@
     <Content Include="Front\Image\kaixin001.gif" />
     <Content Include="Front\Image\left.gif" />
     <Content Include="Front\Image\logo.png" />
+    <Content Include="Front\Image\logo_en.png" />
     <Content Include="Front\Image\map.jpg" />
     <Content Include="Front\Image\next_off.png" />
     <Content Include="Front\Image\next_page.png" />
     <Content Include="Front\Image\prev_off.png" />
     <Content Include="Front\Image\prev_page.png" />
+    <Content Include="Front\Image\product_1.png" />
+    <Content Include="Front\Image\product_2.png" />
+    <Content Include="Front\Image\product_3.png" />
+    <Content Include="Front\Image\product_4.png" />
+    <Content Include="Front\Image\product_5.png" />
+    <Content Include="Front\Image\product_6.png" />
+    <Content Include="Front\Image\product_7.png" />
+    <Content Include="Front\Image\product_8.png" />
     <Content Include="Front\Image\qq.gif" />
     <Content Include="Front\Image\qqshuqian.gif" />
     <Content Include="Front\Image\qqzone.gif" />
@@ -377,6 +386,8 @@
     <Content Include="Front\Image\triangle_right_orange.png" />
     <Content Include="Front\Image\vote.gif" />
     <Content Include="Front\Image\zhuaxia.gif" />
+    <Content Include="Front\Script\scroll.js" />
+    <Content Include="Front\Style\scroll.css" />
     <Content Include="Image\application_category_1.jpg" />
     <Content Include="Image\application_category_2.jpg" />
     <Content Include="Image\application_category_3.jpg" />
@@ -388,6 +399,7 @@
     <Content Include="Image\img4.jpg" />
     <Content Include="Image\img5.jpg" />
     <Content Include="Image\img6.jpg" />
+    <Content Include="Image\logo_en.png" />
     <Content Include="Image\map.jpg" />
     <Content Include="Image\next_off.png" />
     <Content Include="Image\next_page.png" />

@@ -17,15 +17,18 @@ namespace HZCGZM_Web.Web
         {
             if (Session["lang"] == null)
             {
-                Thread.CurrentThread.CurrentUICulture = CultureInfo.CreateSpecificCulture(""); 
+                Thread.CurrentThread.CurrentUICulture = CultureInfo.CreateSpecificCulture("");
+                imgLogo.ImageUrl = "Image/logo.png";
             }
             else if (Session["lang"].ToString() == "en-us")
             {
-                Thread.CurrentThread.CurrentUICulture = CultureInfo.CreateSpecificCulture("en-us"); ;
+                Thread.CurrentThread.CurrentUICulture = CultureInfo.CreateSpecificCulture("en-us");
+                imgLogo.ImageUrl = "Image/logo_en.png";
             }
             else
             {
-                Thread.CurrentThread.CurrentUICulture = CultureInfo.CreateSpecificCulture(""); 
+                Thread.CurrentThread.CurrentUICulture = CultureInfo.CreateSpecificCulture("");
+                imgLogo.ImageUrl = "~/Image/logo.png";
             }
         }
 

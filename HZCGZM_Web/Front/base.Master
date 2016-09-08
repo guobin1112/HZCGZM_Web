@@ -24,7 +24,8 @@
          <asp:ScriptManager ID="ScriptManager" runat="server" EnablePageMethods="True"></asp:ScriptManager>
         <div class="header">
             <div class="top">
-                <img class="logo left" src="Image/logo.png" />
+                <asp:Image ID="imgLogo" CssClass="logo left" runat="server" ImageUrl="~/Image/logo.png" />
+               
                 <div class="right" style="display: inline-block">
                     <div class="language" style="display: block">
                         <asp:LinkButton ID="lkbChinese" runat="server" meta:resourcekey="lkbChineseResource1" OnClick="lkbChinese_Click">Chinese</asp:LinkButton>
