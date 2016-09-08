@@ -282,6 +282,26 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   查找类似 &lt;p class=&quot;MsoNormal&quot;&gt;
+        ///	标准包装设计
+        ///&lt;/p&gt;
+        ///&lt;p class=&quot;MsoNormal&quot;&gt;
+        ///	&lt;img src=&quot;/upload/image/20160908/20160908210959_5845.jpg&quot; alt=&quot;&quot; /&gt;
+        ///&lt;/p&gt;
+        ///&lt;p class=&quot;MsoNormal&quot;&gt;
+        ///	我们有专业的设计团队，可以满足各式各样不同的彩盒包装需求！&lt;img src=&quot;/upload/image/20160908/20160908211021_1315.jpg&quot; alt=&quot;&quot; /&gt;
+        ///&lt;/p&gt;
+        ///&lt;p class=&quot;MsoNormal&quot;&gt;
+        ///	多样产品包装
+        ///&lt;/p&gt; 的本地化字符串。
+        /// </summary>
+        internal static string package_design_detail {
+            get {
+                return ResourceManager.GetString("package_design_detail", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 电话 的本地化字符串。
         /// </summary>
         internal static string phone {
@@ -305,6 +325,25 @@ namespace Resources {
         internal static string producing_process {
             get {
                 return ResourceManager.GetString("producing_process", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 &lt;h1 style=&quot;text-align:center;&quot;&gt;
+        ///	&lt;span style=&quot;color:#FF9900;font-size:32px;&quot;&gt;陈光照明&lt;/span&gt; 
+        ///&lt;/h1&gt;
+        ///&lt;p&gt;
+        ///	&lt;span style=&quot;color:#FF9900;&quot;&gt;&lt;b&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/b&gt;&lt;/span&gt; 
+        ///&lt;/p&gt;
+        ///&lt;table cellpadding=&quot;2&quot; cellspacing=&quot;0&quot; border=&quot;20&quot; class=&quot;&quot; bordercolor=&quot;#FFFFFF&quot; style=&quot;width:1257px;&quot;&gt;
+        ///	&lt;tbody&gt;
+        ///		&lt;tr&gt;
+        ///			&lt;td&gt;
+        ///				&lt;b&gt;&lt;span style=&quot;color:#FF9900;font-size:16px;&quot;&gt;LED&lt;/span&gt;&lt;/b&gt;&lt;span style=&quot;color:#FF9900;font-size:16 [字符串的其余部分被截断]&quot;; 的本地化字符串。
+        /// </summary>
+        internal static string producing_process_detail {
+            get {
+                return ResourceManager.GetString("producing_process_detail", resourceCulture);
             }
         }
         
@@ -341,6 +380,15 @@ namespace Resources {
         internal static string promotion_material_design {
             get {
                 return ResourceManager.GetString("promotion_material_design", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 样品设计内容 的本地化字符串。
+        /// </summary>
+        internal static string promotion_material_design_detail {
+            get {
+                return ResourceManager.GetString("promotion_material_design_detail", resourceCulture);
             }
         }
         

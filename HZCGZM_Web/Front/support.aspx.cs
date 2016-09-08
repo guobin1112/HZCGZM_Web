@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Globalization;
 using System.Linq;
 using System.Threading;
@@ -27,6 +28,42 @@ namespace HZCGZM_Web.Front
             }
 
             Master.updateNav((int)NavType.NAV_SUPPORT);
+
+            divPackageDesignDetail.Visible = true;
+            divProducingProcessDetail.Visible = false;
+            divPromotionMaterialDesign.Visible = false;
+            lbPackageDesign.ForeColor = Color.FromArgb(255, 127, 0);
+        }
+
+        protected void lbPackageDesign_Click(object sender, EventArgs e)
+        {
+            divPackageDesignDetail.Visible = true;
+            divProducingProcessDetail.Visible = false;
+            divPromotionMaterialDesign.Visible = false;
+            lbPackageDesign.ForeColor = Color.FromArgb(255, 127, 0);
+            lbPromotionMaterialDesign.ForeColor=Color.FromArgb(51, 51, 51);
+            lbProducingProcess.ForeColor = Color.FromArgb(51, 51, 51);
+        }
+
+        protected void lbPromotionMaterialDesign_Click(object sender, EventArgs e)
+        {
+            divPackageDesignDetail.Visible = false;
+            divProducingProcessDetail.Visible = false;
+            divPromotionMaterialDesign.Visible = true;
+            lbPromotionMaterialDesign.ForeColor = Color.FromArgb(255, 127, 0);
+            lbPackageDesign.ForeColor = Color.FromArgb(51, 51, 51);
+            lbProducingProcess.ForeColor = Color.FromArgb(51, 51, 51);
+        }
+
+        protected void lbProducingProcess_Click(object sender, EventArgs e)
+        {
+            divPackageDesignDetail.Visible = false;
+            divProducingProcessDetail.Visible = true;
+            divPromotionMaterialDesign.Visible = false;
+            lbProducingProcess.ForeColor = Color.FromArgb(255, 127, 0);
+            lbPromotionMaterialDesign.ForeColor = Color.FromArgb(51, 51, 51);
+            lbPackageDesign.ForeColor = Color.FromArgb(51, 51, 51);
+ 
         }
     }
 }

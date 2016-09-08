@@ -13,6 +13,33 @@ namespace HZCGZM_Web.Front {
     public partial class support {
         
         /// <summary>
+        /// lbPackageDesign 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton lbPackageDesign;
+        
+        /// <summary>
+        /// lbPromotionMaterialDesign 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton lbPromotionMaterialDesign;
+        
+        /// <summary>
+        /// lbProducingProcess 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton lbProducingProcess;
+        
+        /// <summary>
         /// lblsupportType 控件。
         /// </summary>
         /// <remarks>
@@ -20,6 +47,33 @@ namespace HZCGZM_Web.Front {
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblsupportType;
+        
+        /// <summary>
+        /// divPackageDesignDetail 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divPackageDesignDetail;
+        
+        /// <summary>
+        /// divPromotionMaterialDesign 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divPromotionMaterialDesign;
+        
+        /// <summary>
+        /// divProducingProcessDetail 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divProducingProcessDetail;
         
         /// <summary>
         /// Master 属性。
